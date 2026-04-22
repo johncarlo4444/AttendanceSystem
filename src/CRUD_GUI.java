@@ -55,7 +55,7 @@ public class CRUD_GUI extends JFrame {
     public CRUD_GUI() {
         // Basic window setup
         setTitle("Java-MySQL Based Attendance Monitoring System for College Students at MSEUF-Candelaria");
-        setSize(900, 650);
+        setSize(1100, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // Center the window on the screen
         setLayout(new BorderLayout(30, 30));
@@ -70,7 +70,7 @@ public class CRUD_GUI extends JFrame {
 
         // Application Title
         JLabel titleLabel = new JLabel("Student Attendance Monitoring System", JLabel.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 28));
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 36));
         titleLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 20, 0));
         topPanel.add(titleLabel, BorderLayout.NORTH);
 
@@ -142,6 +142,8 @@ public class CRUD_GUI extends JFrame {
             }
         };
         table = new JTable(model);
+        table.setRowHeight(35);
+        table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 18));
         add(new JScrollPane(table), BorderLayout.CENTER);
 
         // Initialize Database and load existing records
@@ -492,7 +494,7 @@ public class CRUD_GUI extends JFrame {
             root.setBorder(BorderFactory.createEmptyBorder(12, 12, 12, 12));
 
             JLabel monthLabel = new JLabel("", SwingConstants.CENTER);
-            monthLabel.setFont(new Font("Arial", Font.BOLD, 14));
+            monthLabel.setFont(new Font("Arial", Font.BOLD, 22));
 
             JButton prev = new JButton("<");
             JButton next = new JButton(">");
@@ -582,7 +584,7 @@ public class CRUD_GUI extends JFrame {
         content.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
 
         JLabel title = new JLabel("Please login to continue", SwingConstants.CENTER);
-        title.setFont(new Font("Arial", Font.BOLD, 16));
+        title.setFont(new Font("Arial", Font.BOLD, 24));
         content.add(title, BorderLayout.NORTH);
 
         JPanel form = new JPanel(new GridBagLayout());
@@ -657,10 +659,24 @@ public class CRUD_GUI extends JFrame {
         return authenticated[0];
     }
 
+    private static void setUIFont(javax.swing.plaf.FontUIResource f) {
+        java.util.Enumeration<Object> keys = UIManager.getDefaults().keys();
+        while (keys.hasMoreElements()) {
+            Object key = keys.nextElement();
+            Object value = UIManager.get(key);
+            if (value instanceof javax.swing.plaf.FontUIResource) {
+                UIManager.put(key, f);
+            }
+        }
+    }
+
     /**
      * Application entry point.
      */
     public static void main(String[] args) {
+        // Set global font size for better accessibility
+        setUIFont(new javax.swing.plaf.FontUIResource(new Font("Arial", Font.PLAIN, 18)));
+
         // Run the GUI on the Event Dispatch Thread for thread safety
         SwingUtilities.invokeLater(() -> {
             if (!showLoginDialog()) {
