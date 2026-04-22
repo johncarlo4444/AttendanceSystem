@@ -9,6 +9,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.YearMonth;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 /**
  * CRUD_GUI - A Student Attendance Monitoring System application.
@@ -17,21 +24,31 @@ import java.sql.Statement;
  */
 public class CRUD_GUI extends JFrame {
 
+    static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm a");
+    static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
     // UI Components for data entry and display
     JTextField txtId;           // Displays the unique record ID (auto-generated)
     JTextField txtName;         // Field to enter student name
-    JTextField txtDate;         // Field to enter attendance date (YYYY-MM-DD)
+    JTextField txtDate;         // Date picker display (click to open calendar)
+    JTextField txtRemarks;      // Field to enter custom remarks/message
     JTextField txtSearch;       // Field to search records by name or status
     JTextField txtFilterDate;   // Field to filter records by a specific date
     JComboBox<String> cmbAttendance; // Dropdown to select attendance status (Present/Absent)
     JTable table;               // Table to display records from the database
     DefaultTableModel model;    // Data model for the JTable
 
+    LocalDate selectedDate = LocalDate.now();
+
     // Database connection constants
     static final String URL = "jdbc:mysql://localhost:3306/"; // MySQL server address
     static final String DB_NAME = "crud_gui_db";             // Database name
     static final String USER = "root";                        // Database username
     static final String PASS = "Administrator.123";           // Database password
+
+    // Login credentials (change as needed)
+    static final String LOGIN_USERNAME = "admin";
+    static final String LOGIN_PASSWORD = "admin";
 
     Connection con; // Connection object to interact with MySQL
 
@@ -58,22 +75,28 @@ public class CRUD_GUI extends JFrame {
         topPanel.add(titleLabel, BorderLayout.NORTH);
 
         // formPanel: Input fields organized in a grid (Label next to TextField)
-        JPanel formPanel = new JPanel(new GridLayout(4, 2, 10, 10));
+        JPanel formPanel = new JPanel(new GridLayout(5, 2, 10, 10));
 
         txtId = new JTextField();
         txtId.setEnabled(false); // ID is read-only as it's auto-incremented in DB
         txtName = new JTextField();
         txtDate = new JTextField();
-        cmbAttendance = new JComboBox<>(new String[]{"Present", "Absent"});
+        txtDate.setEditable(false);
+        txtDate.setText(selectedDate.format(DATE_FORMATTER));
+        txtDate.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        txtRemarks = new JTextField();
+        cmbAttendance = new JComboBox<>(new String[]{"Present", "Absent", "Late", "Excuse"});
 
         formPanel.add(new JLabel("ID:"));
         formPanel.add(txtId);
         formPanel.add(new JLabel("Student Name:"));
         formPanel.add(txtName);
-        formPanel.add(new JLabel("Date (YYYY-MM-DD):"));
+        formPanel.add(new JLabel("Date:"));
         formPanel.add(txtDate);
         formPanel.add(new JLabel("Attendance:"));
         formPanel.add(cmbAttendance);
+        formPanel.add(new JLabel("Remarks:"));
+        formPanel.add(txtRemarks);
 
         // buttonPanel: Action buttons for CRUD operations
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 10));
@@ -112,7 +135,7 @@ public class CRUD_GUI extends JFrame {
         add(topPanel, BorderLayout.NORTH);
 
         // Table Setup: Defining columns and making cells non-editable
-        model = new DefaultTableModel(new String[]{"ID", "Student Name", "Date", "Attendance"}, 0) {
+        model = new DefaultTableModel(new String[]{"ID", "Student Name", "Date", "Time", "Attendance", "Remarks"}, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false; // Prevent users from editing directly in the table
@@ -137,6 +160,18 @@ public class CRUD_GUI extends JFrame {
             loadData(); // Reload all data
         });
 
+        // Pop-up calendar date picker
+        txtDate.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                LocalDate picked = CalendarPopup.pickDate(CRUD_GUI.this, selectedDate);
+                if (picked != null) {
+                    selectedDate = picked;
+                    txtDate.setText(selectedDate.format(DATE_FORMATTER));
+                }
+            }
+        });
+
         // Table Mouse Listener: Click a row to populate the input form for editing
         table.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
@@ -147,8 +182,24 @@ public class CRUD_GUI extends JFrame {
 
                 txtId.setText(model.getValueAt(i, 0).toString());
                 txtName.setText(model.getValueAt(i, 1).toString());
-                txtDate.setText(model.getValueAt(i, 2).toString());
-                cmbAttendance.setSelectedItem(model.getValueAt(i, 3).toString());
+                Object dateValue = model.getValueAt(i, 2);
+                if (dateValue instanceof java.util.Date) {
+                    java.util.Date d = (java.util.Date) dateValue;
+                    selectedDate = new java.sql.Date(d.getTime()).toLocalDate();
+                    txtDate.setText(selectedDate.format(DATE_FORMATTER));
+                } else if (dateValue != null) {
+                    try {
+                        java.sql.Date sqlDate = java.sql.Date.valueOf(dateValue.toString());
+                        selectedDate = sqlDate.toLocalDate();
+                        txtDate.setText(selectedDate.format(DATE_FORMATTER));
+                    } catch (Exception ignore) {
+                        selectedDate = LocalDate.now();
+                        txtDate.setText(selectedDate.format(DATE_FORMATTER));
+                    }
+                }
+                cmbAttendance.setSelectedItem(model.getValueAt(i, 4).toString());
+                Object remarksValue = model.getValueAt(i, 5);
+                txtRemarks.setText(remarksValue == null ? "" : remarksValue.toString());
             }
         });
     }
@@ -172,9 +223,41 @@ public class CRUD_GUI extends JFrame {
                     "CREATE TABLE IF NOT EXISTS attendance_records (" +
                             "id INT AUTO_INCREMENT PRIMARY KEY," +
                             "student_name VARCHAR(100) NOT NULL," +
-                            "attendance_status VARCHAR(20) NOT NULL," +
-                            "attendance_date DATE NOT NULL)"
+                            "attendance_status VARCHAR(30) NOT NULL," +
+                            "attendance_date DATE NOT NULL," +
+                            "attendance_time VARCHAR(10) NOT NULL," +
+                            "remarks TEXT NULL)"
             );
+
+            // Upgrade existing databases: add remarks column if missing
+            PreparedStatement colCheck = con.prepareStatement(
+                    "SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS " +
+                            "WHERE TABLE_SCHEMA = ? AND TABLE_NAME = 'attendance_records' AND COLUMN_NAME = 'remarks' LIMIT 1"
+            );
+            colCheck.setString(1, DB_NAME);
+            ResultSet colRs = colCheck.executeQuery();
+            boolean hasRemarks = colRs.next();
+            colRs.close();
+            colCheck.close();
+
+            if (!hasRemarks) {
+                dbStmt.executeUpdate("ALTER TABLE attendance_records ADD COLUMN remarks TEXT NULL");
+            }
+
+            // Upgrade existing databases: add attendance_time column if missing
+            PreparedStatement timeColCheck = con.prepareStatement(
+                    "SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS " +
+                            "WHERE TABLE_SCHEMA = ? AND TABLE_NAME = 'attendance_records' AND COLUMN_NAME = 'attendance_time' LIMIT 1"
+            );
+            timeColCheck.setString(1, DB_NAME);
+            ResultSet timeColRs = timeColCheck.executeQuery();
+            boolean hasAttendanceTime = timeColRs.next();
+            timeColRs.close();
+            timeColCheck.close();
+
+            if (!hasAttendanceTime) {
+                dbStmt.executeUpdate("ALTER TABLE attendance_records ADD COLUMN attendance_time VARCHAR(20) NOT NULL DEFAULT '---'");
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Database setup failed: " + e.getMessage());
         }
@@ -199,12 +282,12 @@ public class CRUD_GUI extends JFrame {
 
             // Build dynamic SQL query based on filters
             StringBuilder sql = new StringBuilder(
-                    "SELECT id, student_name, attendance_status, attendance_date " +
+                    "SELECT id, student_name, attendance_status, attendance_date, attendance_time, remarks " +
                             "FROM attendance_records WHERE 1=1"
             );
 
             if (!searchText.isEmpty()) {
-                sql.append(" AND (student_name LIKE ? OR attendance_status LIKE ?)");
+                sql.append(" AND (student_name LIKE ? OR attendance_status LIKE ? OR remarks LIKE ?)");
             }
             if (!filterDate.isEmpty()) {
                 sql.append(" AND attendance_date = ?");
@@ -219,6 +302,7 @@ public class CRUD_GUI extends JFrame {
                 String keyword = "%" + searchText + "%";
                 pst.setString(parameterIndex++, keyword);
                 pst.setString(parameterIndex++, keyword);
+                pst.setString(parameterIndex++, keyword);
             }
             if (!filterDate.isEmpty()) {
                 pst.setDate(parameterIndex, Date.valueOf(filterDate));
@@ -231,7 +315,9 @@ public class CRUD_GUI extends JFrame {
                         rs.getInt("id"),
                         rs.getString("student_name"),
                         rs.getDate("attendance_date"),
-                        rs.getString("attendance_status")
+                        rs.getString("attendance_time"),
+                        rs.getString("attendance_status"),
+                        rs.getString("remarks")
                 });
             }
         } catch (Exception e) {
@@ -249,11 +335,22 @@ public class CRUD_GUI extends JFrame {
 
         try {
             PreparedStatement pst = con.prepareStatement(
-                    "INSERT INTO attendance_records(student_name, attendance_status, attendance_date) VALUES (?, ?, ?)"
+                    "INSERT INTO attendance_records(student_name, attendance_status, attendance_date, attendance_time, remarks) VALUES (?, ?, ?, ?, ?)"
             );
+            String status = cmbAttendance.getSelectedItem().toString();
             pst.setString(1, txtName.getText().trim());
-            pst.setString(2, cmbAttendance.getSelectedItem().toString());
-            pst.setDate(3, Date.valueOf(txtDate.getText().trim()));
+            pst.setString(2, status);
+            pst.setDate(3, java.sql.Date.valueOf(selectedDate));
+
+            String time;
+            if (status.equalsIgnoreCase("Absent") || status.equalsIgnoreCase("Excuse")) {
+                time = "---";
+            } else {
+                time = LocalTime.now().format(TIME_FORMATTER);
+            }
+            pst.setString(4, time);
+
+            pst.setString(5, txtRemarks.getText().trim());
             pst.executeUpdate();
 
             JOptionPane.showMessageDialog(this, "Inserted!");
@@ -274,12 +371,23 @@ public class CRUD_GUI extends JFrame {
 
         try {
             PreparedStatement pst = con.prepareStatement(
-                    "UPDATE attendance_records SET student_name=?, attendance_status=?, attendance_date=? WHERE id=?"
+                    "UPDATE attendance_records SET student_name=?, attendance_status=?, attendance_date=?, attendance_time=?, remarks=? WHERE id=?"
             );
+            String status = cmbAttendance.getSelectedItem().toString();
             pst.setString(1, txtName.getText().trim());
-            pst.setString(2, cmbAttendance.getSelectedItem().toString());
-            pst.setDate(3, Date.valueOf(txtDate.getText().trim()));
-            pst.setInt(4, Integer.parseInt(txtId.getText().trim()));
+            pst.setString(2, status);
+            pst.setDate(3, java.sql.Date.valueOf(selectedDate));
+
+            String time;
+            if (status.equalsIgnoreCase("Absent") || status.equalsIgnoreCase("Excuse")) {
+                time = "---";
+            } else {
+                time = LocalTime.now().format(TIME_FORMATTER);
+            }
+            pst.setString(4, time);
+
+            pst.setString(5, txtRemarks.getText().trim());
+            pst.setInt(6, Integer.parseInt(txtId.getText().trim()));
 
             int updated = pst.executeUpdate();
             if (updated == 0) {
@@ -339,13 +447,8 @@ public class CRUD_GUI extends JFrame {
             return false;
         }
 
-        if (txtDate.getText().trim().isEmpty()) {
+        if (selectedDate == null) {
             JOptionPane.showMessageDialog(this, "Attendance date is required.");
-            return false;
-        }
-
-        if (!isValidDate(txtDate.getText().trim())) {
-            JOptionPane.showMessageDialog(this, "Date must be in YYYY-MM-DD format.");
             return false;
         }
 
@@ -370,9 +473,188 @@ public class CRUD_GUI extends JFrame {
     void clearFields() {
         txtId.setText("");
         txtName.setText("");
-        txtDate.setText("");
+        selectedDate = LocalDate.now();
+        txtDate.setText(selectedDate.format(DATE_FORMATTER));
+        txtRemarks.setText("");
         cmbAttendance.setSelectedIndex(0);
         table.clearSelection();
+    }
+
+    static class CalendarPopup {
+        static LocalDate pickDate(Component parent, LocalDate initial) {
+            JDialog dialog = new JDialog(SwingUtilities.getWindowAncestor(parent), "Select Date", Dialog.ModalityType.APPLICATION_MODAL);
+            dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+            LocalDate[] result = {null};
+            YearMonth[] shownMonth = {YearMonth.from(initial == null ? LocalDate.now() : initial)};
+
+            JPanel root = new JPanel(new BorderLayout(10, 10));
+            root.setBorder(BorderFactory.createEmptyBorder(12, 12, 12, 12));
+
+            JLabel monthLabel = new JLabel("", SwingConstants.CENTER);
+            monthLabel.setFont(new Font("Arial", Font.BOLD, 14));
+
+            JButton prev = new JButton("<");
+            JButton next = new JButton(">");
+            JPanel header = new JPanel(new BorderLayout(10, 0));
+            header.add(prev, BorderLayout.WEST);
+            header.add(monthLabel, BorderLayout.CENTER);
+            header.add(next, BorderLayout.EAST);
+            root.add(header, BorderLayout.NORTH);
+
+            JPanel grid = new JPanel(new GridLayout(0, 7, 6, 6));
+            root.add(grid, BorderLayout.CENTER);
+
+            JButton cancel = new JButton("Cancel");
+            JPanel footer = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+            footer.add(cancel);
+            root.add(footer, BorderLayout.SOUTH);
+
+            Runnable rebuild = () -> {
+                grid.removeAll();
+                YearMonth ym = shownMonth[0];
+                monthLabel.setText(ym.getMonth().getDisplayName(TextStyle.FULL, Locale.getDefault()) + " " + ym.getYear());
+
+                DayOfWeek[] week = new DayOfWeek[]{
+                        DayOfWeek.SUNDAY, DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY,
+                        DayOfWeek.THURSDAY, DayOfWeek.FRIDAY, DayOfWeek.SATURDAY
+                };
+                for (DayOfWeek dow : week) {
+                    JLabel lbl = new JLabel(dow.getDisplayName(TextStyle.SHORT, Locale.getDefault()), SwingConstants.CENTER);
+                    lbl.setFont(lbl.getFont().deriveFont(Font.BOLD));
+                    grid.add(lbl);
+                }
+
+                LocalDate first = ym.atDay(1);
+                int firstDayIndex = first.getDayOfWeek().getValue() % 7; // Sunday = 0
+                for (int i = 0; i < firstDayIndex; i++) {
+                    grid.add(new JLabel(""));
+                }
+
+                LocalDate today = LocalDate.now();
+                int length = ym.lengthOfMonth();
+                for (int day = 1; day <= length; day++) {
+                    LocalDate d = ym.atDay(day);
+                    JButton b = new JButton(String.valueOf(day));
+                    if (d.equals(today)) {
+                        b.setFont(b.getFont().deriveFont(Font.BOLD));
+                    }
+                    b.addActionListener(e -> {
+                        result[0] = d;
+                        dialog.dispose();
+                    });
+                    grid.add(b);
+                }
+
+                dialog.pack();
+                dialog.setLocationRelativeTo(parent);
+                grid.revalidate();
+                grid.repaint();
+            };
+
+            prev.addActionListener(e -> {
+                shownMonth[0] = shownMonth[0].minusMonths(1);
+                rebuild.run();
+            });
+            next.addActionListener(e -> {
+                shownMonth[0] = shownMonth[0].plusMonths(1);
+                rebuild.run();
+            });
+            cancel.addActionListener(e -> {
+                result[0] = null;
+                dialog.dispose();
+            });
+
+            dialog.setContentPane(root);
+            dialog.setResizable(false);
+            rebuild.run();
+            dialog.setVisible(true);
+
+            return result[0];
+        }
+    }
+
+    private static boolean showLoginDialog() {
+        final JDialog dialog = new JDialog((Frame) null, "Login", true);
+        dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+        JPanel content = new JPanel(new BorderLayout(12, 12));
+        content.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
+
+        JLabel title = new JLabel("Please login to continue", SwingConstants.CENTER);
+        title.setFont(new Font("Arial", Font.BOLD, 16));
+        content.add(title, BorderLayout.NORTH);
+
+        JPanel form = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(6, 6, 6, 6);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        JTextField txtUsername = new JTextField(18);
+        JPasswordField txtPassword = new JPasswordField(18);
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        form.add(new JLabel("Username:"), gbc);
+        gbc.gridx = 1;
+        form.add(txtUsername, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        form.add(new JLabel("Password:"), gbc);
+        gbc.gridx = 1;
+        form.add(txtPassword, gbc);
+
+        content.add(form, BorderLayout.CENTER);
+
+        JPanel buttons = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 0));
+        JButton btnLogin = new JButton("Login");
+        JButton btnCancel = new JButton("Cancel");
+        buttons.add(btnLogin);
+        buttons.add(btnCancel);
+        content.add(buttons, BorderLayout.SOUTH);
+
+        final boolean[] authenticated = {false};
+
+        Runnable attemptLogin = () -> {
+            String username = txtUsername.getText().trim();
+            String password = new String(txtPassword.getPassword());
+
+            if (username.isEmpty() || password.isEmpty()) {
+                JOptionPane.showMessageDialog(dialog, "Username and password are required.");
+                return;
+            }
+
+            if (LOGIN_USERNAME.equals(username) && LOGIN_PASSWORD.equals(password)) {
+                authenticated[0] = true;
+                dialog.dispose();
+                return;
+            }
+
+            JOptionPane.showMessageDialog(dialog, "Invalid username or password.");
+            txtPassword.setText("");
+            txtPassword.requestFocusInWindow();
+        };
+
+        btnLogin.addActionListener(e -> attemptLogin.run());
+        btnCancel.addActionListener(e -> {
+            authenticated[0] = false;
+            dialog.dispose();
+        });
+
+        txtUsername.addActionListener(e -> attemptLogin.run());
+        txtPassword.addActionListener(e -> attemptLogin.run());
+
+        dialog.setContentPane(content);
+        dialog.getRootPane().setDefaultButton(btnLogin);
+        dialog.pack();
+        dialog.setResizable(false);
+        dialog.setLocationRelativeTo(null);
+
+        SwingUtilities.invokeLater(txtUsername::requestFocusInWindow);
+        dialog.setVisible(true);
+
+        return authenticated[0];
     }
 
     /**
@@ -380,6 +662,12 @@ public class CRUD_GUI extends JFrame {
      */
     public static void main(String[] args) {
         // Run the GUI on the Event Dispatch Thread for thread safety
-        SwingUtilities.invokeLater(() -> new CRUD_GUI().setVisible(true));
+        SwingUtilities.invokeLater(() -> {
+            if (!showLoginDialog()) {
+                System.exit(0);
+                return;
+            }
+            new CRUD_GUI().setVisible(true);
+        });
     }
 }
