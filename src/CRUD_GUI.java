@@ -1,6 +1,9 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Connection;
@@ -12,44 +15,41 @@ import java.sql.Statement;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-// PUBLIC CLASS: The main window of our application, extending JFrame to create a GUI.
 public class CRUD_GUI extends JFrame {
 
-    // STATIC FINAL: Constant formatters to keep Date and Time strings consistent throughout the app.
     static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm a");
     static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    static final int WINDOW_MARGIN = 18;
+    static final int RESPONSIVE_BREAKPOINT = 980;
 
-    // VARIABLES: UI Components used for user input and data display.
-    JTextField txtId;           // Holds the unique ID from the database (Primary Key).
-    JTextField txtStudentIdentifier; // Holds the remembered permanent student ID.
-    JTextField txtName;         // Input field for the Student's Name.
-    JTextField txtDate;         // Displays the selected date for attendance.
-    JTextField txtRemarks;      // Optional field for additional notes.
-    JTextField txtSearch;       // Field used to search/filter records.
-    JTextField txtFilterDate;   // Field used to filter records by a specific date.
-    JComboBox<String> cmbAttendance; // Dropdown menu for selecting status (Present, Absent, etc.).
-    JComboBox<String> cmbFilterAttendance; // Dropdown menu for filtering by status.
-    JComboBox<String> cmbFilterSubject; // Dropdown menu for filtering by subject.
-    JTable table;               // The visual table that shows data from MySQL.
-    DefaultTableModel model;    // The "brain" of the table that manages the actual rows and columns.
+    JTextField txtId;
+    JTextField txtStudentIdentifier;
+    JTextField txtName;
+    JTextField txtDate;
+    JTextField txtRemarks;
+    JTextField txtSearch;
+    JTextField txtFilterDate;
+    JComboBox<String> cmbAttendance;
+    JComboBox<String> cmbSubjectEntry;
+    JComboBox<String> cmbFilterAttendance;
+    JComboBox<String> cmbFilterSubject;
+    JTable table;
+    DefaultTableModel model;
 
-    // VARIABLE: Keeps track of the date and subject currently selected by the user.
     LocalDate selectedDate = LocalDate.now();
     String selectedSubject = "General";
 
-    // DATABASE CONSTANTS: Connection details for the MySQL server.
     static final String URL = "jdbc:mysql://localhost:3306/";
     static final String DB_NAME = "crud_gui_db";
     static final String USER = "root";
     static final String PASS = "Administrator.123";
 
-    // LOGIN CREDENTIALS: Hardcoded admin access for the login screen.
     static final String LOGIN_USERNAME = "admin";
     static final String LOGIN_PASSWORD = "admin";
     static final String[] ATTENDANCE_OPTIONS = {"Present", "Absent", "Late", "Excuse"};
@@ -65,161 +65,135 @@ public class CRUD_GUI extends JFrame {
             "University and I"
     };
 
-    // CONNECTION: The object that maintains the link between Java and MySQL.
     Connection con;
     boolean databaseReady = false;
 
-    // CONSTRUCTOR: This runs when the program starts. It sets up the window and components.
-    public CRUD_GUI() {
-        // WINDOW SETUP: Defining the title, size, and behavior of the main window.
-        setTitle("Java-MySQL Based Attendance Monitoring System for College Students at MSEUF-Candelaria");
-        setSize(1100, 800);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // Centers the window on the screen.
-        setLayout(new BorderLayout(30, 30));
+    private final JPanel responsiveBody = new JPanel(new BorderLayout());
+    private final JPanel crudPanel = new JPanel(new BorderLayout(10, 10));
+    private final JPanel rightPanel = new JPanel(new BorderLayout(10, 10));
+    private boolean stackedLayout;
 
-        // MAIN PANEL: The container with padding to make the UI look clean.
+    public CRUD_GUI() {
+        AppTheme.install();
+        setTitle("Java-MySQL Based Attendance Monitoring System for College Students at MSEUF-Candelaria");
+        setSize(1250, 820);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
         JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
-        mainPanel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
+        AppTheme.stylePanel(mainPanel);
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(WINDOW_MARGIN, WINDOW_MARGIN, WINDOW_MARGIN, WINDOW_MARGIN));
         setContentPane(mainPanel);
 
-        // TOP PANEL: Contains the Title, Input Form, and Buttons.
-        JPanel topPanel = new JPanel(new BorderLayout(10, 10));
-
-        // TITLE LABEL: Large header for the application.
         JLabel titleLabel = new JLabel("Student Attendance Monitoring System", JLabel.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 36));
-        titleLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 20, 0));
-        topPanel.add(titleLabel, BorderLayout.NORTH);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 30));
+        AppTheme.styleTitle(titleLabel);
+        titleLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, WINDOW_MARGIN, 0));
+        mainPanel.add(titleLabel, BorderLayout.NORTH);
 
-        // FORM PANEL: A grid layout to organize labels and input fields side-by-side.
-        JPanel formPanel = new JPanel(new GridLayout(6, 2, 10, 10));
+        buildCrudPanel();
+        buildRightPanel();
 
-        txtId = new JTextField();
-        txtId.setEnabled(false); // ID is auto-generated by MySQL, so user cannot edit it.
-        txtStudentIdentifier = new JTextField();
-        txtStudentIdentifier.setEditable(false);
-        txtName = new JTextField();
-        txtDate = new JTextField();
-        txtDate.setEditable(false);
-        txtDate.setText(selectedDate.format(DATE_FORMATTER) + " | " + selectedSubject);
-        txtDate.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        txtRemarks = new JTextField();
-        cmbAttendance = new JComboBox<>(ATTENDANCE_OPTIONS);
+        mainPanel.add(responsiveBody, BorderLayout.CENTER);
 
-        formPanel.add(new JLabel("Student ID:"));
-        formPanel.add(txtStudentIdentifier);
-        formPanel.add(new JLabel("Student Name:"));
-        formPanel.add(txtName);
-        formPanel.add(new JLabel("Date:"));
-        formPanel.add(txtDate);
-        formPanel.add(new JLabel("Attendance:"));
-        formPanel.add(cmbAttendance);
-        formPanel.add(new JLabel("Remarks:"));
-        formPanel.add(txtRemarks);
-        formPanel.add(new JLabel(""));
-        formPanel.add(new JLabel(""));
-
-        // BUTTON PANEL: Holds the Insert, Update, Delete, and Clear buttons.
-        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 10));
-
-        JButton btnInsert = new JButton("Insert");
-        JButton btnUpdate = new JButton("Update");
-        JButton btnDelete = new JButton("Delete");
-        JButton btnClear = new JButton("Clear");
-        JButton btnTeacherView = new JButton("Teacher View");
-        JButton btnAttendanceSummary = new JButton("Attendance Summary");
-
-        buttonPanel.add(btnInsert);
-        buttonPanel.add(btnUpdate);
-        buttonPanel.add(btnDelete);
-        buttonPanel.add(btnClear);
-        buttonPanel.add(btnTeacherView);
-        buttonPanel.add(btnAttendanceSummary);
-
-        // FILTER PANEL: Responsive grid layout to keep filters visible on smaller windows.
-        JPanel filterPanel = new JPanel(new GridBagLayout());
-        GridBagConstraints gbcFilter = new GridBagConstraints();
-        gbcFilter.insets = new Insets(5, 5, 5, 5);
-        gbcFilter.fill = GridBagConstraints.HORIZONTAL;
-
-        txtSearch = new JTextField(12);
-        txtFilterDate = new JTextField(8);
-        cmbFilterAttendance = new JComboBox<>(prependAllOption(ATTENDANCE_OPTIONS));
-        cmbFilterSubject = new JComboBox<>(prependAllOption(SUBJECTS));
-        JButton btnSearch = new JButton("Search");
-        JButton btnReset = new JButton("Reset Filter");
-
-        // FIRST ROW: Search and Status
-        gbcFilter.gridx = 0; gbcFilter.gridy = 0;
-        filterPanel.add(new JLabel("Search:"), gbcFilter);
-        gbcFilter.gridx = 1;
-        filterPanel.add(txtSearch, gbcFilter);
-        gbcFilter.gridx = 2;
-        filterPanel.add(new JLabel("Status:"), gbcFilter);
-        gbcFilter.gridx = 3;
-        filterPanel.add(cmbFilterAttendance, gbcFilter);
-
-        // SECOND ROW: Date and Buttons
-        gbcFilter.gridx = 0; gbcFilter.gridy = 1;
-        filterPanel.add(new JLabel("Date (YYYY-MM-DD):"), gbcFilter);
-        gbcFilter.gridx = 1;
-        filterPanel.add(txtFilterDate, gbcFilter);
-        gbcFilter.gridx = 2;
-        filterPanel.add(new JLabel("Subject:"), gbcFilter);
-        gbcFilter.gridx = 3;
-        filterPanel.add(cmbFilterSubject, gbcFilter);
-
-        // THIRD ROW: Buttons
-        gbcFilter.gridx = 2; gbcFilter.gridy = 2;
-        filterPanel.add(btnSearch, gbcFilter);
-        gbcFilter.gridx = 3;
-        filterPanel.add(btnReset, gbcFilter);
-
-        // NORTH CONTENT: Groups the form, buttons, and filters. Uses BoxLayout for vertical stacking.
-        JPanel northContent = new JPanel();
-        northContent.setLayout(new BoxLayout(northContent, BoxLayout.Y_AXIS));
-        northContent.add(formPanel);
-        northContent.add(Box.createVerticalStrut(15));
-        northContent.add(buttonPanel);
-        northContent.add(Box.createVerticalStrut(15));
-        northContent.add(filterPanel);
-
-        topPanel.add(northContent, BorderLayout.CENTER);
-        add(topPanel, BorderLayout.NORTH);
-
-        // TABLE SETUP: Defines columns and prevents direct cell editing in the table.
-        model = new DefaultTableModel(new String[]{"Record ID", "Student ID", "Student Name", "Subject", "Date", "Time In", "Time Out", "Attendance", "Remarks"}, 0) {
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                return false; 
-            }
-        };
-        table = new JTable(model);
-        table.setRowHeight(35); // Large row height for better visibility.
-        table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 18));
-        table.removeColumn(table.getColumnModel().getColumn(0));
-        add(new JScrollPane(table), BorderLayout.CENTER);
-
-        // INITIALIZATION: Calls methods to connect to the DB and load the table.
         setupDatabase();
         if (databaseReady) {
             loadData();
         }
 
-        // ACTION LISTENERS: Links button clicks to their respective Java methods.
-        btnInsert.addActionListener(e -> insertData()); 
-        btnUpdate.addActionListener(e -> updateData()); 
-        btnDelete.addActionListener(e -> deleteData()); 
-        btnClear.addActionListener(e -> clearFields()); 
-        btnTeacherView.addActionListener(e -> openTeacherDashboard());
-        btnAttendanceSummary.addActionListener(e -> openAttendanceSummary());
-        btnSearch.addActionListener(e -> loadData());    
-        cmbFilterAttendance.addActionListener(e -> loadData());
-        cmbFilterSubject.addActionListener(e -> loadData());
-        btnReset.addActionListener(e -> {
-            resetFilters();
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                updateResponsiveLayout();
+            }
         });
+        SwingUtilities.invokeLater(this::updateResponsiveLayout);
+    }
+
+    private void buildCrudPanel() {
+        AppTheme.stylePanel(crudPanel);
+        crudPanel.setBorder(AppTheme.createSectionBorder("Attendance CRUD", WINDOW_MARGIN));
+
+        JPanel formPanel = new JPanel(new GridBagLayout());
+        AppTheme.stylePanel(formPanel);
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(6, 6, 6, 6);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        txtId = new JTextField();
+        txtId.setEnabled(false);
+        txtStudentIdentifier = new JTextField();
+        txtStudentIdentifier.setEditable(false);
+        txtName = new JTextField();
+        txtDate = new JTextField();
+        txtDate.setEditable(false);
+        txtDate.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        txtRemarks = new JTextField();
+        cmbAttendance = new JComboBox<>(ATTENDANCE_OPTIONS);
+        cmbSubjectEntry = new JComboBox<>(SUBJECTS);
+        cmbSubjectEntry.setSelectedItem(selectedSubject);
+        updateDateField();
+        styleInputs(txtStudentIdentifier, txtName, txtDate, txtRemarks, cmbAttendance, cmbSubjectEntry);
+
+        addFormRow(formPanel, gbc, 0, "Student ID:", txtStudentIdentifier);
+        addFormRow(formPanel, gbc, 1, "Student Name:", txtName);
+        addFormRow(formPanel, gbc, 2, "Date:", txtDate);
+        addFormRow(formPanel, gbc, 3, "Subject:", cmbSubjectEntry);
+        addFormRow(formPanel, gbc, 4, "Attendance:", cmbAttendance);
+        addFormRow(formPanel, gbc, 5, "Remarks:", txtRemarks);
+
+        JButton btnInsert = new JButton("Insert");
+        JButton btnUpdate = new JButton("Update");
+        JButton btnDelete = new JButton("Delete");
+        JButton btnClear = new JButton("Clear");
+        JButton btnSearch = new JButton("Search");
+        JButton btnReset = new JButton("Reset Filter");
+        styleButtons(btnInsert, btnUpdate, btnDelete, btnClear, btnSearch, btnReset);
+
+        JPanel buttonPanel = new JPanel(new GridLayout(2, 2, 10, 10));
+        AppTheme.stylePanel(buttonPanel);
+        buttonPanel.add(btnInsert);
+        buttonPanel.add(btnUpdate);
+        buttonPanel.add(btnDelete);
+        buttonPanel.add(btnClear);
+
+        JPanel filterPanel = new JPanel(new GridBagLayout());
+        AppTheme.stylePanel(filterPanel);
+        GridBagConstraints gbcFilter = new GridBagConstraints();
+        gbcFilter.insets = new Insets(5, 5, 5, 5);
+        gbcFilter.fill = GridBagConstraints.HORIZONTAL;
+
+        txtSearch = new JTextField(12);
+        txtFilterDate = new JTextField(10);
+        cmbFilterAttendance = new JComboBox<>(prependAllOption(ATTENDANCE_OPTIONS));
+        cmbFilterSubject = new JComboBox<>(prependAllOption(SUBJECTS));
+        styleInputs(txtSearch, txtFilterDate, cmbFilterAttendance, cmbFilterSubject);
+
+        addFilterRow(filterPanel, gbcFilter, 0, "Search:", txtSearch, "Status:", cmbFilterAttendance);
+        addFilterRow(filterPanel, gbcFilter, 1, "Date:", txtFilterDate, "Subject:", cmbFilterSubject);
+        gbcFilter.gridx = 0;
+        gbcFilter.gridy = 2;
+        gbcFilter.gridwidth = 2;
+        filterPanel.add(btnSearch, gbcFilter);
+        gbcFilter.gridx = 2;
+        filterPanel.add(btnReset, gbcFilter);
+
+        JPanel lowerPanel = new JPanel();
+        AppTheme.stylePanel(lowerPanel);
+        lowerPanel.setLayout(new BoxLayout(lowerPanel, BoxLayout.Y_AXIS));
+        lowerPanel.add(buttonPanel);
+        lowerPanel.add(Box.createVerticalStrut(12));
+        lowerPanel.add(filterPanel);
+
+        crudPanel.add(formPanel, BorderLayout.CENTER);
+        crudPanel.add(lowerPanel, BorderLayout.SOUTH);
+
+        btnInsert.addActionListener(e -> insertData());
+        btnUpdate.addActionListener(e -> updateData());
+        btnDelete.addActionListener(e -> deleteData());
+        btnClear.addActionListener(e -> clearFields());
+        btnSearch.addActionListener(e -> loadData());
+        btnReset.addActionListener(e -> resetFilters());
 
         txtName.addActionListener(e -> autofillStudentIdentifier());
         txtName.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -228,53 +202,81 @@ public class CRUD_GUI extends JFrame {
                 autofillStudentIdentifier();
             }
         });
-
-        // EVENT LISTENER: Opens a calendar popup when the date field is clicked.
         txtDate.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 LocalDate picked = CalendarPopup.pickDate(CRUD_GUI.this, selectedDate);
                 if (picked != null) {
                     selectedDate = picked;
-                    
-                    // SUBJECT POPUP: After picking a date, user picks a subject.
-                    String pickedSubject = (String) JOptionPane.showInputDialog(
-                        CRUD_GUI.this, 
-                        "Select Subject:", 
-                        "Subject Selection", 
-                        JOptionPane.QUESTION_MESSAGE, 
-                        null, 
-                        SUBJECTS,
-                        selectedSubject
-                    );
-
-                    if (pickedSubject != null) {
-                        selectedSubject = pickedSubject;
-                        updateDateField();
-                    }
+                    updateDateField();
                 }
             }
         });
+        cmbSubjectEntry.addActionListener(e -> selectedSubject = cmbSubjectEntry.getSelectedItem().toString());
+        cmbFilterAttendance.addActionListener(e -> loadData());
+        cmbFilterSubject.addActionListener(e -> loadData());
+    }
 
-        // EVENT LISTENER: Fills the form fields when a user clicks a row in the table.
+    private void buildRightPanel() {
+        AppTheme.stylePanel(rightPanel);
+        rightPanel.setBorder(AppTheme.createSectionBorder("Views and Inserted Students", WINDOW_MARGIN));
+
+        JPanel topPanel = new JPanel();
+        AppTheme.stylePanel(topPanel);
+        topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
+
+        JButton btnTeacherView = new JButton("Teacher View");
+        JButton btnAttendanceSummary = new JButton("Attendance Summary");
+        styleButtons(btnTeacherView, btnAttendanceSummary);
+        JPanel viewButtonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 0));
+        AppTheme.stylePanel(viewButtonPanel);
+        viewButtonPanel.add(btnTeacherView);
+        viewButtonPanel.add(btnAttendanceSummary);
+
+        topPanel.add(viewButtonPanel);
+
+        model = new DefaultTableModel(new String[]{"Record ID", "Student ID", "Student Name", "Subject", "Date", "Time In", "Time Out", "Attendance", "Remarks"}, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        table = new JTable(model);
+        table.setRowHeight(30);
+        table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 15));
+        table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+        AppTheme.styleTable(table);
+        table.removeColumn(table.getColumnModel().getColumn(0));
+
+        JScrollPane scrollPane = new JScrollPane(table);
+        AppTheme.styleScrollPane(scrollPane);
+        rightPanel.add(topPanel, BorderLayout.NORTH);
+        rightPanel.add(scrollPane, BorderLayout.CENTER);
+
+        btnTeacherView.addActionListener(e -> openTeacherDashboard());
+        btnAttendanceSummary.addActionListener(e -> openAttendanceSummary());
+
         table.addMouseListener(new MouseAdapter() {
+            @Override
             public void mouseClicked(MouseEvent e) {
                 int i = table.getSelectedRow();
-                if (i < 0) return;
+                if (i < 0) {
+                    return;
+                }
 
                 txtId.setText(model.getValueAt(i, 0).toString());
                 txtStudentIdentifier.setText(model.getValueAt(i, 1).toString());
                 txtName.setText(model.getValueAt(i, 2).toString());
                 selectedSubject = model.getValueAt(i, 3).toString();
-                
+                cmbSubjectEntry.setSelectedItem(selectedSubject);
+
                 Object dateValue = model.getValueAt(i, 4);
                 if (dateValue instanceof java.util.Date) {
                     java.util.Date d = (java.util.Date) dateValue;
                     selectedDate = new java.sql.Date(d.getTime()).toLocalDate();
                 } else if (dateValue != null) {
                     try {
-                        java.sql.Date sqlDate = java.sql.Date.valueOf(dateValue.toString());
-                        selectedDate = sqlDate.toLocalDate();
+                        selectedDate = java.sql.Date.valueOf(dateValue.toString()).toLocalDate();
                     } catch (Exception ignore) {
                         selectedDate = LocalDate.now();
                     }
@@ -287,7 +289,72 @@ public class CRUD_GUI extends JFrame {
         });
     }
 
-    // VOID METHOD: Handles database creation, table creation, and schema updates.
+    private void updateResponsiveLayout() {
+        boolean shouldStack = getWidth() < RESPONSIVE_BREAKPOINT;
+        if (responsiveBody.getComponentCount() > 0 && stackedLayout == shouldStack) {
+            return;
+        }
+
+        stackedLayout = shouldStack;
+        responsiveBody.removeAll();
+
+        if (shouldStack) {
+            JPanel stacked = new JPanel();
+            stacked.setLayout(new BoxLayout(stacked, BoxLayout.Y_AXIS));
+            stacked.add(crudPanel);
+            stacked.add(Box.createVerticalStrut(12));
+            stacked.add(rightPanel);
+            responsiveBody.add(new JScrollPane(stacked), BorderLayout.CENTER);
+        } else {
+            JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, crudPanel, rightPanel);
+            splitPane.setResizeWeight(0.35);
+            splitPane.setBorder(null);
+            responsiveBody.add(splitPane, BorderLayout.CENTER);
+        }
+
+        responsiveBody.revalidate();
+        responsiveBody.repaint();
+    }
+
+    private void addFormRow(JPanel panel, GridBagConstraints gbc, int row, String label, JComponent field) {
+        gbc.gridx = 0;
+        gbc.gridy = row;
+        gbc.weightx = 0;
+        panel.add(new JLabel(label), gbc);
+
+        gbc.gridx = 1;
+        gbc.weightx = 1;
+        panel.add(field, gbc);
+    }
+
+    private void addFilterRow(JPanel panel, GridBagConstraints gbc, int row, String leftLabel, JComponent leftField, String rightLabel, JComponent rightField) {
+        gbc.gridx = 0;
+        gbc.gridy = row;
+        gbc.weightx = 0;
+        panel.add(new JLabel(leftLabel), gbc);
+        gbc.gridx = 1;
+        gbc.weightx = 1;
+        panel.add(leftField, gbc);
+        gbc.gridx = 2;
+        gbc.weightx = 0;
+        panel.add(new JLabel(rightLabel), gbc);
+        gbc.gridx = 3;
+        gbc.weightx = 1;
+        panel.add(rightField, gbc);
+    }
+
+    private void styleButtons(AbstractButton... buttons) {
+        for (AbstractButton button : buttons) {
+            AppTheme.styleButton(button);
+        }
+    }
+
+    private void styleInputs(JComponent... inputs) {
+        for (JComponent input : inputs) {
+            AppTheme.styleInput(input);
+        }
+    }
+
     void setupDatabase() {
         try {
             Connection tempCon = DriverManager.getConnection(URL, USER, PASS);
@@ -317,8 +384,6 @@ public class CRUD_GUI extends JFrame {
             );
 
             ensureStudentsTableSchema(dbStmt);
-
-            // SCHEMA UPDATES: Checks if 'remarks', 'attendance_time', or 'subject_name' columns exist.
             ensureColumnExists("attendance_records", "remarks", "ALTER TABLE attendance_records ADD COLUMN remarks TEXT NULL");
             ensureColumnExists("attendance_records", "attendance_time", "ALTER TABLE attendance_records ADD COLUMN attendance_time VARCHAR(20) NOT NULL DEFAULT '---'");
             ensureColumnExists("attendance_records", "time_out", "ALTER TABLE attendance_records ADD COLUMN time_out VARCHAR(20) NULL");
@@ -327,14 +392,12 @@ public class CRUD_GUI extends JFrame {
 
             migrateExistingStudents();
             databaseReady = true;
-
         } catch (Exception e) {
             databaseReady = false;
             JOptionPane.showMessageDialog(this, "Database setup failed: " + e.getMessage());
         }
     }
 
-    // VOID METHOD: Reads data from MySQL and populates the JTable. Supports searching.
     void loadData() {
         if (!isDatabaseReady()) {
             return;
@@ -342,10 +405,10 @@ public class CRUD_GUI extends JFrame {
 
         String searchText = txtSearch == null ? "" : txtSearch.getText().trim();
         String filterDate = txtFilterDate == null ? "" : txtFilterDate.getText().trim();
-        String filterStatus = (cmbFilterAttendance == null || cmbFilterAttendance.getSelectedIndex() == 0) 
-                              ? "" : cmbFilterAttendance.getSelectedItem().toString();
+        String filterStatus = (cmbFilterAttendance == null || cmbFilterAttendance.getSelectedIndex() == 0)
+                ? "" : cmbFilterAttendance.getSelectedItem().toString();
         String filterSubject = (cmbFilterSubject == null || cmbFilterSubject.getSelectedIndex() == 0)
-                              ? "" : cmbFilterSubject.getSelectedItem().toString();
+                ? "" : cmbFilterSubject.getSelectedItem().toString();
 
         if (!filterDate.isEmpty() && !isValidDate(filterDate)) {
             JOptionPane.showMessageDialog(this, "Filter date must be in YYYY-MM-DD format.");
@@ -353,7 +416,7 @@ public class CRUD_GUI extends JFrame {
         }
 
         try {
-            model.setRowCount(0); // Clear table before reloading.
+            model.setRowCount(0);
 
             StringBuilder sql = new StringBuilder(
                     "SELECT id, student_identifier, student_name, subject_name, attendance_status, attendance_date, attendance_time, time_out, remarks " +
@@ -414,19 +477,23 @@ public class CRUD_GUI extends JFrame {
         }
     }
 
-    // VOID METHOD: Inserts a new record into the database (CREATE in CRUD).
     void insertData() {
         if (!isDatabaseReady()) {
             return;
         }
-        if (!validateForm(false)) return;
+        if (!validateForm(false)) {
+            return;
+        }
 
         try {
             String studentName = txtName.getText().trim();
             String studentIdentifier = ensureStudentIdentifierForName(studentName);
-            if (studentIdentifier == null) return;
+            if (studentIdentifier == null) {
+                return;
+            }
             txtStudentIdentifier.setText(studentIdentifier);
             String status = cmbAttendance.getSelectedItem().toString();
+            selectedSubject = cmbSubjectEntry.getSelectedItem().toString();
 
             PreparedStatement existingPst = con.prepareStatement(
                     "SELECT id, attendance_time, time_out FROM attendance_records WHERE student_identifier = ? AND attendance_date = ? AND subject_name = ? LIMIT 1"
@@ -480,18 +547,22 @@ public class CRUD_GUI extends JFrame {
         }
     }
 
-    // VOID METHOD: Updates an existing record based on the ID (UPDATE in CRUD).
     void updateData() {
         if (!isDatabaseReady()) {
             return;
         }
-        if (!validateForm(true)) return;
+        if (!validateForm(true)) {
+            return;
+        }
 
         try {
             String studentName = txtName.getText().trim();
             String studentIdentifier = ensureStudentIdentifierForName(studentName);
-            if (studentIdentifier == null) return;
+            if (studentIdentifier == null) {
+                return;
+            }
             txtStudentIdentifier.setText(studentIdentifier);
+            selectedSubject = cmbSubjectEntry.getSelectedItem().toString();
 
             PreparedStatement duplicateCheck = con.prepareStatement(
                     "SELECT 1 FROM attendance_records WHERE student_identifier = ? AND attendance_date = ? AND subject_name = ? AND id <> ?"
@@ -528,13 +599,23 @@ public class CRUD_GUI extends JFrame {
         }
     }
 
-    // VOID METHOD: Removes a record from the database using its ID (DELETE in CRUD).
     void deleteData() {
         if (!isDatabaseReady()) {
             return;
         }
         if (txtId.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Select a record first before deleting.");
+            return;
+        }
+
+        int confirm = JOptionPane.showConfirmDialog(
+                this,
+                "Delete the selected attendance record?",
+                "Confirm Delete",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE
+        );
+        if (confirm != JOptionPane.YES_OPTION) {
             return;
         }
 
@@ -553,7 +634,6 @@ public class CRUD_GUI extends JFrame {
         }
     }
 
-    // BOOLEAN METHOD: Returns true if the form is valid, false if fields are missing.
     boolean validateForm(boolean requireId) {
         if (requireId && txtId.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Select a record first.");
@@ -570,7 +650,6 @@ public class CRUD_GUI extends JFrame {
         return true;
     }
 
-    // BOOLEAN METHOD: Validates if a string follows the correct YYYY-MM-DD format.
     boolean isValidDate(String value) {
         try {
             Date.valueOf(value);
@@ -580,13 +659,13 @@ public class CRUD_GUI extends JFrame {
         }
     }
 
-    // VOID METHOD: Resets all UI components to their default empty state.
     void clearFields() {
         txtId.setText("");
         txtStudentIdentifier.setText("");
         txtName.setText("");
         selectedDate = LocalDate.now();
         selectedSubject = "General";
+        cmbSubjectEntry.setSelectedItem(selectedSubject);
         updateDateField();
         txtRemarks.setText("");
         cmbAttendance.setSelectedIndex(0);
@@ -594,7 +673,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void updateDateField() {
-        txtDate.setText(selectedDate.format(DATE_FORMATTER) + " | " + selectedSubject);
+        txtDate.setText(selectedDate.format(DATE_FORMATTER));
     }
 
     boolean isValidStudentNameFormat(String studentName) {
@@ -695,9 +774,7 @@ public class CRUD_GUI extends JFrame {
     void ensureStudentsTableSchema(Statement dbStmt) throws Exception {
         ensureColumnExists("students", "student_name", "ALTER TABLE students ADD COLUMN student_name VARCHAR(100) NOT NULL DEFAULT ''");
         ensureColumnExists("students", "student_identifier", "ALTER TABLE students ADD COLUMN student_identifier VARCHAR(50) NULL");
-
         backfillStudentIdentifiers();
-
         ensureIndexExists("students", "idx_students_student_identifier", "CREATE UNIQUE INDEX idx_students_student_identifier ON students(student_identifier)");
     }
 
@@ -804,9 +881,7 @@ public class CRUD_GUI extends JFrame {
         String base = prefix + year;
 
         PreparedStatement pst = con.prepareStatement(
-                "SELECT student_identifier FROM students " +
-                        "WHERE student_identifier LIKE ? " +
-                        "ORDER BY student_identifier DESC LIMIT 1"
+                "SELECT student_identifier FROM students WHERE student_identifier LIKE ? ORDER BY student_identifier DESC LIMIT 1"
         );
         pst.setString(1, base + "%");
         ResultSet rs = pst.executeQuery();
@@ -850,7 +925,6 @@ public class CRUD_GUI extends JFrame {
         return generateAutomaticStudentIdentifier();
     }
 
-    // STATIC INNER CLASS: A custom calendar dialog for selecting dates.
     static class CalendarPopup {
         static LocalDate pickDate(Component parent, LocalDate initial) {
             JDialog dialog = new JDialog(SwingUtilities.getWindowAncestor(parent), "Select Date", Dialog.ModalityType.APPLICATION_MODAL);
@@ -881,7 +955,6 @@ public class CRUD_GUI extends JFrame {
             footer.add(cancel);
             root.add(footer, BorderLayout.SOUTH);
 
-            // RUNNABLE: Logic to redraw the calendar when the user changes months.
             Runnable rebuild = () -> {
                 grid.removeAll();
                 YearMonth ym = shownMonth[0];
@@ -895,13 +968,17 @@ public class CRUD_GUI extends JFrame {
                 }
 
                 int firstDayIndex = ym.atDay(1).getDayOfWeek().getValue() % 7;
-                for (int i = 0; i < firstDayIndex; i++) grid.add(new JLabel(""));
+                for (int i = 0; i < firstDayIndex; i++) {
+                    grid.add(new JLabel(""));
+                }
 
                 int length = ym.lengthOfMonth();
                 for (int day = 1; day <= length; day++) {
                     LocalDate d = ym.atDay(day);
                     JButton b = new JButton(String.valueOf(day));
-                    if (d.equals(LocalDate.now())) b.setFont(b.getFont().deriveFont(Font.BOLD));
+                    if (d.equals(LocalDate.now())) {
+                        b.setFont(b.getFont().deriveFont(Font.BOLD));
+                    }
                     b.addActionListener(e -> {
                         result[0] = d;
                         dialog.dispose();
@@ -914,9 +991,18 @@ public class CRUD_GUI extends JFrame {
                 grid.repaint();
             };
 
-            prev.addActionListener(e -> { shownMonth[0] = shownMonth[0].minusMonths(1); rebuild.run(); });
-            next.addActionListener(e -> { shownMonth[0] = shownMonth[0].plusMonths(1); rebuild.run(); });
-            cancel.addActionListener(e -> { result[0] = null; dialog.dispose(); });
+            prev.addActionListener(e -> {
+                shownMonth[0] = shownMonth[0].minusMonths(1);
+                rebuild.run();
+            });
+            next.addActionListener(e -> {
+                shownMonth[0] = shownMonth[0].plusMonths(1);
+                rebuild.run();
+            });
+            cancel.addActionListener(e -> {
+                result[0] = null;
+                dialog.dispose();
+            });
 
             dialog.setContentPane(root);
             dialog.setResizable(false);
@@ -927,7 +1013,6 @@ public class CRUD_GUI extends JFrame {
         }
     }
 
-    // PRIVATE STATIC METHOD: Displays a login window before the main app opens.
     private static boolean showLoginDialog() {
         final JDialog dialog = new JDialog((Frame) null, "Login", true);
         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -947,12 +1032,14 @@ public class CRUD_GUI extends JFrame {
         JTextField txtUsername = new JTextField(18);
         JPasswordField txtPassword = new JPasswordField(18);
 
-        gbc.gridx = 0; gbc.gridy = 0;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
         form.add(new JLabel("Username:"), gbc);
         gbc.gridx = 1;
         form.add(txtUsername, gbc);
 
-        gbc.gridx = 0; gbc.gridy = 1;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
         form.add(new JLabel("Password:"), gbc);
         gbc.gridx = 1;
         form.add(txtPassword, gbc);
@@ -986,7 +1073,6 @@ public class CRUD_GUI extends JFrame {
         return authenticated[0];
     }
 
-    // PRIVATE STATIC METHOD: Applies a uniform font to all UI components for accessibility.
     private static void setUIFont(javax.swing.plaf.FontUIResource f) {
         java.util.Enumeration<Object> keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()) {
@@ -998,7 +1084,6 @@ public class CRUD_GUI extends JFrame {
         }
     }
 
-    // PUBLIC STATIC VOID MAIN: The entry point of the program.
     public static void main(String[] args) {
         setUIFont(new javax.swing.plaf.FontUIResource(new Font("Arial", Font.PLAIN, 18)));
         SwingUtilities.invokeLater(() -> {
