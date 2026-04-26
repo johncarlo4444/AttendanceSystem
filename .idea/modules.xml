@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Java-MySQL Based Attendance Monitoring System for College Students at MSEUF-Candelaria.iml" filepath="$PROJECT_DIR$/Java-MySQL Based Attendance Monitoring System for College Students at MSEUF-Candelaria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AttendanceSystem.iml" filepath="$PROJECT_DIR$/AttendanceSystem.iml" />
     </modules>
   </component>
 </project>

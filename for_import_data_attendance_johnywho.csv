@@ -1,0 +1,1811 @@
+id,student_identifier,student_name,subject_name,attendance_status,attendance_date,attendance_time,time_out,remarks
+1,IL2601,"Ilagan, John Carlo",General,Present,2026-04-01,8:00 AM,8:59 AM,
+2,AU2601,"Aurelio, Harold",General,Present,2026-04-01,8:00 AM,8:59 AM,
+3,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-01,8:00 AM,8:59 AM,
+4,ES2601,"Escalona, Christan",General,Present,2026-04-01,8:00 AM,8:59 AM,
+5,BA2602,"Baera, Julliane",General,Present,2026-04-01,8:00 AM,8:59 AM,
+6,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-01,9:14 AM,9:59 AM,Na-traffic
+7,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-01,,,May sakit
+8,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-01,,,Player
+9,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-01,9:00 AM,9:59 AM,
+10,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-01,9:00 AM,9:59 AM,
+11,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-01,10:00 AM,10:59 AM,
+12,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-01,10:00 AM,10:59 AM,
+13,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-01,10:00 AM,10:59 AM,
+14,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-01,10:00 AM,10:59 AM,
+15,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-01,10:00 AM,10:59 AM,
+16,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-01,11:14 AM,11:59 AM,Kumain pa
+17,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-01,,,Nagcutting
+18,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-01,,,Player
+19,ES2601,"Escalona, Christan",Calculus,Present,2026-04-01,11:00 AM,11:59 AM,
+20,BA2602,"Baera, Julliane",Calculus,Present,2026-04-01,11:00 AM,11:59 AM,
+21,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-01,1:00 PM,1:59 PM,
+22,AU2601,"Aurelio, Harold",Physics,Present,2026-04-01,1:00 PM,1:59 PM,
+23,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-01,1:00 PM,1:59 PM,
+24,ES2601,"Escalona, Christan",Physics,Present,2026-04-01,1:00 PM,1:59 PM,
+25,BA2602,"Baera, Julliane",Physics,Present,2026-04-01,1:00 PM,1:59 PM,
+26,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-01,2:00 PM,2:59 PM,
+27,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-01,2:00 PM,2:59 PM,
+28,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-01,2:00 PM,2:59 PM,
+29,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-01,2:00 PM,2:59 PM,
+30,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-01,2:00 PM,2:59 PM,
+31,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-01,3:00 PM,3:59 PM,
+32,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-01,3:00 PM,3:59 PM,
+33,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-01,3:00 PM,3:59 PM,
+34,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-01,3:00 PM,3:59 PM,
+35,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-01,3:00 PM,3:59 PM,
+36,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-01,4:00 PM,4:59 PM,
+37,AU2601,"Aurelio, Harold",University and I,Present,2026-04-01,4:00 PM,4:59 PM,
+38,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-01,4:14 PM,4:59 PM,Di alam room
+39,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-01,4:00 PM,4:59 PM,Player
+40,BA2602,"Baera, Julliane",University and I,Absent,2026-04-01,,,Nagcutting
+41,IL2601,"Ilagan, John Carlo",General,Present,2026-04-02,8:00 AM,8:59 AM,
+42,AU2601,"Aurelio, Harold",General,Present,2026-04-02,8:00 AM,8:59 AM,
+43,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-02,8:00 AM,8:59 AM,
+44,ES2601,"Escalona, Christan",General,Present,2026-04-02,8:00 AM,8:59 AM,
+45,BA2602,"Baera, Julliane",General,Present,2026-04-02,8:00 AM,8:59 AM,
+46,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-02,9:14 AM,9:59 AM,Na-traffic
+47,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-02,,,May sakit
+48,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-02,,,Player
+49,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-02,9:00 AM,9:59 AM,
+50,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-02,9:00 AM,9:59 AM,
+51,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-02,10:00 AM,10:59 AM,
+52,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-02,10:00 AM,10:59 AM,
+53,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-02,10:00 AM,10:59 AM,
+54,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-02,10:00 AM,10:59 AM,
+55,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-02,10:00 AM,10:59 AM,
+56,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-02,11:14 AM,11:59 AM,Kumain pa
+57,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-02,,,Nagcutting
+58,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-02,,,Player
+59,ES2601,"Escalona, Christan",Calculus,Present,2026-04-02,11:00 AM,11:59 AM,
+60,BA2602,"Baera, Julliane",Calculus,Present,2026-04-02,11:00 AM,11:59 AM,
+61,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-02,1:00 PM,1:59 PM,
+62,AU2601,"Aurelio, Harold",Physics,Present,2026-04-02,1:00 PM,1:59 PM,
+63,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-02,1:00 PM,1:59 PM,
+64,ES2601,"Escalona, Christan",Physics,Present,2026-04-02,1:00 PM,1:59 PM,
+65,BA2602,"Baera, Julliane",Physics,Present,2026-04-02,1:00 PM,1:59 PM,
+66,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-02,2:00 PM,2:59 PM,
+67,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-02,2:00 PM,2:59 PM,
+68,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-02,2:00 PM,2:59 PM,
+69,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-02,2:00 PM,2:59 PM,
+70,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-02,2:00 PM,2:59 PM,
+71,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-02,3:00 PM,3:59 PM,
+72,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-02,3:00 PM,3:59 PM,
+73,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-02,3:00 PM,3:59 PM,
+74,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-02,3:00 PM,3:59 PM,
+75,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-02,3:00 PM,3:59 PM,
+76,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-02,4:00 PM,4:59 PM,
+77,AU2601,"Aurelio, Harold",University and I,Present,2026-04-02,4:00 PM,4:59 PM,
+78,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-02,4:14 PM,4:59 PM,Di alam room
+79,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-02,4:00 PM,4:59 PM,Player
+80,BA2602,"Baera, Julliane",University and I,Absent,2026-04-02,,,Nagcutting
+81,IL2601,"Ilagan, John Carlo",General,Present,2026-04-03,8:00 AM,8:59 AM,
+82,AU2601,"Aurelio, Harold",General,Present,2026-04-03,8:00 AM,8:59 AM,
+83,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-03,8:00 AM,8:59 AM,
+84,ES2601,"Escalona, Christan",General,Present,2026-04-03,8:00 AM,8:59 AM,
+85,BA2602,"Baera, Julliane",General,Present,2026-04-03,8:00 AM,8:59 AM,
+86,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-03,9:14 AM,9:59 AM,Na-traffic
+87,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-03,,,May sakit
+88,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-03,,,Player
+89,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-03,9:00 AM,9:59 AM,
+90,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-03,9:00 AM,9:59 AM,
+91,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-03,10:00 AM,10:59 AM,
+92,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-03,10:00 AM,10:59 AM,
+93,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-03,10:00 AM,10:59 AM,
+94,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-03,10:00 AM,10:59 AM,
+95,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-03,10:00 AM,10:59 AM,
+96,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-03,11:14 AM,11:59 AM,Kumain pa
+97,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-03,,,Nagcutting
+98,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-03,,,Player
+99,ES2601,"Escalona, Christan",Calculus,Present,2026-04-03,11:00 AM,11:59 AM,
+100,BA2602,"Baera, Julliane",Calculus,Present,2026-04-03,11:00 AM,11:59 AM,
+101,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-03,1:00 PM,1:59 PM,
+102,AU2601,"Aurelio, Harold",Physics,Present,2026-04-03,1:00 PM,1:59 PM,
+103,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-03,1:00 PM,1:59 PM,
+104,ES2601,"Escalona, Christan",Physics,Present,2026-04-03,1:00 PM,1:59 PM,
+105,BA2602,"Baera, Julliane",Physics,Present,2026-04-03,1:00 PM,1:59 PM,
+106,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-03,2:00 PM,2:59 PM,
+107,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-03,2:00 PM,2:59 PM,
+108,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-03,2:00 PM,2:59 PM,
+109,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-03,2:00 PM,2:59 PM,
+110,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-03,2:00 PM,2:59 PM,
+111,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-03,3:00 PM,3:59 PM,
+112,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-03,3:00 PM,3:59 PM,
+113,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-03,3:00 PM,3:59 PM,
+114,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-03,3:00 PM,3:59 PM,
+115,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-03,3:00 PM,3:59 PM,
+116,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-03,4:00 PM,4:59 PM,
+117,AU2601,"Aurelio, Harold",University and I,Present,2026-04-03,4:00 PM,4:59 PM,
+118,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-03,4:14 PM,4:59 PM,Di alam room
+119,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-03,4:00 PM,4:59 PM,Player
+120,BA2602,"Baera, Julliane",University and I,Absent,2026-04-03,,,Nagcutting
+121,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-04-04,8:00 AM,8:59 AM,
+122,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-04-04,8:00 AM,8:59 AM,
+123,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-04-04,8:00 AM,8:59 AM,
+124,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-04-04,8:00 AM,8:59 AM,
+125,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-04-04,8:00 AM,8:59 AM,
+126,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-04-04,9:14 AM,9:59 AM,Na-traffic
+127,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-04-04,,,May sakit
+128,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-04-04,,,Player
+129,ES2601,"Escalona, Christan",Physical Education,Present,2026-04-04,9:00 AM,9:59 AM,
+130,BA2602,"Baera, Julliane",Physical Education,Present,2026-04-04,9:00 AM,9:59 AM,
+131,IL2601,"Ilagan, John Carlo",General,Present,2026-04-06,8:00 AM,8:59 AM,
+132,AU2601,"Aurelio, Harold",General,Present,2026-04-06,8:00 AM,8:59 AM,
+133,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-06,8:00 AM,8:59 AM,
+134,ES2601,"Escalona, Christan",General,Present,2026-04-06,8:00 AM,8:59 AM,
+135,BA2602,"Baera, Julliane",General,Present,2026-04-06,8:00 AM,8:59 AM,
+136,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-06,9:14 AM,9:59 AM,Na-traffic
+137,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-06,,,May sakit
+138,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-06,,,Player
+139,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-06,9:00 AM,9:59 AM,
+140,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-06,9:00 AM,9:59 AM,
+141,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-06,10:00 AM,10:59 AM,
+142,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-06,10:00 AM,10:59 AM,
+143,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-06,10:00 AM,10:59 AM,
+144,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-06,10:00 AM,10:59 AM,
+145,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-06,10:00 AM,10:59 AM,
+146,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-06,11:14 AM,11:59 AM,Kumain pa
+147,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-06,,,Nagcutting
+148,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-06,,,Player
+149,ES2601,"Escalona, Christan",Calculus,Present,2026-04-06,11:00 AM,11:59 AM,
+150,BA2602,"Baera, Julliane",Calculus,Present,2026-04-06,11:00 AM,11:59 AM,
+151,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-06,1:00 PM,1:59 PM,
+152,AU2601,"Aurelio, Harold",Physics,Present,2026-04-06,1:00 PM,1:59 PM,
+153,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-06,1:00 PM,1:59 PM,
+154,ES2601,"Escalona, Christan",Physics,Present,2026-04-06,1:00 PM,1:59 PM,
+155,BA2602,"Baera, Julliane",Physics,Present,2026-04-06,1:00 PM,1:59 PM,
+156,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-06,2:00 PM,2:59 PM,
+157,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-06,2:00 PM,2:59 PM,
+158,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-06,2:00 PM,2:59 PM,
+159,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-06,2:00 PM,2:59 PM,
+160,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-06,2:00 PM,2:59 PM,
+161,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-06,3:00 PM,3:59 PM,
+162,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-06,3:00 PM,3:59 PM,
+163,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-06,3:00 PM,3:59 PM,
+164,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-06,3:00 PM,3:59 PM,
+165,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-06,3:00 PM,3:59 PM,
+166,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-06,4:00 PM,4:59 PM,
+167,AU2601,"Aurelio, Harold",University and I,Present,2026-04-06,4:00 PM,4:59 PM,
+168,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-06,4:14 PM,4:59 PM,Di alam room
+169,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-06,4:00 PM,4:59 PM,Player
+170,BA2602,"Baera, Julliane",University and I,Absent,2026-04-06,,,Nagcutting
+171,IL2601,"Ilagan, John Carlo",General,Present,2026-04-07,8:00 AM,8:59 AM,
+172,AU2601,"Aurelio, Harold",General,Present,2026-04-07,8:00 AM,8:59 AM,
+173,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-07,8:00 AM,8:59 AM,
+174,ES2601,"Escalona, Christan",General,Present,2026-04-07,8:00 AM,8:59 AM,
+175,BA2602,"Baera, Julliane",General,Present,2026-04-07,8:00 AM,8:59 AM,
+176,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-07,9:14 AM,9:59 AM,Na-traffic
+177,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-07,,,May sakit
+178,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-07,,,Player
+179,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-07,9:00 AM,9:59 AM,
+180,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-07,9:00 AM,9:59 AM,
+181,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-07,10:00 AM,10:59 AM,
+182,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-07,10:00 AM,10:59 AM,
+183,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-07,10:00 AM,10:59 AM,
+184,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-07,10:00 AM,10:59 AM,
+185,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-07,10:00 AM,10:59 AM,
+186,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-07,11:14 AM,11:59 AM,Kumain pa
+187,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-07,,,Nagcutting
+188,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-07,,,Player
+189,ES2601,"Escalona, Christan",Calculus,Present,2026-04-07,11:00 AM,11:59 AM,
+190,BA2602,"Baera, Julliane",Calculus,Present,2026-04-07,11:00 AM,11:59 AM,
+191,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-07,1:00 PM,1:59 PM,
+192,AU2601,"Aurelio, Harold",Physics,Present,2026-04-07,1:00 PM,1:59 PM,
+193,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-07,1:00 PM,1:59 PM,
+194,ES2601,"Escalona, Christan",Physics,Present,2026-04-07,1:00 PM,1:59 PM,
+195,BA2602,"Baera, Julliane",Physics,Present,2026-04-07,1:00 PM,1:59 PM,
+196,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-07,2:00 PM,2:59 PM,
+197,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-07,2:00 PM,2:59 PM,
+198,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-07,2:00 PM,2:59 PM,
+199,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-07,2:00 PM,2:59 PM,
+200,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-07,2:00 PM,2:59 PM,
+201,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-07,3:00 PM,3:59 PM,
+202,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-07,3:00 PM,3:59 PM,
+203,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-07,3:00 PM,3:59 PM,
+204,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-07,3:00 PM,3:59 PM,
+205,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-07,3:00 PM,3:59 PM,
+206,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-07,4:00 PM,4:59 PM,
+207,AU2601,"Aurelio, Harold",University and I,Present,2026-04-07,4:00 PM,4:59 PM,
+208,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-07,4:14 PM,4:59 PM,Di alam room
+209,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-07,4:00 PM,4:59 PM,Player
+210,BA2602,"Baera, Julliane",University and I,Absent,2026-04-07,,,Nagcutting
+211,IL2601,"Ilagan, John Carlo",General,Present,2026-04-08,8:00 AM,8:59 AM,
+212,AU2601,"Aurelio, Harold",General,Present,2026-04-08,8:00 AM,8:59 AM,
+213,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-08,8:00 AM,8:59 AM,
+214,ES2601,"Escalona, Christan",General,Present,2026-04-08,8:00 AM,8:59 AM,
+215,BA2602,"Baera, Julliane",General,Present,2026-04-08,8:00 AM,8:59 AM,
+216,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-08,9:14 AM,9:59 AM,Na-traffic
+217,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-08,,,May sakit
+218,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-08,,,Player
+219,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-08,9:00 AM,9:59 AM,
+220,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-08,9:00 AM,9:59 AM,
+221,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-08,10:00 AM,10:59 AM,
+222,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-08,10:00 AM,10:59 AM,
+223,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-08,10:00 AM,10:59 AM,
+224,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-08,10:00 AM,10:59 AM,
+225,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-08,10:00 AM,10:59 AM,
+226,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-08,11:14 AM,11:59 AM,Kumain pa
+227,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-08,,,Nagcutting
+228,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-08,,,Player
+229,ES2601,"Escalona, Christan",Calculus,Present,2026-04-08,11:00 AM,11:59 AM,
+230,BA2602,"Baera, Julliane",Calculus,Present,2026-04-08,11:00 AM,11:59 AM,
+231,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-08,1:00 PM,1:59 PM,
+232,AU2601,"Aurelio, Harold",Physics,Present,2026-04-08,1:00 PM,1:59 PM,
+233,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-08,1:00 PM,1:59 PM,
+234,ES2601,"Escalona, Christan",Physics,Present,2026-04-08,1:00 PM,1:59 PM,
+235,BA2602,"Baera, Julliane",Physics,Present,2026-04-08,1:00 PM,1:59 PM,
+236,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-08,2:00 PM,2:59 PM,
+237,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-08,2:00 PM,2:59 PM,
+238,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-08,2:00 PM,2:59 PM,
+239,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-08,2:00 PM,2:59 PM,
+240,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-08,2:00 PM,2:59 PM,
+241,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-08,3:00 PM,3:59 PM,
+242,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-08,3:00 PM,3:59 PM,
+243,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-08,3:00 PM,3:59 PM,
+244,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-08,3:00 PM,3:59 PM,
+245,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-08,3:00 PM,3:59 PM,
+246,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-08,4:00 PM,4:59 PM,
+247,AU2601,"Aurelio, Harold",University and I,Present,2026-04-08,4:00 PM,4:59 PM,
+248,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-08,4:14 PM,4:59 PM,Di alam room
+249,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-08,4:00 PM,4:59 PM,Player
+250,BA2602,"Baera, Julliane",University and I,Absent,2026-04-08,,,Nagcutting
+251,IL2601,"Ilagan, John Carlo",General,Present,2026-04-09,8:00 AM,8:59 AM,
+252,AU2601,"Aurelio, Harold",General,Present,2026-04-09,8:00 AM,8:59 AM,
+253,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-09,8:00 AM,8:59 AM,
+254,ES2601,"Escalona, Christan",General,Present,2026-04-09,8:00 AM,8:59 AM,
+255,BA2602,"Baera, Julliane",General,Present,2026-04-09,8:00 AM,8:59 AM,
+256,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-09,9:14 AM,9:59 AM,Na-traffic
+257,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-09,,,May sakit
+258,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-09,,,Player
+259,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-09,9:00 AM,9:59 AM,
+260,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-09,9:00 AM,9:59 AM,
+261,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-09,10:00 AM,10:59 AM,
+262,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-09,10:00 AM,10:59 AM,
+263,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-09,10:00 AM,10:59 AM,
+264,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-09,10:00 AM,10:59 AM,
+265,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-09,10:00 AM,10:59 AM,
+266,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-09,11:14 AM,11:59 AM,Kumain pa
+267,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-09,,,Nagcutting
+268,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-09,,,Player
+269,ES2601,"Escalona, Christan",Calculus,Present,2026-04-09,11:00 AM,11:59 AM,
+270,BA2602,"Baera, Julliane",Calculus,Present,2026-04-09,11:00 AM,11:59 AM,
+271,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-09,1:00 PM,1:59 PM,
+272,AU2601,"Aurelio, Harold",Physics,Present,2026-04-09,1:00 PM,1:59 PM,
+273,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-09,1:00 PM,1:59 PM,
+274,ES2601,"Escalona, Christan",Physics,Present,2026-04-09,1:00 PM,1:59 PM,
+275,BA2602,"Baera, Julliane",Physics,Present,2026-04-09,1:00 PM,1:59 PM,
+276,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-09,2:00 PM,2:59 PM,
+277,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-09,2:00 PM,2:59 PM,
+278,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-09,2:00 PM,2:59 PM,
+279,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-09,2:00 PM,2:59 PM,
+280,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-09,2:00 PM,2:59 PM,
+281,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-09,3:00 PM,3:59 PM,
+282,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-09,3:00 PM,3:59 PM,
+283,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-09,3:00 PM,3:59 PM,
+284,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-09,3:00 PM,3:59 PM,
+285,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-09,3:00 PM,3:59 PM,
+286,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-09,4:00 PM,4:59 PM,
+287,AU2601,"Aurelio, Harold",University and I,Present,2026-04-09,4:00 PM,4:59 PM,
+288,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-09,4:14 PM,4:59 PM,Di alam room
+289,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-09,4:00 PM,4:59 PM,Player
+290,BA2602,"Baera, Julliane",University and I,Absent,2026-04-09,,,Nagcutting
+291,IL2601,"Ilagan, John Carlo",General,Present,2026-04-10,8:00 AM,8:59 AM,
+292,AU2601,"Aurelio, Harold",General,Present,2026-04-10,8:00 AM,8:59 AM,
+293,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-10,8:00 AM,8:59 AM,
+294,ES2601,"Escalona, Christan",General,Present,2026-04-10,8:00 AM,8:59 AM,
+295,BA2602,"Baera, Julliane",General,Present,2026-04-10,8:00 AM,8:59 AM,
+296,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-10,9:14 AM,9:59 AM,Na-traffic
+297,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-10,,,May sakit
+298,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-10,,,Player
+299,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-10,9:00 AM,9:59 AM,
+300,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-10,9:00 AM,9:59 AM,
+301,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-10,10:00 AM,10:59 AM,
+302,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-10,10:00 AM,10:59 AM,
+303,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-10,10:00 AM,10:59 AM,
+304,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-10,10:00 AM,10:59 AM,
+305,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-10,10:00 AM,10:59 AM,
+306,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-10,11:14 AM,11:59 AM,Kumain pa
+307,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-10,,,Nagcutting
+308,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-10,,,Player
+309,ES2601,"Escalona, Christan",Calculus,Present,2026-04-10,11:00 AM,11:59 AM,
+310,BA2602,"Baera, Julliane",Calculus,Present,2026-04-10,11:00 AM,11:59 AM,
+311,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-10,1:00 PM,1:59 PM,
+312,AU2601,"Aurelio, Harold",Physics,Present,2026-04-10,1:00 PM,1:59 PM,
+313,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-10,1:00 PM,1:59 PM,
+314,ES2601,"Escalona, Christan",Physics,Present,2026-04-10,1:00 PM,1:59 PM,
+315,BA2602,"Baera, Julliane",Physics,Present,2026-04-10,1:00 PM,1:59 PM,
+316,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-10,2:00 PM,2:59 PM,
+317,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-10,2:00 PM,2:59 PM,
+318,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-10,2:00 PM,2:59 PM,
+319,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-10,2:00 PM,2:59 PM,
+320,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-10,2:00 PM,2:59 PM,
+321,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-10,3:00 PM,3:59 PM,
+322,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-10,3:00 PM,3:59 PM,
+323,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-10,3:00 PM,3:59 PM,
+324,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-10,3:00 PM,3:59 PM,
+325,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-10,3:00 PM,3:59 PM,
+326,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-10,4:00 PM,4:59 PM,
+327,AU2601,"Aurelio, Harold",University and I,Present,2026-04-10,4:00 PM,4:59 PM,
+328,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-10,4:14 PM,4:59 PM,Di alam room
+329,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-10,4:00 PM,4:59 PM,Player
+330,BA2602,"Baera, Julliane",University and I,Absent,2026-04-10,,,Nagcutting
+331,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-04-11,8:00 AM,8:59 AM,
+332,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-04-11,8:00 AM,8:59 AM,
+333,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-04-11,8:00 AM,8:59 AM,
+334,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-04-11,8:00 AM,8:59 AM,
+335,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-04-11,8:00 AM,8:59 AM,
+336,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-04-11,9:14 AM,9:59 AM,Na-traffic
+337,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-04-11,,,May sakit
+338,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-04-11,,,Player
+339,ES2601,"Escalona, Christan",Physical Education,Present,2026-04-11,9:00 AM,9:59 AM,
+340,BA2602,"Baera, Julliane",Physical Education,Present,2026-04-11,9:00 AM,9:59 AM,
+341,IL2601,"Ilagan, John Carlo",General,Present,2026-04-13,8:00 AM,8:59 AM,
+342,AU2601,"Aurelio, Harold",General,Present,2026-04-13,8:00 AM,8:59 AM,
+343,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-13,8:00 AM,8:59 AM,
+344,ES2601,"Escalona, Christan",General,Present,2026-04-13,8:00 AM,8:59 AM,
+345,BA2602,"Baera, Julliane",General,Present,2026-04-13,8:00 AM,8:59 AM,
+346,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-13,9:14 AM,9:59 AM,Na-traffic
+347,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-13,,,May sakit
+348,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-13,,,Player
+349,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-13,9:00 AM,9:59 AM,
+350,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-13,9:00 AM,9:59 AM,
+351,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-13,10:00 AM,10:59 AM,
+352,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-13,10:00 AM,10:59 AM,
+353,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-13,10:00 AM,10:59 AM,
+354,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-13,10:00 AM,10:59 AM,
+355,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-13,10:00 AM,10:59 AM,
+356,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-13,11:14 AM,11:59 AM,Kumain pa
+357,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-13,,,Nagcutting
+358,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-13,,,Player
+359,ES2601,"Escalona, Christan",Calculus,Present,2026-04-13,11:00 AM,11:59 AM,
+360,BA2602,"Baera, Julliane",Calculus,Present,2026-04-13,11:00 AM,11:59 AM,
+361,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-13,1:00 PM,1:59 PM,
+362,AU2601,"Aurelio, Harold",Physics,Present,2026-04-13,1:00 PM,1:59 PM,
+363,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-13,1:00 PM,1:59 PM,
+364,ES2601,"Escalona, Christan",Physics,Present,2026-04-13,1:00 PM,1:59 PM,
+365,BA2602,"Baera, Julliane",Physics,Present,2026-04-13,1:00 PM,1:59 PM,
+366,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-13,2:00 PM,2:59 PM,
+367,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-13,2:00 PM,2:59 PM,
+368,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-13,2:00 PM,2:59 PM,
+369,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-13,2:00 PM,2:59 PM,
+370,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-13,2:00 PM,2:59 PM,
+371,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-13,3:00 PM,3:59 PM,
+372,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-13,3:00 PM,3:59 PM,
+373,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-13,3:00 PM,3:59 PM,
+374,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-13,3:00 PM,3:59 PM,
+375,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-13,3:00 PM,3:59 PM,
+376,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-13,4:00 PM,4:59 PM,
+377,AU2601,"Aurelio, Harold",University and I,Present,2026-04-13,4:00 PM,4:59 PM,
+378,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-13,4:14 PM,4:59 PM,Di alam room
+379,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-13,4:00 PM,4:59 PM,Player
+380,BA2602,"Baera, Julliane",University and I,Absent,2026-04-13,,,Nagcutting
+381,IL2601,"Ilagan, John Carlo",General,Present,2026-04-14,8:00 AM,8:59 AM,
+382,AU2601,"Aurelio, Harold",General,Present,2026-04-14,8:00 AM,8:59 AM,
+383,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-14,8:00 AM,8:59 AM,
+384,ES2601,"Escalona, Christan",General,Present,2026-04-14,8:00 AM,8:59 AM,
+385,BA2602,"Baera, Julliane",General,Present,2026-04-14,8:00 AM,8:59 AM,
+386,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-14,9:14 AM,9:59 AM,Na-traffic
+387,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-14,,,May sakit
+388,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-14,,,Player
+389,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-14,9:00 AM,9:59 AM,
+390,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-14,9:00 AM,9:59 AM,
+391,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-14,10:00 AM,10:59 AM,
+392,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-14,10:00 AM,10:59 AM,
+393,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-14,10:00 AM,10:59 AM,
+394,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-14,10:00 AM,10:59 AM,
+395,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-14,10:00 AM,10:59 AM,
+396,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-14,11:14 AM,11:59 AM,Kumain pa
+397,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-14,,,Nagcutting
+398,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-14,,,Player
+399,ES2601,"Escalona, Christan",Calculus,Present,2026-04-14,11:00 AM,11:59 AM,
+400,BA2602,"Baera, Julliane",Calculus,Present,2026-04-14,11:00 AM,11:59 AM,
+401,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-14,1:00 PM,1:59 PM,
+402,AU2601,"Aurelio, Harold",Physics,Present,2026-04-14,1:00 PM,1:59 PM,
+403,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-14,1:00 PM,1:59 PM,
+404,ES2601,"Escalona, Christan",Physics,Present,2026-04-14,1:00 PM,1:59 PM,
+405,BA2602,"Baera, Julliane",Physics,Present,2026-04-14,1:00 PM,1:59 PM,
+406,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-14,2:00 PM,2:59 PM,
+407,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-14,2:00 PM,2:59 PM,
+408,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-14,2:00 PM,2:59 PM,
+409,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-14,2:00 PM,2:59 PM,
+410,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-14,2:00 PM,2:59 PM,
+411,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-14,3:00 PM,3:59 PM,
+412,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-14,3:00 PM,3:59 PM,
+413,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-14,3:00 PM,3:59 PM,
+414,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-14,3:00 PM,3:59 PM,
+415,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-14,3:00 PM,3:59 PM,
+416,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-14,4:00 PM,4:59 PM,
+417,AU2601,"Aurelio, Harold",University and I,Present,2026-04-14,4:00 PM,4:59 PM,
+418,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-14,4:14 PM,4:59 PM,Di alam room
+419,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-14,4:00 PM,4:59 PM,Player
+420,BA2602,"Baera, Julliane",University and I,Absent,2026-04-14,,,Nagcutting
+421,IL2601,"Ilagan, John Carlo",General,Present,2026-04-15,8:00 AM,8:59 AM,
+422,AU2601,"Aurelio, Harold",General,Present,2026-04-15,8:00 AM,8:59 AM,
+423,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-15,8:00 AM,8:59 AM,
+424,ES2601,"Escalona, Christan",General,Present,2026-04-15,8:00 AM,8:59 AM,
+425,BA2602,"Baera, Julliane",General,Present,2026-04-15,8:00 AM,8:59 AM,
+426,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-15,9:14 AM,9:59 AM,Na-traffic
+427,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-15,,,May sakit
+428,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-15,,,Player
+429,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-15,9:00 AM,9:59 AM,
+430,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-15,9:00 AM,9:59 AM,
+431,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-15,10:00 AM,10:59 AM,
+432,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-15,10:00 AM,10:59 AM,
+433,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-15,10:00 AM,10:59 AM,
+434,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-15,10:00 AM,10:59 AM,
+435,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-15,10:00 AM,10:59 AM,
+436,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-15,11:14 AM,11:59 AM,Kumain pa
+437,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-15,,,Nagcutting
+438,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-15,,,Player
+439,ES2601,"Escalona, Christan",Calculus,Present,2026-04-15,11:00 AM,11:59 AM,
+440,BA2602,"Baera, Julliane",Calculus,Present,2026-04-15,11:00 AM,11:59 AM,
+441,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-15,1:00 PM,1:59 PM,
+442,AU2601,"Aurelio, Harold",Physics,Present,2026-04-15,1:00 PM,1:59 PM,
+443,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-15,1:00 PM,1:59 PM,
+444,ES2601,"Escalona, Christan",Physics,Present,2026-04-15,1:00 PM,1:59 PM,
+445,BA2602,"Baera, Julliane",Physics,Present,2026-04-15,1:00 PM,1:59 PM,
+446,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-15,2:00 PM,2:59 PM,
+447,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-15,2:00 PM,2:59 PM,
+448,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-15,2:00 PM,2:59 PM,
+449,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-15,2:00 PM,2:59 PM,
+450,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-15,2:00 PM,2:59 PM,
+451,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-15,3:00 PM,3:59 PM,
+452,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-15,3:00 PM,3:59 PM,
+453,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-15,3:00 PM,3:59 PM,
+454,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-15,3:00 PM,3:59 PM,
+455,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-15,3:00 PM,3:59 PM,
+456,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-15,4:00 PM,4:59 PM,
+457,AU2601,"Aurelio, Harold",University and I,Present,2026-04-15,4:00 PM,4:59 PM,
+458,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-15,4:14 PM,4:59 PM,Di alam room
+459,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-15,4:00 PM,4:59 PM,Player
+460,BA2602,"Baera, Julliane",University and I,Absent,2026-04-15,,,Nagcutting
+461,IL2601,"Ilagan, John Carlo",General,Present,2026-04-16,8:00 AM,8:59 AM,
+462,AU2601,"Aurelio, Harold",General,Present,2026-04-16,8:00 AM,8:59 AM,
+463,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-16,8:00 AM,8:59 AM,
+464,ES2601,"Escalona, Christan",General,Present,2026-04-16,8:00 AM,8:59 AM,
+465,BA2602,"Baera, Julliane",General,Present,2026-04-16,8:00 AM,8:59 AM,
+466,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-16,9:14 AM,9:59 AM,Na-traffic
+467,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-16,,,May sakit
+468,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-16,,,Player
+469,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-16,9:00 AM,9:59 AM,
+470,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-16,9:00 AM,9:59 AM,
+471,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-16,10:00 AM,10:59 AM,
+472,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-16,10:00 AM,10:59 AM,
+473,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-16,10:00 AM,10:59 AM,
+474,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-16,10:00 AM,10:59 AM,
+475,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-16,10:00 AM,10:59 AM,
+476,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-16,11:14 AM,11:59 AM,Kumain pa
+477,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-16,,,Nagcutting
+478,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-16,,,Player
+479,ES2601,"Escalona, Christan",Calculus,Present,2026-04-16,11:00 AM,11:59 AM,
+480,BA2602,"Baera, Julliane",Calculus,Present,2026-04-16,11:00 AM,11:59 AM,
+481,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-16,1:00 PM,1:59 PM,
+482,AU2601,"Aurelio, Harold",Physics,Present,2026-04-16,1:00 PM,1:59 PM,
+483,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-16,1:00 PM,1:59 PM,
+484,ES2601,"Escalona, Christan",Physics,Present,2026-04-16,1:00 PM,1:59 PM,
+485,BA2602,"Baera, Julliane",Physics,Present,2026-04-16,1:00 PM,1:59 PM,
+486,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-16,2:00 PM,2:59 PM,
+487,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-16,2:00 PM,2:59 PM,
+488,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-16,2:00 PM,2:59 PM,
+489,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-16,2:00 PM,2:59 PM,
+490,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-16,2:00 PM,2:59 PM,
+491,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-16,3:00 PM,3:59 PM,
+492,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-16,3:00 PM,3:59 PM,
+493,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-16,3:00 PM,3:59 PM,
+494,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-16,3:00 PM,3:59 PM,
+495,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-16,3:00 PM,3:59 PM,
+496,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-16,4:00 PM,4:59 PM,
+497,AU2601,"Aurelio, Harold",University and I,Present,2026-04-16,4:00 PM,4:59 PM,
+498,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-16,4:14 PM,4:59 PM,Di alam room
+499,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-16,4:00 PM,4:59 PM,Player
+500,BA2602,"Baera, Julliane",University and I,Absent,2026-04-16,,,Nagcutting
+501,IL2601,"Ilagan, John Carlo",General,Present,2026-04-17,8:00 AM,8:59 AM,
+502,AU2601,"Aurelio, Harold",General,Present,2026-04-17,8:00 AM,8:59 AM,
+503,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-17,8:00 AM,8:59 AM,
+504,ES2601,"Escalona, Christan",General,Present,2026-04-17,8:00 AM,8:59 AM,
+505,BA2602,"Baera, Julliane",General,Present,2026-04-17,8:00 AM,8:59 AM,
+506,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-17,9:14 AM,9:59 AM,Na-traffic
+507,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-17,,,May sakit
+508,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-17,,,Player
+509,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-17,9:00 AM,9:59 AM,
+510,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-17,9:00 AM,9:59 AM,
+511,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-17,10:00 AM,10:59 AM,
+512,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-17,10:00 AM,10:59 AM,
+513,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-17,10:00 AM,10:59 AM,
+514,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-17,10:00 AM,10:59 AM,
+515,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-17,10:00 AM,10:59 AM,
+516,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-17,11:14 AM,11:59 AM,Kumain pa
+517,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-17,,,Nagcutting
+518,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-17,,,Player
+519,ES2601,"Escalona, Christan",Calculus,Present,2026-04-17,11:00 AM,11:59 AM,
+520,BA2602,"Baera, Julliane",Calculus,Present,2026-04-17,11:00 AM,11:59 AM,
+521,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-17,1:00 PM,1:59 PM,
+522,AU2601,"Aurelio, Harold",Physics,Present,2026-04-17,1:00 PM,1:59 PM,
+523,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-17,1:00 PM,1:59 PM,
+524,ES2601,"Escalona, Christan",Physics,Present,2026-04-17,1:00 PM,1:59 PM,
+525,BA2602,"Baera, Julliane",Physics,Present,2026-04-17,1:00 PM,1:59 PM,
+526,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-17,2:00 PM,2:59 PM,
+527,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-17,2:00 PM,2:59 PM,
+528,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-17,2:00 PM,2:59 PM,
+529,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-17,2:00 PM,2:59 PM,
+530,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-17,2:00 PM,2:59 PM,
+531,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-17,3:00 PM,3:59 PM,
+532,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-17,3:00 PM,3:59 PM,
+533,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-17,3:00 PM,3:59 PM,
+534,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-17,3:00 PM,3:59 PM,
+535,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-17,3:00 PM,3:59 PM,
+536,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-17,4:00 PM,4:59 PM,
+537,AU2601,"Aurelio, Harold",University and I,Present,2026-04-17,4:00 PM,4:59 PM,
+538,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-17,4:14 PM,4:59 PM,Di alam room
+539,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-17,4:00 PM,4:59 PM,Player
+540,BA2602,"Baera, Julliane",University and I,Absent,2026-04-17,,,Nagcutting
+541,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-04-18,8:00 AM,8:59 AM,
+542,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-04-18,8:00 AM,8:59 AM,
+543,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-04-18,8:00 AM,8:59 AM,
+544,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-04-18,8:00 AM,8:59 AM,
+545,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-04-18,8:00 AM,8:59 AM,
+546,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-04-18,9:14 AM,9:59 AM,Na-traffic
+547,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-04-18,,,May sakit
+548,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-04-18,,,Player
+549,ES2601,"Escalona, Christan",Physical Education,Present,2026-04-18,9:00 AM,9:59 AM,
+550,BA2602,"Baera, Julliane",Physical Education,Present,2026-04-18,9:00 AM,9:59 AM,
+551,IL2601,"Ilagan, John Carlo",General,Present,2026-04-20,8:00 AM,8:59 AM,
+552,AU2601,"Aurelio, Harold",General,Present,2026-04-20,8:00 AM,8:59 AM,
+553,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-20,8:00 AM,8:59 AM,
+554,ES2601,"Escalona, Christan",General,Present,2026-04-20,8:00 AM,8:59 AM,
+555,BA2602,"Baera, Julliane",General,Present,2026-04-20,8:00 AM,8:59 AM,
+556,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-20,9:14 AM,9:59 AM,Na-traffic
+557,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-20,,,May sakit
+558,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-20,,,Player
+559,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-20,9:00 AM,9:59 AM,
+560,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-20,9:00 AM,9:59 AM,
+561,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-20,10:00 AM,10:59 AM,
+562,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-20,10:00 AM,10:59 AM,
+563,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-20,10:00 AM,10:59 AM,
+564,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-20,10:00 AM,10:59 AM,
+565,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-20,10:00 AM,10:59 AM,
+566,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-20,11:14 AM,11:59 AM,Kumain pa
+567,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-20,,,Nagcutting
+568,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-20,,,Player
+569,ES2601,"Escalona, Christan",Calculus,Present,2026-04-20,11:00 AM,11:59 AM,
+570,BA2602,"Baera, Julliane",Calculus,Present,2026-04-20,11:00 AM,11:59 AM,
+571,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-20,1:00 PM,1:59 PM,
+572,AU2601,"Aurelio, Harold",Physics,Present,2026-04-20,1:00 PM,1:59 PM,
+573,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-20,1:00 PM,1:59 PM,
+574,ES2601,"Escalona, Christan",Physics,Present,2026-04-20,1:00 PM,1:59 PM,
+575,BA2602,"Baera, Julliane",Physics,Present,2026-04-20,1:00 PM,1:59 PM,
+576,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-20,2:00 PM,2:59 PM,
+577,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-20,2:00 PM,2:59 PM,
+578,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-20,2:00 PM,2:59 PM,
+579,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-20,2:00 PM,2:59 PM,
+580,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-20,2:00 PM,2:59 PM,
+581,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-20,3:00 PM,3:59 PM,
+582,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-20,3:00 PM,3:59 PM,
+583,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-20,3:00 PM,3:59 PM,
+584,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-20,3:00 PM,3:59 PM,
+585,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-20,3:00 PM,3:59 PM,
+586,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-20,4:00 PM,4:59 PM,
+587,AU2601,"Aurelio, Harold",University and I,Present,2026-04-20,4:00 PM,4:59 PM,
+588,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-20,4:14 PM,4:59 PM,Di alam room
+589,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-20,4:00 PM,4:59 PM,Player
+590,BA2602,"Baera, Julliane",University and I,Absent,2026-04-20,,,Nagcutting
+591,IL2601,"Ilagan, John Carlo",General,Present,2026-04-21,8:00 AM,8:59 AM,
+592,AU2601,"Aurelio, Harold",General,Present,2026-04-21,8:00 AM,8:59 AM,
+593,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-21,8:00 AM,8:59 AM,
+594,ES2601,"Escalona, Christan",General,Present,2026-04-21,8:00 AM,8:59 AM,
+595,BA2602,"Baera, Julliane",General,Present,2026-04-21,8:00 AM,8:59 AM,
+596,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-21,9:14 AM,9:59 AM,Na-traffic
+597,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-21,,,May sakit
+598,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-21,,,Player
+599,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-21,9:00 AM,9:59 AM,
+600,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-21,9:00 AM,9:59 AM,
+601,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-21,10:00 AM,10:59 AM,
+602,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-21,10:00 AM,10:59 AM,
+603,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-21,10:00 AM,10:59 AM,
+604,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-21,10:00 AM,10:59 AM,
+605,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-21,10:00 AM,10:59 AM,
+606,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-21,11:14 AM,11:59 AM,Kumain pa
+607,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-21,,,Nagcutting
+608,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-21,,,Player
+609,ES2601,"Escalona, Christan",Calculus,Present,2026-04-21,11:00 AM,11:59 AM,
+610,BA2602,"Baera, Julliane",Calculus,Present,2026-04-21,11:00 AM,11:59 AM,
+611,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-21,1:00 PM,1:59 PM,
+612,AU2601,"Aurelio, Harold",Physics,Present,2026-04-21,1:00 PM,1:59 PM,
+613,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-21,1:00 PM,1:59 PM,
+614,ES2601,"Escalona, Christan",Physics,Present,2026-04-21,1:00 PM,1:59 PM,
+615,BA2602,"Baera, Julliane",Physics,Present,2026-04-21,1:00 PM,1:59 PM,
+616,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-21,2:00 PM,2:59 PM,
+617,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-21,2:00 PM,2:59 PM,
+618,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-21,2:00 PM,2:59 PM,
+619,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-21,2:00 PM,2:59 PM,
+620,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-21,2:00 PM,2:59 PM,
+621,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-21,3:00 PM,3:59 PM,
+622,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-21,3:00 PM,3:59 PM,
+623,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-21,3:00 PM,3:59 PM,
+624,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-21,3:00 PM,3:59 PM,
+625,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-21,3:00 PM,3:59 PM,
+626,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-21,4:00 PM,4:59 PM,
+627,AU2601,"Aurelio, Harold",University and I,Present,2026-04-21,4:00 PM,4:59 PM,
+628,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-21,4:14 PM,4:59 PM,Di alam room
+629,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-21,4:00 PM,4:59 PM,Player
+630,BA2602,"Baera, Julliane",University and I,Absent,2026-04-21,,,Nagcutting
+631,IL2601,"Ilagan, John Carlo",General,Present,2026-04-22,8:00 AM,8:59 AM,
+632,AU2601,"Aurelio, Harold",General,Present,2026-04-22,8:00 AM,8:59 AM,
+633,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-22,8:00 AM,8:59 AM,
+634,ES2601,"Escalona, Christan",General,Present,2026-04-22,8:00 AM,8:59 AM,
+635,BA2602,"Baera, Julliane",General,Present,2026-04-22,8:00 AM,8:59 AM,
+636,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-22,9:14 AM,9:59 AM,Na-traffic
+637,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-22,,,May sakit
+638,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-22,,,Player
+639,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-22,9:00 AM,9:59 AM,
+640,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-22,9:00 AM,9:59 AM,
+641,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-22,10:00 AM,10:59 AM,
+642,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-22,10:00 AM,10:59 AM,
+643,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-22,10:00 AM,10:59 AM,
+644,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-22,10:00 AM,10:59 AM,
+645,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-22,10:00 AM,10:59 AM,
+646,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-22,11:14 AM,11:59 AM,Kumain pa
+647,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-22,,,Nagcutting
+648,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-22,,,Player
+649,ES2601,"Escalona, Christan",Calculus,Present,2026-04-22,11:00 AM,11:59 AM,
+650,BA2602,"Baera, Julliane",Calculus,Present,2026-04-22,11:00 AM,11:59 AM,
+651,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-22,1:00 PM,1:59 PM,
+652,AU2601,"Aurelio, Harold",Physics,Present,2026-04-22,1:00 PM,1:59 PM,
+653,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-22,1:00 PM,1:59 PM,
+654,ES2601,"Escalona, Christan",Physics,Present,2026-04-22,1:00 PM,1:59 PM,
+655,BA2602,"Baera, Julliane",Physics,Present,2026-04-22,1:00 PM,1:59 PM,
+656,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-22,2:00 PM,2:59 PM,
+657,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-22,2:00 PM,2:59 PM,
+658,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-22,2:00 PM,2:59 PM,
+659,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-22,2:00 PM,2:59 PM,
+660,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-22,2:00 PM,2:59 PM,
+661,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-22,3:00 PM,3:59 PM,
+662,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-22,3:00 PM,3:59 PM,
+663,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-22,3:00 PM,3:59 PM,
+664,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-22,3:00 PM,3:59 PM,
+665,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-22,3:00 PM,3:59 PM,
+666,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-22,4:00 PM,4:59 PM,
+667,AU2601,"Aurelio, Harold",University and I,Present,2026-04-22,4:00 PM,4:59 PM,
+668,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-22,4:14 PM,4:59 PM,Di alam room
+669,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-22,4:00 PM,4:59 PM,Player
+670,BA2602,"Baera, Julliane",University and I,Absent,2026-04-22,,,Nagcutting
+671,IL2601,"Ilagan, John Carlo",General,Present,2026-04-23,8:00 AM,8:59 AM,
+672,AU2601,"Aurelio, Harold",General,Present,2026-04-23,8:00 AM,8:59 AM,
+673,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-23,8:00 AM,8:59 AM,
+674,ES2601,"Escalona, Christan",General,Present,2026-04-23,8:00 AM,8:59 AM,
+675,BA2602,"Baera, Julliane",General,Present,2026-04-23,8:00 AM,8:59 AM,
+676,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-23,9:14 AM,9:59 AM,Na-traffic
+677,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-23,,,May sakit
+678,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-23,,,Player
+679,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-23,9:00 AM,9:59 AM,
+680,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-23,9:00 AM,9:59 AM,
+681,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-23,10:00 AM,10:59 AM,
+682,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-23,10:00 AM,10:59 AM,
+683,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-23,10:00 AM,10:59 AM,
+684,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-23,10:00 AM,10:59 AM,
+685,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-23,10:00 AM,10:59 AM,
+686,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-23,11:14 AM,11:59 AM,Kumain pa
+687,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-23,,,Nagcutting
+688,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-23,,,Player
+689,ES2601,"Escalona, Christan",Calculus,Present,2026-04-23,11:00 AM,11:59 AM,
+690,BA2602,"Baera, Julliane",Calculus,Present,2026-04-23,11:00 AM,11:59 AM,
+691,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-23,1:00 PM,1:59 PM,
+692,AU2601,"Aurelio, Harold",Physics,Present,2026-04-23,1:00 PM,1:59 PM,
+693,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-23,1:00 PM,1:59 PM,
+694,ES2601,"Escalona, Christan",Physics,Present,2026-04-23,1:00 PM,1:59 PM,
+695,BA2602,"Baera, Julliane",Physics,Present,2026-04-23,1:00 PM,1:59 PM,
+696,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-23,2:00 PM,2:59 PM,
+697,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-23,2:00 PM,2:59 PM,
+698,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-23,2:00 PM,2:59 PM,
+699,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-23,2:00 PM,2:59 PM,
+700,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-23,2:00 PM,2:59 PM,
+701,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-23,3:00 PM,3:59 PM,
+702,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-23,3:00 PM,3:59 PM,
+703,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-23,3:00 PM,3:59 PM,
+704,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-23,3:00 PM,3:59 PM,
+705,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-23,3:00 PM,3:59 PM,
+706,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-23,4:00 PM,4:59 PM,
+707,AU2601,"Aurelio, Harold",University and I,Present,2026-04-23,4:00 PM,4:59 PM,
+708,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-23,4:14 PM,4:59 PM,Di alam room
+709,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-23,4:00 PM,4:59 PM,Player
+710,BA2602,"Baera, Julliane",University and I,Absent,2026-04-23,,,Nagcutting
+711,IL2601,"Ilagan, John Carlo",General,Present,2026-04-24,8:00 AM,8:59 AM,
+712,AU2601,"Aurelio, Harold",General,Present,2026-04-24,8:00 AM,8:59 AM,
+713,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-24,8:00 AM,8:59 AM,
+714,ES2601,"Escalona, Christan",General,Present,2026-04-24,8:00 AM,8:59 AM,
+715,BA2602,"Baera, Julliane",General,Present,2026-04-24,8:00 AM,8:59 AM,
+716,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-24,9:14 AM,9:59 AM,Na-traffic
+717,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-24,,,May sakit
+718,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-24,,,Player
+719,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-24,9:00 AM,9:59 AM,
+720,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-24,9:00 AM,9:59 AM,
+721,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-24,10:00 AM,10:59 AM,
+722,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-24,10:00 AM,10:59 AM,
+723,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-24,10:00 AM,10:59 AM,
+724,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-24,10:00 AM,10:59 AM,
+725,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-24,10:00 AM,10:59 AM,
+726,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-24,11:14 AM,11:59 AM,Kumain pa
+727,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-24,,,Nagcutting
+728,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-24,,,Player
+729,ES2601,"Escalona, Christan",Calculus,Present,2026-04-24,11:00 AM,11:59 AM,
+730,BA2602,"Baera, Julliane",Calculus,Present,2026-04-24,11:00 AM,11:59 AM,
+731,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-24,1:00 PM,1:59 PM,
+732,AU2601,"Aurelio, Harold",Physics,Present,2026-04-24,1:00 PM,1:59 PM,
+733,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-24,1:00 PM,1:59 PM,
+734,ES2601,"Escalona, Christan",Physics,Present,2026-04-24,1:00 PM,1:59 PM,
+735,BA2602,"Baera, Julliane",Physics,Present,2026-04-24,1:00 PM,1:59 PM,
+736,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-24,2:00 PM,2:59 PM,
+737,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-24,2:00 PM,2:59 PM,
+738,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-24,2:00 PM,2:59 PM,
+739,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-24,2:00 PM,2:59 PM,
+740,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-24,2:00 PM,2:59 PM,
+741,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-24,3:00 PM,3:59 PM,
+742,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-24,3:00 PM,3:59 PM,
+743,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-24,3:00 PM,3:59 PM,
+744,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-24,3:00 PM,3:59 PM,
+745,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-24,3:00 PM,3:59 PM,
+746,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-24,4:00 PM,4:59 PM,
+747,AU2601,"Aurelio, Harold",University and I,Present,2026-04-24,4:00 PM,4:59 PM,
+748,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-24,4:14 PM,4:59 PM,Di alam room
+749,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-24,4:00 PM,4:59 PM,Player
+750,BA2602,"Baera, Julliane",University and I,Absent,2026-04-24,,,Nagcutting
+751,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-04-25,8:00 AM,8:59 AM,
+752,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-04-25,8:00 AM,8:59 AM,
+753,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-04-25,8:00 AM,8:59 AM,
+754,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-04-25,8:00 AM,8:59 AM,
+755,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-04-25,8:00 AM,8:59 AM,
+756,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-04-25,9:14 AM,9:59 AM,Na-traffic
+757,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-04-25,,,May sakit
+758,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-04-25,,,Player
+759,ES2601,"Escalona, Christan",Physical Education,Present,2026-04-25,9:00 AM,9:59 AM,
+760,BA2602,"Baera, Julliane",Physical Education,Present,2026-04-25,9:00 AM,9:59 AM,
+761,IL2601,"Ilagan, John Carlo",General,Present,2026-04-27,8:00 AM,8:59 AM,
+762,AU2601,"Aurelio, Harold",General,Present,2026-04-27,8:00 AM,8:59 AM,
+763,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-27,8:00 AM,8:59 AM,
+764,ES2601,"Escalona, Christan",General,Present,2026-04-27,8:00 AM,8:59 AM,
+765,BA2602,"Baera, Julliane",General,Present,2026-04-27,8:00 AM,8:59 AM,
+766,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-27,9:14 AM,9:59 AM,Na-traffic
+767,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-27,,,May sakit
+768,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-27,,,Player
+769,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-27,9:00 AM,9:59 AM,
+770,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-27,9:00 AM,9:59 AM,
+771,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-27,10:00 AM,10:59 AM,
+772,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-27,10:00 AM,10:59 AM,
+773,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-27,10:00 AM,10:59 AM,
+774,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-27,10:00 AM,10:59 AM,
+775,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-27,10:00 AM,10:59 AM,
+776,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-27,11:14 AM,11:59 AM,Kumain pa
+777,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-27,,,Nagcutting
+778,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-27,,,Player
+779,ES2601,"Escalona, Christan",Calculus,Present,2026-04-27,11:00 AM,11:59 AM,
+780,BA2602,"Baera, Julliane",Calculus,Present,2026-04-27,11:00 AM,11:59 AM,
+781,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-27,1:00 PM,1:59 PM,
+782,AU2601,"Aurelio, Harold",Physics,Present,2026-04-27,1:00 PM,1:59 PM,
+783,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-27,1:00 PM,1:59 PM,
+784,ES2601,"Escalona, Christan",Physics,Present,2026-04-27,1:00 PM,1:59 PM,
+785,BA2602,"Baera, Julliane",Physics,Present,2026-04-27,1:00 PM,1:59 PM,
+786,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-27,2:00 PM,2:59 PM,
+787,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-27,2:00 PM,2:59 PM,
+788,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-27,2:00 PM,2:59 PM,
+789,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-27,2:00 PM,2:59 PM,
+790,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-27,2:00 PM,2:59 PM,
+791,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-27,3:00 PM,3:59 PM,
+792,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-27,3:00 PM,3:59 PM,
+793,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-27,3:00 PM,3:59 PM,
+794,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-27,3:00 PM,3:59 PM,
+795,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-27,3:00 PM,3:59 PM,
+796,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-27,4:00 PM,4:59 PM,
+797,AU2601,"Aurelio, Harold",University and I,Present,2026-04-27,4:00 PM,4:59 PM,
+798,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-27,4:14 PM,4:59 PM,Di alam room
+799,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-27,4:00 PM,4:59 PM,Player
+800,BA2602,"Baera, Julliane",University and I,Absent,2026-04-27,,,Nagcutting
+801,IL2601,"Ilagan, John Carlo",General,Present,2026-04-28,8:00 AM,8:59 AM,
+802,AU2601,"Aurelio, Harold",General,Present,2026-04-28,8:00 AM,8:59 AM,
+803,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-28,8:00 AM,8:59 AM,
+804,ES2601,"Escalona, Christan",General,Present,2026-04-28,8:00 AM,8:59 AM,
+805,BA2602,"Baera, Julliane",General,Present,2026-04-28,8:00 AM,8:59 AM,
+806,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-28,9:14 AM,9:59 AM,Na-traffic
+807,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-28,,,May sakit
+808,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-28,,,Player
+809,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-28,9:00 AM,9:59 AM,
+810,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-28,9:00 AM,9:59 AM,
+811,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-28,10:00 AM,10:59 AM,
+812,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-28,10:00 AM,10:59 AM,
+813,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-28,10:00 AM,10:59 AM,
+814,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-28,10:00 AM,10:59 AM,
+815,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-28,10:00 AM,10:59 AM,
+816,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-28,11:14 AM,11:59 AM,Kumain pa
+817,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-28,,,Nagcutting
+818,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-28,,,Player
+819,ES2601,"Escalona, Christan",Calculus,Present,2026-04-28,11:00 AM,11:59 AM,
+820,BA2602,"Baera, Julliane",Calculus,Present,2026-04-28,11:00 AM,11:59 AM,
+821,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-28,1:00 PM,1:59 PM,
+822,AU2601,"Aurelio, Harold",Physics,Present,2026-04-28,1:00 PM,1:59 PM,
+823,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-28,1:00 PM,1:59 PM,
+824,ES2601,"Escalona, Christan",Physics,Present,2026-04-28,1:00 PM,1:59 PM,
+825,BA2602,"Baera, Julliane",Physics,Present,2026-04-28,1:00 PM,1:59 PM,
+826,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-28,2:00 PM,2:59 PM,
+827,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-28,2:00 PM,2:59 PM,
+828,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-28,2:00 PM,2:59 PM,
+829,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-28,2:00 PM,2:59 PM,
+830,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-28,2:00 PM,2:59 PM,
+831,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-28,3:00 PM,3:59 PM,
+832,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-28,3:00 PM,3:59 PM,
+833,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-28,3:00 PM,3:59 PM,
+834,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-28,3:00 PM,3:59 PM,
+835,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-28,3:00 PM,3:59 PM,
+836,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-28,4:00 PM,4:59 PM,
+837,AU2601,"Aurelio, Harold",University and I,Present,2026-04-28,4:00 PM,4:59 PM,
+838,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-28,4:14 PM,4:59 PM,Di alam room
+839,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-28,4:00 PM,4:59 PM,Player
+840,BA2602,"Baera, Julliane",University and I,Absent,2026-04-28,,,Nagcutting
+841,IL2601,"Ilagan, John Carlo",General,Present,2026-04-29,8:00 AM,8:59 AM,
+842,AU2601,"Aurelio, Harold",General,Present,2026-04-29,8:00 AM,8:59 AM,
+843,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-29,8:00 AM,8:59 AM,
+844,ES2601,"Escalona, Christan",General,Present,2026-04-29,8:00 AM,8:59 AM,
+845,BA2602,"Baera, Julliane",General,Present,2026-04-29,8:00 AM,8:59 AM,
+846,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-29,9:14 AM,9:59 AM,Na-traffic
+847,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-29,,,May sakit
+848,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-29,,,Player
+849,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-29,9:00 AM,9:59 AM,
+850,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-29,9:00 AM,9:59 AM,
+851,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-29,10:00 AM,10:59 AM,
+852,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-29,10:00 AM,10:59 AM,
+853,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-29,10:00 AM,10:59 AM,
+854,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-29,10:00 AM,10:59 AM,
+855,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-29,10:00 AM,10:59 AM,
+856,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-29,11:14 AM,11:59 AM,Kumain pa
+857,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-29,,,Nagcutting
+858,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-29,,,Player
+859,ES2601,"Escalona, Christan",Calculus,Present,2026-04-29,11:00 AM,11:59 AM,
+860,BA2602,"Baera, Julliane",Calculus,Present,2026-04-29,11:00 AM,11:59 AM,
+861,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-29,1:00 PM,1:59 PM,
+862,AU2601,"Aurelio, Harold",Physics,Present,2026-04-29,1:00 PM,1:59 PM,
+863,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-29,1:00 PM,1:59 PM,
+864,ES2601,"Escalona, Christan",Physics,Present,2026-04-29,1:00 PM,1:59 PM,
+865,BA2602,"Baera, Julliane",Physics,Present,2026-04-29,1:00 PM,1:59 PM,
+866,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-29,2:00 PM,2:59 PM,
+867,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-29,2:00 PM,2:59 PM,
+868,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-29,2:00 PM,2:59 PM,
+869,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-29,2:00 PM,2:59 PM,
+870,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-29,2:00 PM,2:59 PM,
+871,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-29,3:00 PM,3:59 PM,
+872,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-29,3:00 PM,3:59 PM,
+873,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-29,3:00 PM,3:59 PM,
+874,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-29,3:00 PM,3:59 PM,
+875,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-29,3:00 PM,3:59 PM,
+876,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-29,4:00 PM,4:59 PM,
+877,AU2601,"Aurelio, Harold",University and I,Present,2026-04-29,4:00 PM,4:59 PM,
+878,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-29,4:14 PM,4:59 PM,Di alam room
+879,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-29,4:00 PM,4:59 PM,Player
+880,BA2602,"Baera, Julliane",University and I,Absent,2026-04-29,,,Nagcutting
+881,IL2601,"Ilagan, John Carlo",General,Present,2026-04-30,8:00 AM,8:59 AM,
+882,AU2601,"Aurelio, Harold",General,Present,2026-04-30,8:00 AM,8:59 AM,
+883,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-04-30,8:00 AM,8:59 AM,
+884,ES2601,"Escalona, Christan",General,Present,2026-04-30,8:00 AM,8:59 AM,
+885,BA2602,"Baera, Julliane",General,Present,2026-04-30,8:00 AM,8:59 AM,
+886,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-04-30,9:14 AM,9:59 AM,Na-traffic
+887,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-04-30,,,May sakit
+888,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-04-30,,,Player
+889,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-04-30,9:00 AM,9:59 AM,
+890,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-04-30,9:00 AM,9:59 AM,
+891,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-04-30,10:00 AM,10:59 AM,
+892,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-04-30,10:00 AM,10:59 AM,
+893,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-04-30,10:00 AM,10:59 AM,
+894,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-04-30,10:00 AM,10:59 AM,
+895,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-04-30,10:00 AM,10:59 AM,
+896,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-04-30,11:14 AM,11:59 AM,Kumain pa
+897,AU2601,"Aurelio, Harold",Calculus,Absent,2026-04-30,,,Nagcutting
+898,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-04-30,,,Player
+899,ES2601,"Escalona, Christan",Calculus,Present,2026-04-30,11:00 AM,11:59 AM,
+900,BA2602,"Baera, Julliane",Calculus,Present,2026-04-30,11:00 AM,11:59 AM,
+901,IL2601,"Ilagan, John Carlo",Physics,Present,2026-04-30,1:00 PM,1:59 PM,
+902,AU2601,"Aurelio, Harold",Physics,Present,2026-04-30,1:00 PM,1:59 PM,
+903,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-04-30,1:00 PM,1:59 PM,
+904,ES2601,"Escalona, Christan",Physics,Present,2026-04-30,1:00 PM,1:59 PM,
+905,BA2602,"Baera, Julliane",Physics,Present,2026-04-30,1:00 PM,1:59 PM,
+906,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-04-30,2:00 PM,2:59 PM,
+907,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-04-30,2:00 PM,2:59 PM,
+908,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-04-30,2:00 PM,2:59 PM,
+909,ES2601,"Escalona, Christan",AutoCAD,Present,2026-04-30,2:00 PM,2:59 PM,
+910,BA2602,"Baera, Julliane",AutoCAD,Present,2026-04-30,2:00 PM,2:59 PM,
+911,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-04-30,3:00 PM,3:59 PM,
+912,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-04-30,3:00 PM,3:59 PM,
+913,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-04-30,3:00 PM,3:59 PM,
+914,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-04-30,3:00 PM,3:59 PM,
+915,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-04-30,3:00 PM,3:59 PM,
+916,IL2601,"Ilagan, John Carlo",University and I,Present,2026-04-30,4:00 PM,4:59 PM,
+917,AU2601,"Aurelio, Harold",University and I,Present,2026-04-30,4:00 PM,4:59 PM,
+918,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-04-30,4:14 PM,4:59 PM,Di alam room
+919,ES2601,"Escalona, Christan",University and I,Excuse,2026-04-30,4:00 PM,4:59 PM,Player
+920,BA2602,"Baera, Julliane",University and I,Absent,2026-04-30,,,Nagcutting
+921,IL2601,"Ilagan, John Carlo",General,Present,2026-05-01,8:00 AM,8:59 AM,
+922,AU2601,"Aurelio, Harold",General,Present,2026-05-01,8:00 AM,8:59 AM,
+923,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-01,8:00 AM,8:59 AM,
+924,ES2601,"Escalona, Christan",General,Present,2026-05-01,8:00 AM,8:59 AM,
+925,BA2602,"Baera, Julliane",General,Present,2026-05-01,8:00 AM,8:59 AM,
+926,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-01,9:14 AM,9:59 AM,Na-traffic
+927,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-01,,,May sakit
+928,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-01,,,Player
+929,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-01,9:00 AM,9:59 AM,
+930,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-01,9:00 AM,9:59 AM,
+931,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-01,10:00 AM,10:59 AM,
+932,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-01,10:00 AM,10:59 AM,
+933,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-01,10:00 AM,10:59 AM,
+934,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-01,10:00 AM,10:59 AM,
+935,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-01,10:00 AM,10:59 AM,
+936,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-01,11:14 AM,11:59 AM,Kumain pa
+937,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-01,,,Nagcutting
+938,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-01,,,Player
+939,ES2601,"Escalona, Christan",Calculus,Present,2026-05-01,11:00 AM,11:59 AM,
+940,BA2602,"Baera, Julliane",Calculus,Present,2026-05-01,11:00 AM,11:59 AM,
+941,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-01,1:00 PM,1:59 PM,
+942,AU2601,"Aurelio, Harold",Physics,Present,2026-05-01,1:00 PM,1:59 PM,
+943,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-01,1:00 PM,1:59 PM,
+944,ES2601,"Escalona, Christan",Physics,Present,2026-05-01,1:00 PM,1:59 PM,
+945,BA2602,"Baera, Julliane",Physics,Present,2026-05-01,1:00 PM,1:59 PM,
+946,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-01,2:00 PM,2:59 PM,
+947,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-01,2:00 PM,2:59 PM,
+948,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-01,2:00 PM,2:59 PM,
+949,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-01,2:00 PM,2:59 PM,
+950,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-01,2:00 PM,2:59 PM,
+951,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-01,3:00 PM,3:59 PM,
+952,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-01,3:00 PM,3:59 PM,
+953,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-01,3:00 PM,3:59 PM,
+954,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-01,3:00 PM,3:59 PM,
+955,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-01,3:00 PM,3:59 PM,
+956,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-01,4:00 PM,4:59 PM,
+957,AU2601,"Aurelio, Harold",University and I,Present,2026-05-01,4:00 PM,4:59 PM,
+958,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-01,4:14 PM,4:59 PM,Di alam room
+959,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-01,4:00 PM,4:59 PM,Player
+960,BA2602,"Baera, Julliane",University and I,Absent,2026-05-01,,,Nagcutting
+961,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-05-02,8:00 AM,8:59 AM,
+962,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-05-02,8:00 AM,8:59 AM,
+963,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-05-02,8:00 AM,8:59 AM,
+964,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-05-02,8:00 AM,8:59 AM,
+965,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-05-02,8:00 AM,8:59 AM,
+966,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-05-02,9:14 AM,9:59 AM,Na-traffic
+967,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-05-02,,,May sakit
+968,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-05-02,,,Player
+969,ES2601,"Escalona, Christan",Physical Education,Present,2026-05-02,9:00 AM,9:59 AM,
+970,BA2602,"Baera, Julliane",Physical Education,Present,2026-05-02,9:00 AM,9:59 AM,
+971,IL2601,"Ilagan, John Carlo",General,Present,2026-05-04,8:00 AM,8:59 AM,
+972,AU2601,"Aurelio, Harold",General,Present,2026-05-04,8:00 AM,8:59 AM,
+973,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-04,8:00 AM,8:59 AM,
+974,ES2601,"Escalona, Christan",General,Present,2026-05-04,8:00 AM,8:59 AM,
+975,BA2602,"Baera, Julliane",General,Present,2026-05-04,8:00 AM,8:59 AM,
+976,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-04,9:14 AM,9:59 AM,Na-traffic
+977,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-04,,,May sakit
+978,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-04,,,Player
+979,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-04,9:00 AM,9:59 AM,
+980,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-04,9:00 AM,9:59 AM,
+981,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-04,10:00 AM,10:59 AM,
+982,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-04,10:00 AM,10:59 AM,
+983,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-04,10:00 AM,10:59 AM,
+984,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-04,10:00 AM,10:59 AM,
+985,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-04,10:00 AM,10:59 AM,
+986,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-04,11:14 AM,11:59 AM,Kumain pa
+987,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-04,,,Nagcutting
+988,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-04,,,Player
+989,ES2601,"Escalona, Christan",Calculus,Present,2026-05-04,11:00 AM,11:59 AM,
+990,BA2602,"Baera, Julliane",Calculus,Present,2026-05-04,11:00 AM,11:59 AM,
+991,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-04,1:00 PM,1:59 PM,
+992,AU2601,"Aurelio, Harold",Physics,Present,2026-05-04,1:00 PM,1:59 PM,
+993,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-04,1:00 PM,1:59 PM,
+994,ES2601,"Escalona, Christan",Physics,Present,2026-05-04,1:00 PM,1:59 PM,
+995,BA2602,"Baera, Julliane",Physics,Present,2026-05-04,1:00 PM,1:59 PM,
+996,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-04,2:00 PM,2:59 PM,
+997,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-04,2:00 PM,2:59 PM,
+998,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-04,2:00 PM,2:59 PM,
+999,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-04,2:00 PM,2:59 PM,
+1000,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-04,2:00 PM,2:59 PM,
+1001,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-04,3:00 PM,3:59 PM,
+1002,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-04,3:00 PM,3:59 PM,
+1003,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-04,3:00 PM,3:59 PM,
+1004,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-04,3:00 PM,3:59 PM,
+1005,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-04,3:00 PM,3:59 PM,
+1006,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-04,4:00 PM,4:59 PM,
+1007,AU2601,"Aurelio, Harold",University and I,Present,2026-05-04,4:00 PM,4:59 PM,
+1008,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-04,4:14 PM,4:59 PM,Di alam room
+1009,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-04,4:00 PM,4:59 PM,Player
+1010,BA2602,"Baera, Julliane",University and I,Absent,2026-05-04,,,Nagcutting
+1011,IL2601,"Ilagan, John Carlo",General,Present,2026-05-05,8:00 AM,8:59 AM,
+1012,AU2601,"Aurelio, Harold",General,Present,2026-05-05,8:00 AM,8:59 AM,
+1013,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-05,8:00 AM,8:59 AM,
+1014,ES2601,"Escalona, Christan",General,Present,2026-05-05,8:00 AM,8:59 AM,
+1015,BA2602,"Baera, Julliane",General,Present,2026-05-05,8:00 AM,8:59 AM,
+1016,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-05,9:14 AM,9:59 AM,Na-traffic
+1017,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-05,,,May sakit
+1018,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-05,,,Player
+1019,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-05,9:00 AM,9:59 AM,
+1020,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-05,9:00 AM,9:59 AM,
+1021,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-05,10:00 AM,10:59 AM,
+1022,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-05,10:00 AM,10:59 AM,
+1023,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-05,10:00 AM,10:59 AM,
+1024,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-05,10:00 AM,10:59 AM,
+1025,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-05,10:00 AM,10:59 AM,
+1026,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-05,11:14 AM,11:59 AM,Kumain pa
+1027,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-05,,,Nagcutting
+1028,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-05,,,Player
+1029,ES2601,"Escalona, Christan",Calculus,Present,2026-05-05,11:00 AM,11:59 AM,
+1030,BA2602,"Baera, Julliane",Calculus,Present,2026-05-05,11:00 AM,11:59 AM,
+1031,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-05,1:00 PM,1:59 PM,
+1032,AU2601,"Aurelio, Harold",Physics,Present,2026-05-05,1:00 PM,1:59 PM,
+1033,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-05,1:00 PM,1:59 PM,
+1034,ES2601,"Escalona, Christan",Physics,Present,2026-05-05,1:00 PM,1:59 PM,
+1035,BA2602,"Baera, Julliane",Physics,Present,2026-05-05,1:00 PM,1:59 PM,
+1036,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-05,2:00 PM,2:59 PM,
+1037,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-05,2:00 PM,2:59 PM,
+1038,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-05,2:00 PM,2:59 PM,
+1039,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-05,2:00 PM,2:59 PM,
+1040,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-05,2:00 PM,2:59 PM,
+1041,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-05,3:00 PM,3:59 PM,
+1042,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-05,3:00 PM,3:59 PM,
+1043,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-05,3:00 PM,3:59 PM,
+1044,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-05,3:00 PM,3:59 PM,
+1045,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-05,3:00 PM,3:59 PM,
+1046,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-05,4:00 PM,4:59 PM,
+1047,AU2601,"Aurelio, Harold",University and I,Present,2026-05-05,4:00 PM,4:59 PM,
+1048,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-05,4:14 PM,4:59 PM,Di alam room
+1049,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-05,4:00 PM,4:59 PM,Player
+1050,BA2602,"Baera, Julliane",University and I,Absent,2026-05-05,,,Nagcutting
+1051,IL2601,"Ilagan, John Carlo",General,Present,2026-05-06,8:00 AM,8:59 AM,
+1052,AU2601,"Aurelio, Harold",General,Present,2026-05-06,8:00 AM,8:59 AM,
+1053,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-06,8:00 AM,8:59 AM,
+1054,ES2601,"Escalona, Christan",General,Present,2026-05-06,8:00 AM,8:59 AM,
+1055,BA2602,"Baera, Julliane",General,Present,2026-05-06,8:00 AM,8:59 AM,
+1056,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-06,9:14 AM,9:59 AM,Na-traffic
+1057,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-06,,,May sakit
+1058,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-06,,,Player
+1059,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-06,9:00 AM,9:59 AM,
+1060,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-06,9:00 AM,9:59 AM,
+1061,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-06,10:00 AM,10:59 AM,
+1062,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-06,10:00 AM,10:59 AM,
+1063,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-06,10:00 AM,10:59 AM,
+1064,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-06,10:00 AM,10:59 AM,
+1065,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-06,10:00 AM,10:59 AM,
+1066,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-06,11:14 AM,11:59 AM,Kumain pa
+1067,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-06,,,Nagcutting
+1068,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-06,,,Player
+1069,ES2601,"Escalona, Christan",Calculus,Present,2026-05-06,11:00 AM,11:59 AM,
+1070,BA2602,"Baera, Julliane",Calculus,Present,2026-05-06,11:00 AM,11:59 AM,
+1071,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-06,1:00 PM,1:59 PM,
+1072,AU2601,"Aurelio, Harold",Physics,Present,2026-05-06,1:00 PM,1:59 PM,
+1073,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-06,1:00 PM,1:59 PM,
+1074,ES2601,"Escalona, Christan",Physics,Present,2026-05-06,1:00 PM,1:59 PM,
+1075,BA2602,"Baera, Julliane",Physics,Present,2026-05-06,1:00 PM,1:59 PM,
+1076,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-06,2:00 PM,2:59 PM,
+1077,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-06,2:00 PM,2:59 PM,
+1078,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-06,2:00 PM,2:59 PM,
+1079,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-06,2:00 PM,2:59 PM,
+1080,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-06,2:00 PM,2:59 PM,
+1081,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-06,3:00 PM,3:59 PM,
+1082,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-06,3:00 PM,3:59 PM,
+1083,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-06,3:00 PM,3:59 PM,
+1084,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-06,3:00 PM,3:59 PM,
+1085,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-06,3:00 PM,3:59 PM,
+1086,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-06,4:00 PM,4:59 PM,
+1087,AU2601,"Aurelio, Harold",University and I,Present,2026-05-06,4:00 PM,4:59 PM,
+1088,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-06,4:14 PM,4:59 PM,Di alam room
+1089,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-06,4:00 PM,4:59 PM,Player
+1090,BA2602,"Baera, Julliane",University and I,Absent,2026-05-06,,,Nagcutting
+1091,IL2601,"Ilagan, John Carlo",General,Present,2026-05-07,8:00 AM,8:59 AM,
+1092,AU2601,"Aurelio, Harold",General,Present,2026-05-07,8:00 AM,8:59 AM,
+1093,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-07,8:00 AM,8:59 AM,
+1094,ES2601,"Escalona, Christan",General,Present,2026-05-07,8:00 AM,8:59 AM,
+1095,BA2602,"Baera, Julliane",General,Present,2026-05-07,8:00 AM,8:59 AM,
+1096,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-07,9:14 AM,9:59 AM,Na-traffic
+1097,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-07,,,May sakit
+1098,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-07,,,Player
+1099,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-07,9:00 AM,9:59 AM,
+1100,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-07,9:00 AM,9:59 AM,
+1101,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-07,10:00 AM,10:59 AM,
+1102,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-07,10:00 AM,10:59 AM,
+1103,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-07,10:00 AM,10:59 AM,
+1104,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-07,10:00 AM,10:59 AM,
+1105,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-07,10:00 AM,10:59 AM,
+1106,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-07,11:14 AM,11:59 AM,Kumain pa
+1107,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-07,,,Nagcutting
+1108,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-07,,,Player
+1109,ES2601,"Escalona, Christan",Calculus,Present,2026-05-07,11:00 AM,11:59 AM,
+1110,BA2602,"Baera, Julliane",Calculus,Present,2026-05-07,11:00 AM,11:59 AM,
+1111,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-07,1:00 PM,1:59 PM,
+1112,AU2601,"Aurelio, Harold",Physics,Present,2026-05-07,1:00 PM,1:59 PM,
+1113,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-07,1:00 PM,1:59 PM,
+1114,ES2601,"Escalona, Christan",Physics,Present,2026-05-07,1:00 PM,1:59 PM,
+1115,BA2602,"Baera, Julliane",Physics,Present,2026-05-07,1:00 PM,1:59 PM,
+1116,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-07,2:00 PM,2:59 PM,
+1117,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-07,2:00 PM,2:59 PM,
+1118,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-07,2:00 PM,2:59 PM,
+1119,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-07,2:00 PM,2:59 PM,
+1120,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-07,2:00 PM,2:59 PM,
+1121,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-07,3:00 PM,3:59 PM,
+1122,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-07,3:00 PM,3:59 PM,
+1123,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-07,3:00 PM,3:59 PM,
+1124,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-07,3:00 PM,3:59 PM,
+1125,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-07,3:00 PM,3:59 PM,
+1126,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-07,4:00 PM,4:59 PM,
+1127,AU2601,"Aurelio, Harold",University and I,Present,2026-05-07,4:00 PM,4:59 PM,
+1128,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-07,4:14 PM,4:59 PM,Di alam room
+1129,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-07,4:00 PM,4:59 PM,Player
+1130,BA2602,"Baera, Julliane",University and I,Absent,2026-05-07,,,Nagcutting
+1131,IL2601,"Ilagan, John Carlo",General,Present,2026-05-08,8:00 AM,8:59 AM,
+1132,AU2601,"Aurelio, Harold",General,Present,2026-05-08,8:00 AM,8:59 AM,
+1133,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-08,8:00 AM,8:59 AM,
+1134,ES2601,"Escalona, Christan",General,Present,2026-05-08,8:00 AM,8:59 AM,
+1135,BA2602,"Baera, Julliane",General,Present,2026-05-08,8:00 AM,8:59 AM,
+1136,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-08,9:14 AM,9:59 AM,Na-traffic
+1137,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-08,,,May sakit
+1138,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-08,,,Player
+1139,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-08,9:00 AM,9:59 AM,
+1140,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-08,9:00 AM,9:59 AM,
+1141,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-08,10:00 AM,10:59 AM,
+1142,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-08,10:00 AM,10:59 AM,
+1143,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-08,10:00 AM,10:59 AM,
+1144,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-08,10:00 AM,10:59 AM,
+1145,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-08,10:00 AM,10:59 AM,
+1146,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-08,11:14 AM,11:59 AM,Kumain pa
+1147,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-08,,,Nagcutting
+1148,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-08,,,Player
+1149,ES2601,"Escalona, Christan",Calculus,Present,2026-05-08,11:00 AM,11:59 AM,
+1150,BA2602,"Baera, Julliane",Calculus,Present,2026-05-08,11:00 AM,11:59 AM,
+1151,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-08,1:00 PM,1:59 PM,
+1152,AU2601,"Aurelio, Harold",Physics,Present,2026-05-08,1:00 PM,1:59 PM,
+1153,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-08,1:00 PM,1:59 PM,
+1154,ES2601,"Escalona, Christan",Physics,Present,2026-05-08,1:00 PM,1:59 PM,
+1155,BA2602,"Baera, Julliane",Physics,Present,2026-05-08,1:00 PM,1:59 PM,
+1156,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-08,2:00 PM,2:59 PM,
+1157,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-08,2:00 PM,2:59 PM,
+1158,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-08,2:00 PM,2:59 PM,
+1159,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-08,2:00 PM,2:59 PM,
+1160,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-08,2:00 PM,2:59 PM,
+1161,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-08,3:00 PM,3:59 PM,
+1162,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-08,3:00 PM,3:59 PM,
+1163,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-08,3:00 PM,3:59 PM,
+1164,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-08,3:00 PM,3:59 PM,
+1165,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-08,3:00 PM,3:59 PM,
+1166,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-08,4:00 PM,4:59 PM,
+1167,AU2601,"Aurelio, Harold",University and I,Present,2026-05-08,4:00 PM,4:59 PM,
+1168,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-08,4:14 PM,4:59 PM,Di alam room
+1169,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-08,4:00 PM,4:59 PM,Player
+1170,BA2602,"Baera, Julliane",University and I,Absent,2026-05-08,,,Nagcutting
+1171,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-05-09,8:00 AM,8:59 AM,
+1172,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-05-09,8:00 AM,8:59 AM,
+1173,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-05-09,8:00 AM,8:59 AM,
+1174,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-05-09,8:00 AM,8:59 AM,
+1175,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-05-09,8:00 AM,8:59 AM,
+1176,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-05-09,9:14 AM,9:59 AM,Na-traffic
+1177,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-05-09,,,May sakit
+1178,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-05-09,,,Player
+1179,ES2601,"Escalona, Christan",Physical Education,Present,2026-05-09,9:00 AM,9:59 AM,
+1180,BA2602,"Baera, Julliane",Physical Education,Present,2026-05-09,9:00 AM,9:59 AM,
+1181,IL2601,"Ilagan, John Carlo",General,Present,2026-05-11,8:00 AM,8:59 AM,
+1182,AU2601,"Aurelio, Harold",General,Present,2026-05-11,8:00 AM,8:59 AM,
+1183,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-11,8:00 AM,8:59 AM,
+1184,ES2601,"Escalona, Christan",General,Present,2026-05-11,8:00 AM,8:59 AM,
+1185,BA2602,"Baera, Julliane",General,Present,2026-05-11,8:00 AM,8:59 AM,
+1186,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-11,9:14 AM,9:59 AM,Na-traffic
+1187,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-11,,,May sakit
+1188,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-11,,,Player
+1189,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-11,9:00 AM,9:59 AM,
+1190,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-11,9:00 AM,9:59 AM,
+1191,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-11,10:00 AM,10:59 AM,
+1192,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-11,10:00 AM,10:59 AM,
+1193,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-11,10:00 AM,10:59 AM,
+1194,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-11,10:00 AM,10:59 AM,
+1195,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-11,10:00 AM,10:59 AM,
+1196,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-11,11:14 AM,11:59 AM,Kumain pa
+1197,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-11,,,Nagcutting
+1198,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-11,,,Player
+1199,ES2601,"Escalona, Christan",Calculus,Present,2026-05-11,11:00 AM,11:59 AM,
+1200,BA2602,"Baera, Julliane",Calculus,Present,2026-05-11,11:00 AM,11:59 AM,
+1201,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-11,1:00 PM,1:59 PM,
+1202,AU2601,"Aurelio, Harold",Physics,Present,2026-05-11,1:00 PM,1:59 PM,
+1203,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-11,1:00 PM,1:59 PM,
+1204,ES2601,"Escalona, Christan",Physics,Present,2026-05-11,1:00 PM,1:59 PM,
+1205,BA2602,"Baera, Julliane",Physics,Present,2026-05-11,1:00 PM,1:59 PM,
+1206,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-11,2:00 PM,2:59 PM,
+1207,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-11,2:00 PM,2:59 PM,
+1208,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-11,2:00 PM,2:59 PM,
+1209,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-11,2:00 PM,2:59 PM,
+1210,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-11,2:00 PM,2:59 PM,
+1211,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-11,3:00 PM,3:59 PM,
+1212,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-11,3:00 PM,3:59 PM,
+1213,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-11,3:00 PM,3:59 PM,
+1214,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-11,3:00 PM,3:59 PM,
+1215,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-11,3:00 PM,3:59 PM,
+1216,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-11,4:00 PM,4:59 PM,
+1217,AU2601,"Aurelio, Harold",University and I,Present,2026-05-11,4:00 PM,4:59 PM,
+1218,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-11,4:14 PM,4:59 PM,Di alam room
+1219,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-11,4:00 PM,4:59 PM,Player
+1220,BA2602,"Baera, Julliane",University and I,Absent,2026-05-11,,,Nagcutting
+1221,IL2601,"Ilagan, John Carlo",General,Present,2026-05-12,8:00 AM,8:59 AM,
+1222,AU2601,"Aurelio, Harold",General,Present,2026-05-12,8:00 AM,8:59 AM,
+1223,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-12,8:00 AM,8:59 AM,
+1224,ES2601,"Escalona, Christan",General,Present,2026-05-12,8:00 AM,8:59 AM,
+1225,BA2602,"Baera, Julliane",General,Present,2026-05-12,8:00 AM,8:59 AM,
+1226,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-12,9:14 AM,9:59 AM,Na-traffic
+1227,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-12,,,May sakit
+1228,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-12,,,Player
+1229,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-12,9:00 AM,9:59 AM,
+1230,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-12,9:00 AM,9:59 AM,
+1231,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-12,10:00 AM,10:59 AM,
+1232,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-12,10:00 AM,10:59 AM,
+1233,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-12,10:00 AM,10:59 AM,
+1234,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-12,10:00 AM,10:59 AM,
+1235,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-12,10:00 AM,10:59 AM,
+1236,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-12,11:14 AM,11:59 AM,Kumain pa
+1237,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-12,,,Nagcutting
+1238,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-12,,,Player
+1239,ES2601,"Escalona, Christan",Calculus,Present,2026-05-12,11:00 AM,11:59 AM,
+1240,BA2602,"Baera, Julliane",Calculus,Present,2026-05-12,11:00 AM,11:59 AM,
+1241,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-12,1:00 PM,1:59 PM,
+1242,AU2601,"Aurelio, Harold",Physics,Present,2026-05-12,1:00 PM,1:59 PM,
+1243,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-12,1:00 PM,1:59 PM,
+1244,ES2601,"Escalona, Christan",Physics,Present,2026-05-12,1:00 PM,1:59 PM,
+1245,BA2602,"Baera, Julliane",Physics,Present,2026-05-12,1:00 PM,1:59 PM,
+1246,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-12,2:00 PM,2:59 PM,
+1247,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-12,2:00 PM,2:59 PM,
+1248,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-12,2:00 PM,2:59 PM,
+1249,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-12,2:00 PM,2:59 PM,
+1250,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-12,2:00 PM,2:59 PM,
+1251,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-12,3:00 PM,3:59 PM,
+1252,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-12,3:00 PM,3:59 PM,
+1253,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-12,3:00 PM,3:59 PM,
+1254,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-12,3:00 PM,3:59 PM,
+1255,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-12,3:00 PM,3:59 PM,
+1256,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-12,4:00 PM,4:59 PM,
+1257,AU2601,"Aurelio, Harold",University and I,Present,2026-05-12,4:00 PM,4:59 PM,
+1258,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-12,4:14 PM,4:59 PM,Di alam room
+1259,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-12,4:00 PM,4:59 PM,Player
+1260,BA2602,"Baera, Julliane",University and I,Absent,2026-05-12,,,Nagcutting
+1261,IL2601,"Ilagan, John Carlo",General,Present,2026-05-13,8:00 AM,8:59 AM,
+1262,AU2601,"Aurelio, Harold",General,Present,2026-05-13,8:00 AM,8:59 AM,
+1263,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-13,8:00 AM,8:59 AM,
+1264,ES2601,"Escalona, Christan",General,Present,2026-05-13,8:00 AM,8:59 AM,
+1265,BA2602,"Baera, Julliane",General,Present,2026-05-13,8:00 AM,8:59 AM,
+1266,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-13,9:14 AM,9:59 AM,Na-traffic
+1267,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-13,,,May sakit
+1268,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-13,,,Player
+1269,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-13,9:00 AM,9:59 AM,
+1270,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-13,9:00 AM,9:59 AM,
+1271,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-13,10:00 AM,10:59 AM,
+1272,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-13,10:00 AM,10:59 AM,
+1273,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-13,10:00 AM,10:59 AM,
+1274,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-13,10:00 AM,10:59 AM,
+1275,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-13,10:00 AM,10:59 AM,
+1276,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-13,11:14 AM,11:59 AM,Kumain pa
+1277,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-13,,,Nagcutting
+1278,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-13,,,Player
+1279,ES2601,"Escalona, Christan",Calculus,Present,2026-05-13,11:00 AM,11:59 AM,
+1280,BA2602,"Baera, Julliane",Calculus,Present,2026-05-13,11:00 AM,11:59 AM,
+1281,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-13,1:00 PM,1:59 PM,
+1282,AU2601,"Aurelio, Harold",Physics,Present,2026-05-13,1:00 PM,1:59 PM,
+1283,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-13,1:00 PM,1:59 PM,
+1284,ES2601,"Escalona, Christan",Physics,Present,2026-05-13,1:00 PM,1:59 PM,
+1285,BA2602,"Baera, Julliane",Physics,Present,2026-05-13,1:00 PM,1:59 PM,
+1286,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-13,2:00 PM,2:59 PM,
+1287,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-13,2:00 PM,2:59 PM,
+1288,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-13,2:00 PM,2:59 PM,
+1289,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-13,2:00 PM,2:59 PM,
+1290,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-13,2:00 PM,2:59 PM,
+1291,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-13,3:00 PM,3:59 PM,
+1292,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-13,3:00 PM,3:59 PM,
+1293,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-13,3:00 PM,3:59 PM,
+1294,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-13,3:00 PM,3:59 PM,
+1295,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-13,3:00 PM,3:59 PM,
+1296,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-13,4:00 PM,4:59 PM,
+1297,AU2601,"Aurelio, Harold",University and I,Present,2026-05-13,4:00 PM,4:59 PM,
+1298,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-13,4:14 PM,4:59 PM,Di alam room
+1299,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-13,4:00 PM,4:59 PM,Player
+1300,BA2602,"Baera, Julliane",University and I,Absent,2026-05-13,,,Nagcutting
+1301,IL2601,"Ilagan, John Carlo",General,Present,2026-05-14,8:00 AM,8:59 AM,
+1302,AU2601,"Aurelio, Harold",General,Present,2026-05-14,8:00 AM,8:59 AM,
+1303,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-14,8:00 AM,8:59 AM,
+1304,ES2601,"Escalona, Christan",General,Present,2026-05-14,8:00 AM,8:59 AM,
+1305,BA2602,"Baera, Julliane",General,Present,2026-05-14,8:00 AM,8:59 AM,
+1306,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-14,9:14 AM,9:59 AM,Na-traffic
+1307,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-14,,,May sakit
+1308,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-14,,,Player
+1309,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-14,9:00 AM,9:59 AM,
+1310,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-14,9:00 AM,9:59 AM,
+1311,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-14,10:00 AM,10:59 AM,
+1312,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-14,10:00 AM,10:59 AM,
+1313,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-14,10:00 AM,10:59 AM,
+1314,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-14,10:00 AM,10:59 AM,
+1315,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-14,10:00 AM,10:59 AM,
+1316,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-14,11:14 AM,11:59 AM,Kumain pa
+1317,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-14,,,Nagcutting
+1318,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-14,,,Player
+1319,ES2601,"Escalona, Christan",Calculus,Present,2026-05-14,11:00 AM,11:59 AM,
+1320,BA2602,"Baera, Julliane",Calculus,Present,2026-05-14,11:00 AM,11:59 AM,
+1321,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-14,1:00 PM,1:59 PM,
+1322,AU2601,"Aurelio, Harold",Physics,Present,2026-05-14,1:00 PM,1:59 PM,
+1323,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-14,1:00 PM,1:59 PM,
+1324,ES2601,"Escalona, Christan",Physics,Present,2026-05-14,1:00 PM,1:59 PM,
+1325,BA2602,"Baera, Julliane",Physics,Present,2026-05-14,1:00 PM,1:59 PM,
+1326,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-14,2:00 PM,2:59 PM,
+1327,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-14,2:00 PM,2:59 PM,
+1328,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-14,2:00 PM,2:59 PM,
+1329,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-14,2:00 PM,2:59 PM,
+1330,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-14,2:00 PM,2:59 PM,
+1331,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-14,3:00 PM,3:59 PM,
+1332,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-14,3:00 PM,3:59 PM,
+1333,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-14,3:00 PM,3:59 PM,
+1334,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-14,3:00 PM,3:59 PM,
+1335,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-14,3:00 PM,3:59 PM,
+1336,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-14,4:00 PM,4:59 PM,
+1337,AU2601,"Aurelio, Harold",University and I,Present,2026-05-14,4:00 PM,4:59 PM,
+1338,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-14,4:14 PM,4:59 PM,Di alam room
+1339,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-14,4:00 PM,4:59 PM,Player
+1340,BA2602,"Baera, Julliane",University and I,Absent,2026-05-14,,,Nagcutting
+1341,IL2601,"Ilagan, John Carlo",General,Present,2026-05-15,8:00 AM,8:59 AM,
+1342,AU2601,"Aurelio, Harold",General,Present,2026-05-15,8:00 AM,8:59 AM,
+1343,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-15,8:00 AM,8:59 AM,
+1344,ES2601,"Escalona, Christan",General,Present,2026-05-15,8:00 AM,8:59 AM,
+1345,BA2602,"Baera, Julliane",General,Present,2026-05-15,8:00 AM,8:59 AM,
+1346,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-15,9:14 AM,9:59 AM,Na-traffic
+1347,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-15,,,May sakit
+1348,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-15,,,Player
+1349,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-15,9:00 AM,9:59 AM,
+1350,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-15,9:00 AM,9:59 AM,
+1351,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-15,10:00 AM,10:59 AM,
+1352,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-15,10:00 AM,10:59 AM,
+1353,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-15,10:00 AM,10:59 AM,
+1354,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-15,10:00 AM,10:59 AM,
+1355,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-15,10:00 AM,10:59 AM,
+1356,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-15,11:14 AM,11:59 AM,Kumain pa
+1357,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-15,,,Nagcutting
+1358,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-15,,,Player
+1359,ES2601,"Escalona, Christan",Calculus,Present,2026-05-15,11:00 AM,11:59 AM,
+1360,BA2602,"Baera, Julliane",Calculus,Present,2026-05-15,11:00 AM,11:59 AM,
+1361,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-15,1:00 PM,1:59 PM,
+1362,AU2601,"Aurelio, Harold",Physics,Present,2026-05-15,1:00 PM,1:59 PM,
+1363,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-15,1:00 PM,1:59 PM,
+1364,ES2601,"Escalona, Christan",Physics,Present,2026-05-15,1:00 PM,1:59 PM,
+1365,BA2602,"Baera, Julliane",Physics,Present,2026-05-15,1:00 PM,1:59 PM,
+1366,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-15,2:00 PM,2:59 PM,
+1367,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-15,2:00 PM,2:59 PM,
+1368,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-15,2:00 PM,2:59 PM,
+1369,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-15,2:00 PM,2:59 PM,
+1370,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-15,2:00 PM,2:59 PM,
+1371,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-15,3:00 PM,3:59 PM,
+1372,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-15,3:00 PM,3:59 PM,
+1373,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-15,3:00 PM,3:59 PM,
+1374,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-15,3:00 PM,3:59 PM,
+1375,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-15,3:00 PM,3:59 PM,
+1376,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-15,4:00 PM,4:59 PM,
+1377,AU2601,"Aurelio, Harold",University and I,Present,2026-05-15,4:00 PM,4:59 PM,
+1378,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-15,4:14 PM,4:59 PM,Di alam room
+1379,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-15,4:00 PM,4:59 PM,Player
+1380,BA2602,"Baera, Julliane",University and I,Absent,2026-05-15,,,Nagcutting
+1381,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-05-16,8:00 AM,8:59 AM,
+1382,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-05-16,8:00 AM,8:59 AM,
+1383,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-05-16,8:00 AM,8:59 AM,
+1384,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-05-16,8:00 AM,8:59 AM,
+1385,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-05-16,8:00 AM,8:59 AM,
+1386,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-05-16,9:14 AM,9:59 AM,Na-traffic
+1387,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-05-16,,,May sakit
+1388,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-05-16,,,Player
+1389,ES2601,"Escalona, Christan",Physical Education,Present,2026-05-16,9:00 AM,9:59 AM,
+1390,BA2602,"Baera, Julliane",Physical Education,Present,2026-05-16,9:00 AM,9:59 AM,
+1391,IL2601,"Ilagan, John Carlo",General,Present,2026-05-18,8:00 AM,8:59 AM,
+1392,AU2601,"Aurelio, Harold",General,Present,2026-05-18,8:00 AM,8:59 AM,
+1393,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-18,8:00 AM,8:59 AM,
+1394,ES2601,"Escalona, Christan",General,Present,2026-05-18,8:00 AM,8:59 AM,
+1395,BA2602,"Baera, Julliane",General,Present,2026-05-18,8:00 AM,8:59 AM,
+1396,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-18,9:14 AM,9:59 AM,Na-traffic
+1397,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-18,,,May sakit
+1398,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-18,,,Player
+1399,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-18,9:00 AM,9:59 AM,
+1400,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-18,9:00 AM,9:59 AM,
+1401,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-18,10:00 AM,10:59 AM,
+1402,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-18,10:00 AM,10:59 AM,
+1403,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-18,10:00 AM,10:59 AM,
+1404,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-18,10:00 AM,10:59 AM,
+1405,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-18,10:00 AM,10:59 AM,
+1406,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-18,11:14 AM,11:59 AM,Kumain pa
+1407,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-18,,,Nagcutting
+1408,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-18,,,Player
+1409,ES2601,"Escalona, Christan",Calculus,Present,2026-05-18,11:00 AM,11:59 AM,
+1410,BA2602,"Baera, Julliane",Calculus,Present,2026-05-18,11:00 AM,11:59 AM,
+1411,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-18,1:00 PM,1:59 PM,
+1412,AU2601,"Aurelio, Harold",Physics,Present,2026-05-18,1:00 PM,1:59 PM,
+1413,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-18,1:00 PM,1:59 PM,
+1414,ES2601,"Escalona, Christan",Physics,Present,2026-05-18,1:00 PM,1:59 PM,
+1415,BA2602,"Baera, Julliane",Physics,Present,2026-05-18,1:00 PM,1:59 PM,
+1416,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-18,2:00 PM,2:59 PM,
+1417,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-18,2:00 PM,2:59 PM,
+1418,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-18,2:00 PM,2:59 PM,
+1419,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-18,2:00 PM,2:59 PM,
+1420,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-18,2:00 PM,2:59 PM,
+1421,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-18,3:00 PM,3:59 PM,
+1422,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-18,3:00 PM,3:59 PM,
+1423,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-18,3:00 PM,3:59 PM,
+1424,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-18,3:00 PM,3:59 PM,
+1425,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-18,3:00 PM,3:59 PM,
+1426,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-18,4:00 PM,4:59 PM,
+1427,AU2601,"Aurelio, Harold",University and I,Present,2026-05-18,4:00 PM,4:59 PM,
+1428,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-18,4:14 PM,4:59 PM,Di alam room
+1429,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-18,4:00 PM,4:59 PM,Player
+1430,BA2602,"Baera, Julliane",University and I,Absent,2026-05-18,,,Nagcutting
+1431,IL2601,"Ilagan, John Carlo",General,Present,2026-05-19,8:00 AM,8:59 AM,
+1432,AU2601,"Aurelio, Harold",General,Present,2026-05-19,8:00 AM,8:59 AM,
+1433,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-19,8:00 AM,8:59 AM,
+1434,ES2601,"Escalona, Christan",General,Present,2026-05-19,8:00 AM,8:59 AM,
+1435,BA2602,"Baera, Julliane",General,Present,2026-05-19,8:00 AM,8:59 AM,
+1436,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-19,9:14 AM,9:59 AM,Na-traffic
+1437,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-19,,,May sakit
+1438,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-19,,,Player
+1439,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-19,9:00 AM,9:59 AM,
+1440,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-19,9:00 AM,9:59 AM,
+1441,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-19,10:00 AM,10:59 AM,
+1442,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-19,10:00 AM,10:59 AM,
+1443,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-19,10:00 AM,10:59 AM,
+1444,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-19,10:00 AM,10:59 AM,
+1445,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-19,10:00 AM,10:59 AM,
+1446,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-19,11:14 AM,11:59 AM,Kumain pa
+1447,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-19,,,Nagcutting
+1448,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-19,,,Player
+1449,ES2601,"Escalona, Christan",Calculus,Present,2026-05-19,11:00 AM,11:59 AM,
+1450,BA2602,"Baera, Julliane",Calculus,Present,2026-05-19,11:00 AM,11:59 AM,
+1451,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-19,1:00 PM,1:59 PM,
+1452,AU2601,"Aurelio, Harold",Physics,Present,2026-05-19,1:00 PM,1:59 PM,
+1453,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-19,1:00 PM,1:59 PM,
+1454,ES2601,"Escalona, Christan",Physics,Present,2026-05-19,1:00 PM,1:59 PM,
+1455,BA2602,"Baera, Julliane",Physics,Present,2026-05-19,1:00 PM,1:59 PM,
+1456,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-19,2:00 PM,2:59 PM,
+1457,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-19,2:00 PM,2:59 PM,
+1458,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-19,2:00 PM,2:59 PM,
+1459,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-19,2:00 PM,2:59 PM,
+1460,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-19,2:00 PM,2:59 PM,
+1461,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-19,3:00 PM,3:59 PM,
+1462,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-19,3:00 PM,3:59 PM,
+1463,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-19,3:00 PM,3:59 PM,
+1464,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-19,3:00 PM,3:59 PM,
+1465,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-19,3:00 PM,3:59 PM,
+1466,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-19,4:00 PM,4:59 PM,
+1467,AU2601,"Aurelio, Harold",University and I,Present,2026-05-19,4:00 PM,4:59 PM,
+1468,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-19,4:14 PM,4:59 PM,Di alam room
+1469,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-19,4:00 PM,4:59 PM,Player
+1470,BA2602,"Baera, Julliane",University and I,Absent,2026-05-19,,,Nagcutting
+1471,IL2601,"Ilagan, John Carlo",General,Present,2026-05-20,8:00 AM,8:59 AM,
+1472,AU2601,"Aurelio, Harold",General,Present,2026-05-20,8:00 AM,8:59 AM,
+1473,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-20,8:00 AM,8:59 AM,
+1474,ES2601,"Escalona, Christan",General,Present,2026-05-20,8:00 AM,8:59 AM,
+1475,BA2602,"Baera, Julliane",General,Present,2026-05-20,8:00 AM,8:59 AM,
+1476,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-20,9:14 AM,9:59 AM,Na-traffic
+1477,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-20,,,May sakit
+1478,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-20,,,Player
+1479,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-20,9:00 AM,9:59 AM,
+1480,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-20,9:00 AM,9:59 AM,
+1481,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-20,10:00 AM,10:59 AM,
+1482,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-20,10:00 AM,10:59 AM,
+1483,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-20,10:00 AM,10:59 AM,
+1484,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-20,10:00 AM,10:59 AM,
+1485,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-20,10:00 AM,10:59 AM,
+1486,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-20,11:14 AM,11:59 AM,Kumain pa
+1487,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-20,,,Nagcutting
+1488,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-20,,,Player
+1489,ES2601,"Escalona, Christan",Calculus,Present,2026-05-20,11:00 AM,11:59 AM,
+1490,BA2602,"Baera, Julliane",Calculus,Present,2026-05-20,11:00 AM,11:59 AM,
+1491,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-20,1:00 PM,1:59 PM,
+1492,AU2601,"Aurelio, Harold",Physics,Present,2026-05-20,1:00 PM,1:59 PM,
+1493,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-20,1:00 PM,1:59 PM,
+1494,ES2601,"Escalona, Christan",Physics,Present,2026-05-20,1:00 PM,1:59 PM,
+1495,BA2602,"Baera, Julliane",Physics,Present,2026-05-20,1:00 PM,1:59 PM,
+1496,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-20,2:00 PM,2:59 PM,
+1497,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-20,2:00 PM,2:59 PM,
+1498,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-20,2:00 PM,2:59 PM,
+1499,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-20,2:00 PM,2:59 PM,
+1500,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-20,2:00 PM,2:59 PM,
+1501,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-20,3:00 PM,3:59 PM,
+1502,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-20,3:00 PM,3:59 PM,
+1503,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-20,3:00 PM,3:59 PM,
+1504,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-20,3:00 PM,3:59 PM,
+1505,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-20,3:00 PM,3:59 PM,
+1506,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-20,4:00 PM,4:59 PM,
+1507,AU2601,"Aurelio, Harold",University and I,Present,2026-05-20,4:00 PM,4:59 PM,
+1508,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-20,4:14 PM,4:59 PM,Di alam room
+1509,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-20,4:00 PM,4:59 PM,Player
+1510,BA2602,"Baera, Julliane",University and I,Absent,2026-05-20,,,Nagcutting
+1511,IL2601,"Ilagan, John Carlo",General,Present,2026-05-21,8:00 AM,8:59 AM,
+1512,AU2601,"Aurelio, Harold",General,Present,2026-05-21,8:00 AM,8:59 AM,
+1513,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-21,8:00 AM,8:59 AM,
+1514,ES2601,"Escalona, Christan",General,Present,2026-05-21,8:00 AM,8:59 AM,
+1515,BA2602,"Baera, Julliane",General,Present,2026-05-21,8:00 AM,8:59 AM,
+1516,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-21,9:14 AM,9:59 AM,Na-traffic
+1517,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-21,,,May sakit
+1518,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-21,,,Player
+1519,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-21,9:00 AM,9:59 AM,
+1520,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-21,9:00 AM,9:59 AM,
+1521,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-21,10:00 AM,10:59 AM,
+1522,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-21,10:00 AM,10:59 AM,
+1523,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-21,10:00 AM,10:59 AM,
+1524,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-21,10:00 AM,10:59 AM,
+1525,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-21,10:00 AM,10:59 AM,
+1526,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-21,11:14 AM,11:59 AM,Kumain pa
+1527,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-21,,,Nagcutting
+1528,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-21,,,Player
+1529,ES2601,"Escalona, Christan",Calculus,Present,2026-05-21,11:00 AM,11:59 AM,
+1530,BA2602,"Baera, Julliane",Calculus,Present,2026-05-21,11:00 AM,11:59 AM,
+1531,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-21,1:00 PM,1:59 PM,
+1532,AU2601,"Aurelio, Harold",Physics,Present,2026-05-21,1:00 PM,1:59 PM,
+1533,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-21,1:00 PM,1:59 PM,
+1534,ES2601,"Escalona, Christan",Physics,Present,2026-05-21,1:00 PM,1:59 PM,
+1535,BA2602,"Baera, Julliane",Physics,Present,2026-05-21,1:00 PM,1:59 PM,
+1536,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-21,2:00 PM,2:59 PM,
+1537,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-21,2:00 PM,2:59 PM,
+1538,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-21,2:00 PM,2:59 PM,
+1539,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-21,2:00 PM,2:59 PM,
+1540,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-21,2:00 PM,2:59 PM,
+1541,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-21,3:00 PM,3:59 PM,
+1542,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-21,3:00 PM,3:59 PM,
+1543,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-21,3:00 PM,3:59 PM,
+1544,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-21,3:00 PM,3:59 PM,
+1545,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-21,3:00 PM,3:59 PM,
+1546,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-21,4:00 PM,4:59 PM,
+1547,AU2601,"Aurelio, Harold",University and I,Present,2026-05-21,4:00 PM,4:59 PM,
+1548,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-21,4:14 PM,4:59 PM,Di alam room
+1549,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-21,4:00 PM,4:59 PM,Player
+1550,BA2602,"Baera, Julliane",University and I,Absent,2026-05-21,,,Nagcutting
+1551,IL2601,"Ilagan, John Carlo",General,Present,2026-05-22,8:00 AM,8:59 AM,
+1552,AU2601,"Aurelio, Harold",General,Present,2026-05-22,8:00 AM,8:59 AM,
+1553,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-22,8:00 AM,8:59 AM,
+1554,ES2601,"Escalona, Christan",General,Present,2026-05-22,8:00 AM,8:59 AM,
+1555,BA2602,"Baera, Julliane",General,Present,2026-05-22,8:00 AM,8:59 AM,
+1556,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-22,9:14 AM,9:59 AM,Na-traffic
+1557,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-22,,,May sakit
+1558,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-22,,,Player
+1559,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-22,9:00 AM,9:59 AM,
+1560,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-22,9:00 AM,9:59 AM,
+1561,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-22,10:00 AM,10:59 AM,
+1562,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-22,10:00 AM,10:59 AM,
+1563,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-22,10:00 AM,10:59 AM,
+1564,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-22,10:00 AM,10:59 AM,
+1565,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-22,10:00 AM,10:59 AM,
+1566,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-22,11:14 AM,11:59 AM,Kumain pa
+1567,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-22,,,Nagcutting
+1568,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-22,,,Player
+1569,ES2601,"Escalona, Christan",Calculus,Present,2026-05-22,11:00 AM,11:59 AM,
+1570,BA2602,"Baera, Julliane",Calculus,Present,2026-05-22,11:00 AM,11:59 AM,
+1571,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-22,1:00 PM,1:59 PM,
+1572,AU2601,"Aurelio, Harold",Physics,Present,2026-05-22,1:00 PM,1:59 PM,
+1573,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-22,1:00 PM,1:59 PM,
+1574,ES2601,"Escalona, Christan",Physics,Present,2026-05-22,1:00 PM,1:59 PM,
+1575,BA2602,"Baera, Julliane",Physics,Present,2026-05-22,1:00 PM,1:59 PM,
+1576,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-22,2:00 PM,2:59 PM,
+1577,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-22,2:00 PM,2:59 PM,
+1578,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-22,2:00 PM,2:59 PM,
+1579,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-22,2:00 PM,2:59 PM,
+1580,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-22,2:00 PM,2:59 PM,
+1581,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-22,3:00 PM,3:59 PM,
+1582,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-22,3:00 PM,3:59 PM,
+1583,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-22,3:00 PM,3:59 PM,
+1584,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-22,3:00 PM,3:59 PM,
+1585,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-22,3:00 PM,3:59 PM,
+1586,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-22,4:00 PM,4:59 PM,
+1587,AU2601,"Aurelio, Harold",University and I,Present,2026-05-22,4:00 PM,4:59 PM,
+1588,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-22,4:14 PM,4:59 PM,Di alam room
+1589,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-22,4:00 PM,4:59 PM,Player
+1590,BA2602,"Baera, Julliane",University and I,Absent,2026-05-22,,,Nagcutting
+1591,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-05-23,8:00 AM,8:59 AM,
+1592,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-05-23,8:00 AM,8:59 AM,
+1593,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-05-23,8:00 AM,8:59 AM,
+1594,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-05-23,8:00 AM,8:59 AM,
+1595,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-05-23,8:00 AM,8:59 AM,
+1596,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-05-23,9:14 AM,9:59 AM,Na-traffic
+1597,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-05-23,,,May sakit
+1598,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-05-23,,,Player
+1599,ES2601,"Escalona, Christan",Physical Education,Present,2026-05-23,9:00 AM,9:59 AM,
+1600,BA2602,"Baera, Julliane",Physical Education,Present,2026-05-23,9:00 AM,9:59 AM,
+1601,IL2601,"Ilagan, John Carlo",General,Present,2026-05-25,8:00 AM,8:59 AM,
+1602,AU2601,"Aurelio, Harold",General,Present,2026-05-25,8:00 AM,8:59 AM,
+1603,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-25,8:00 AM,8:59 AM,
+1604,ES2601,"Escalona, Christan",General,Present,2026-05-25,8:00 AM,8:59 AM,
+1605,BA2602,"Baera, Julliane",General,Present,2026-05-25,8:00 AM,8:59 AM,
+1606,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-25,9:14 AM,9:59 AM,Na-traffic
+1607,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-25,,,May sakit
+1608,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-25,,,Player
+1609,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-25,9:00 AM,9:59 AM,
+1610,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-25,9:00 AM,9:59 AM,
+1611,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-25,10:00 AM,10:59 AM,
+1612,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-25,10:00 AM,10:59 AM,
+1613,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-25,10:00 AM,10:59 AM,
+1614,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-25,10:00 AM,10:59 AM,
+1615,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-25,10:00 AM,10:59 AM,
+1616,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-25,11:14 AM,11:59 AM,Kumain pa
+1617,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-25,,,Nagcutting
+1618,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-25,,,Player
+1619,ES2601,"Escalona, Christan",Calculus,Present,2026-05-25,11:00 AM,11:59 AM,
+1620,BA2602,"Baera, Julliane",Calculus,Present,2026-05-25,11:00 AM,11:59 AM,
+1621,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-25,1:00 PM,1:59 PM,
+1622,AU2601,"Aurelio, Harold",Physics,Present,2026-05-25,1:00 PM,1:59 PM,
+1623,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-25,1:00 PM,1:59 PM,
+1624,ES2601,"Escalona, Christan",Physics,Present,2026-05-25,1:00 PM,1:59 PM,
+1625,BA2602,"Baera, Julliane",Physics,Present,2026-05-25,1:00 PM,1:59 PM,
+1626,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-25,2:00 PM,2:59 PM,
+1627,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-25,2:00 PM,2:59 PM,
+1628,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-25,2:00 PM,2:59 PM,
+1629,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-25,2:00 PM,2:59 PM,
+1630,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-25,2:00 PM,2:59 PM,
+1631,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-25,3:00 PM,3:59 PM,
+1632,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-25,3:00 PM,3:59 PM,
+1633,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-25,3:00 PM,3:59 PM,
+1634,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-25,3:00 PM,3:59 PM,
+1635,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-25,3:00 PM,3:59 PM,
+1636,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-25,4:00 PM,4:59 PM,
+1637,AU2601,"Aurelio, Harold",University and I,Present,2026-05-25,4:00 PM,4:59 PM,
+1638,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-25,4:14 PM,4:59 PM,Di alam room
+1639,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-25,4:00 PM,4:59 PM,Player
+1640,BA2602,"Baera, Julliane",University and I,Absent,2026-05-25,,,Nagcutting
+1641,IL2601,"Ilagan, John Carlo",General,Present,2026-05-26,8:00 AM,8:59 AM,
+1642,AU2601,"Aurelio, Harold",General,Present,2026-05-26,8:00 AM,8:59 AM,
+1643,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-26,8:00 AM,8:59 AM,
+1644,ES2601,"Escalona, Christan",General,Present,2026-05-26,8:00 AM,8:59 AM,
+1645,BA2602,"Baera, Julliane",General,Present,2026-05-26,8:00 AM,8:59 AM,
+1646,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-26,9:14 AM,9:59 AM,Na-traffic
+1647,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-26,,,May sakit
+1648,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-26,,,Player
+1649,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-26,9:00 AM,9:59 AM,
+1650,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-26,9:00 AM,9:59 AM,
+1651,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-26,10:00 AM,10:59 AM,
+1652,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-26,10:00 AM,10:59 AM,
+1653,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-26,10:00 AM,10:59 AM,
+1654,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-26,10:00 AM,10:59 AM,
+1655,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-26,10:00 AM,10:59 AM,
+1656,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-26,11:14 AM,11:59 AM,Kumain pa
+1657,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-26,,,Nagcutting
+1658,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-26,,,Player
+1659,ES2601,"Escalona, Christan",Calculus,Present,2026-05-26,11:00 AM,11:59 AM,
+1660,BA2602,"Baera, Julliane",Calculus,Present,2026-05-26,11:00 AM,11:59 AM,
+1661,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-26,1:00 PM,1:59 PM,
+1662,AU2601,"Aurelio, Harold",Physics,Present,2026-05-26,1:00 PM,1:59 PM,
+1663,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-26,1:00 PM,1:59 PM,
+1664,ES2601,"Escalona, Christan",Physics,Present,2026-05-26,1:00 PM,1:59 PM,
+1665,BA2602,"Baera, Julliane",Physics,Present,2026-05-26,1:00 PM,1:59 PM,
+1666,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-26,2:00 PM,2:59 PM,
+1667,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-26,2:00 PM,2:59 PM,
+1668,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-26,2:00 PM,2:59 PM,
+1669,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-26,2:00 PM,2:59 PM,
+1670,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-26,2:00 PM,2:59 PM,
+1671,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-26,3:00 PM,3:59 PM,
+1672,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-26,3:00 PM,3:59 PM,
+1673,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-26,3:00 PM,3:59 PM,
+1674,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-26,3:00 PM,3:59 PM,
+1675,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-26,3:00 PM,3:59 PM,
+1676,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-26,4:00 PM,4:59 PM,
+1677,AU2601,"Aurelio, Harold",University and I,Present,2026-05-26,4:00 PM,4:59 PM,
+1678,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-26,4:14 PM,4:59 PM,Di alam room
+1679,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-26,4:00 PM,4:59 PM,Player
+1680,BA2602,"Baera, Julliane",University and I,Absent,2026-05-26,,,Nagcutting
+1681,IL2601,"Ilagan, John Carlo",General,Present,2026-05-27,8:00 AM,8:59 AM,
+1682,AU2601,"Aurelio, Harold",General,Present,2026-05-27,8:00 AM,8:59 AM,
+1683,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-27,8:00 AM,8:59 AM,
+1684,ES2601,"Escalona, Christan",General,Present,2026-05-27,8:00 AM,8:59 AM,
+1685,BA2602,"Baera, Julliane",General,Present,2026-05-27,8:00 AM,8:59 AM,
+1686,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-27,9:14 AM,9:59 AM,Na-traffic
+1687,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-27,,,May sakit
+1688,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-27,,,Player
+1689,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-27,9:00 AM,9:59 AM,
+1690,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-27,9:00 AM,9:59 AM,
+1691,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-27,10:00 AM,10:59 AM,
+1692,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-27,10:00 AM,10:59 AM,
+1693,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-27,10:00 AM,10:59 AM,
+1694,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-27,10:00 AM,10:59 AM,
+1695,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-27,10:00 AM,10:59 AM,
+1696,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-27,11:14 AM,11:59 AM,Kumain pa
+1697,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-27,,,Nagcutting
+1698,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-27,,,Player
+1699,ES2601,"Escalona, Christan",Calculus,Present,2026-05-27,11:00 AM,11:59 AM,
+1700,BA2602,"Baera, Julliane",Calculus,Present,2026-05-27,11:00 AM,11:59 AM,
+1701,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-27,1:00 PM,1:59 PM,
+1702,AU2601,"Aurelio, Harold",Physics,Present,2026-05-27,1:00 PM,1:59 PM,
+1703,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-27,1:00 PM,1:59 PM,
+1704,ES2601,"Escalona, Christan",Physics,Present,2026-05-27,1:00 PM,1:59 PM,
+1705,BA2602,"Baera, Julliane",Physics,Present,2026-05-27,1:00 PM,1:59 PM,
+1706,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-27,2:00 PM,2:59 PM,
+1707,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-27,2:00 PM,2:59 PM,
+1708,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-27,2:00 PM,2:59 PM,
+1709,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-27,2:00 PM,2:59 PM,
+1710,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-27,2:00 PM,2:59 PM,
+1711,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-27,3:00 PM,3:59 PM,
+1712,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-27,3:00 PM,3:59 PM,
+1713,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-27,3:00 PM,3:59 PM,
+1714,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-27,3:00 PM,3:59 PM,
+1715,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-27,3:00 PM,3:59 PM,
+1716,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-27,4:00 PM,4:59 PM,
+1717,AU2601,"Aurelio, Harold",University and I,Present,2026-05-27,4:00 PM,4:59 PM,
+1718,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-27,4:14 PM,4:59 PM,Di alam room
+1719,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-27,4:00 PM,4:59 PM,Player
+1720,BA2602,"Baera, Julliane",University and I,Absent,2026-05-27,,,Nagcutting
+1721,IL2601,"Ilagan, John Carlo",General,Present,2026-05-28,8:00 AM,8:59 AM,
+1722,AU2601,"Aurelio, Harold",General,Present,2026-05-28,8:00 AM,8:59 AM,
+1723,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-28,8:00 AM,8:59 AM,
+1724,ES2601,"Escalona, Christan",General,Present,2026-05-28,8:00 AM,8:59 AM,
+1725,BA2602,"Baera, Julliane",General,Present,2026-05-28,8:00 AM,8:59 AM,
+1726,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-28,9:14 AM,9:59 AM,Na-traffic
+1727,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-28,,,May sakit
+1728,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-28,,,Player
+1729,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-28,9:00 AM,9:59 AM,
+1730,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-28,9:00 AM,9:59 AM,
+1731,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-28,10:00 AM,10:59 AM,
+1732,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-28,10:00 AM,10:59 AM,
+1733,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-28,10:00 AM,10:59 AM,
+1734,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-28,10:00 AM,10:59 AM,
+1735,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-28,10:00 AM,10:59 AM,
+1736,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-28,11:14 AM,11:59 AM,Kumain pa
+1737,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-28,,,Nagcutting
+1738,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-28,,,Player
+1739,ES2601,"Escalona, Christan",Calculus,Present,2026-05-28,11:00 AM,11:59 AM,
+1740,BA2602,"Baera, Julliane",Calculus,Present,2026-05-28,11:00 AM,11:59 AM,
+1741,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-28,1:00 PM,1:59 PM,
+1742,AU2601,"Aurelio, Harold",Physics,Present,2026-05-28,1:00 PM,1:59 PM,
+1743,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-28,1:00 PM,1:59 PM,
+1744,ES2601,"Escalona, Christan",Physics,Present,2026-05-28,1:00 PM,1:59 PM,
+1745,BA2602,"Baera, Julliane",Physics,Present,2026-05-28,1:00 PM,1:59 PM,
+1746,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-28,2:00 PM,2:59 PM,
+1747,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-28,2:00 PM,2:59 PM,
+1748,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-28,2:00 PM,2:59 PM,
+1749,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-28,2:00 PM,2:59 PM,
+1750,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-28,2:00 PM,2:59 PM,
+1751,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-28,3:00 PM,3:59 PM,
+1752,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-28,3:00 PM,3:59 PM,
+1753,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-28,3:00 PM,3:59 PM,
+1754,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-28,3:00 PM,3:59 PM,
+1755,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-28,3:00 PM,3:59 PM,
+1756,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-28,4:00 PM,4:59 PM,
+1757,AU2601,"Aurelio, Harold",University and I,Present,2026-05-28,4:00 PM,4:59 PM,
+1758,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-28,4:14 PM,4:59 PM,Di alam room
+1759,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-28,4:00 PM,4:59 PM,Player
+1760,BA2602,"Baera, Julliane",University and I,Absent,2026-05-28,,,Nagcutting
+1761,IL2601,"Ilagan, John Carlo",General,Present,2026-05-29,8:00 AM,8:59 AM,
+1762,AU2601,"Aurelio, Harold",General,Present,2026-05-29,8:00 AM,8:59 AM,
+1763,BA2601,"Bahoy, John Lhenard Jeff",General,Present,2026-05-29,8:00 AM,8:59 AM,
+1764,ES2601,"Escalona, Christan",General,Present,2026-05-29,8:00 AM,8:59 AM,
+1765,BA2602,"Baera, Julliane",General,Present,2026-05-29,8:00 AM,8:59 AM,
+1766,IL2601,"Ilagan, John Carlo",Object Oriented Programming,Late,2026-05-29,9:14 AM,9:59 AM,Na-traffic
+1767,AU2601,"Aurelio, Harold",Object Oriented Programming,Absent,2026-05-29,,,May sakit
+1768,BA2601,"Bahoy, John Lhenard Jeff",Object Oriented Programming,Excuse,2026-05-29,,,Player
+1769,ES2601,"Escalona, Christan",Object Oriented Programming,Present,2026-05-29,9:00 AM,9:59 AM,
+1770,BA2602,"Baera, Julliane",Object Oriented Programming,Present,2026-05-29,9:00 AM,9:59 AM,
+1771,IL2601,"Ilagan, John Carlo",CpE as a Discipline,Present,2026-05-29,10:00 AM,10:59 AM,
+1772,AU2601,"Aurelio, Harold",CpE as a Discipline,Present,2026-05-29,10:00 AM,10:59 AM,
+1773,BA2601,"Bahoy, John Lhenard Jeff",CpE as a Discipline,Present,2026-05-29,10:00 AM,10:59 AM,
+1774,ES2601,"Escalona, Christan",CpE as a Discipline,Present,2026-05-29,10:00 AM,10:59 AM,
+1775,BA2602,"Baera, Julliane",CpE as a Discipline,Present,2026-05-29,10:00 AM,10:59 AM,
+1776,IL2601,"Ilagan, John Carlo",Calculus,Late,2026-05-29,11:14 AM,11:59 AM,Kumain pa
+1777,AU2601,"Aurelio, Harold",Calculus,Absent,2026-05-29,,,Nagcutting
+1778,BA2601,"Bahoy, John Lhenard Jeff",Calculus,Excuse,2026-05-29,,,Player
+1779,ES2601,"Escalona, Christan",Calculus,Present,2026-05-29,11:00 AM,11:59 AM,
+1780,BA2602,"Baera, Julliane",Calculus,Present,2026-05-29,11:00 AM,11:59 AM,
+1781,IL2601,"Ilagan, John Carlo",Physics,Present,2026-05-29,1:00 PM,1:59 PM,
+1782,AU2601,"Aurelio, Harold",Physics,Present,2026-05-29,1:00 PM,1:59 PM,
+1783,BA2601,"Bahoy, John Lhenard Jeff",Physics,Present,2026-05-29,1:00 PM,1:59 PM,
+1784,ES2601,"Escalona, Christan",Physics,Present,2026-05-29,1:00 PM,1:59 PM,
+1785,BA2602,"Baera, Julliane",Physics,Present,2026-05-29,1:00 PM,1:59 PM,
+1786,IL2601,"Ilagan, John Carlo",AutoCAD,Present,2026-05-29,2:00 PM,2:59 PM,
+1787,AU2601,"Aurelio, Harold",AutoCAD,Present,2026-05-29,2:00 PM,2:59 PM,
+1788,BA2601,"Bahoy, John Lhenard Jeff",AutoCAD,Present,2026-05-29,2:00 PM,2:59 PM,
+1789,ES2601,"Escalona, Christan",AutoCAD,Present,2026-05-29,2:00 PM,2:59 PM,
+1790,BA2602,"Baera, Julliane",AutoCAD,Present,2026-05-29,2:00 PM,2:59 PM,
+1791,IL2601,"Ilagan, John Carlo",Panitikang Filipino,Present,2026-05-29,3:00 PM,3:59 PM,
+1792,AU2601,"Aurelio, Harold",Panitikang Filipino,Present,2026-05-29,3:00 PM,3:59 PM,
+1793,BA2601,"Bahoy, John Lhenard Jeff",Panitikang Filipino,Present,2026-05-29,3:00 PM,3:59 PM,
+1794,ES2601,"Escalona, Christan",Panitikang Filipino,Present,2026-05-29,3:00 PM,3:59 PM,
+1795,BA2602,"Baera, Julliane",Panitikang Filipino,Present,2026-05-29,3:00 PM,3:59 PM,
+1796,IL2601,"Ilagan, John Carlo",University and I,Present,2026-05-29,4:00 PM,4:59 PM,
+1797,AU2601,"Aurelio, Harold",University and I,Present,2026-05-29,4:00 PM,4:59 PM,
+1798,BA2601,"Bahoy, John Lhenard Jeff",University and I,Late,2026-05-29,4:14 PM,4:59 PM,Di alam room
+1799,ES2601,"Escalona, Christan",University and I,Excuse,2026-05-29,4:00 PM,4:59 PM,Player
+1800,BA2602,"Baera, Julliane",University and I,Absent,2026-05-29,,,Nagcutting
+1801,IL2601,"Ilagan, John Carlo",NSTP - CWTS,Present,2026-05-30,8:00 AM,8:59 AM,
+1802,AU2601,"Aurelio, Harold",NSTP - CWTS,Present,2026-05-30,8:00 AM,8:59 AM,
+1803,BA2601,"Bahoy, John Lhenard Jeff",NSTP - CWTS,Present,2026-05-30,8:00 AM,8:59 AM,
+1804,ES2601,"Escalona, Christan",NSTP - CWTS,Present,2026-05-30,8:00 AM,8:59 AM,
+1805,BA2602,"Baera, Julliane",NSTP - CWTS,Present,2026-05-30,8:00 AM,8:59 AM,
+1806,IL2601,"Ilagan, John Carlo",Physical Education,Late,2026-05-30,9:14 AM,9:59 AM,Na-traffic
+1807,AU2601,"Aurelio, Harold",Physical Education,Absent,2026-05-30,,,May sakit
+1808,BA2601,"Bahoy, John Lhenard Jeff",Physical Education,Excuse,2026-05-30,,,Player
+1809,ES2601,"Escalona, Christan",Physical Education,Present,2026-05-30,9:00 AM,9:59 AM,
+1810,BA2602,"Baera, Julliane",Physical Education,Present,2026-05-30,9:00 AM,9:59 AM,
