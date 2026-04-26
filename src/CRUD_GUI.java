@@ -52,6 +52,7 @@ public class CRUD_GUI extends JFrame {
 
     static final String LOGIN_USERNAME = "admin";
     static final String LOGIN_PASSWORD = "admin";
+
     static final String[] ATTENDANCE_OPTIONS = {"Present", "Absent", "Late", "Excuse"};
     static final String[] SUBJECTS = {
             "General",
@@ -62,7 +63,8 @@ public class CRUD_GUI extends JFrame {
             "AutoCAD",
             "Physical Education",
             "Panitikang Filipino",
-            "University and I"
+            "University and I" ,
+            "NSTP - CWTS"
     };
 
     Connection con;
