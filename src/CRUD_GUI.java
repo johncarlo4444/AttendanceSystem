@@ -55,16 +55,16 @@ public class CRUD_GUI extends JFrame {
 
     static final String[] ATTENDANCE_OPTIONS = {"Present", "Absent", "Late", "Excuse"};
     static final String[] SUBJECTS = {
-            "General",
+            "General / Events / All Day",
             "Object Oriented Programming",
             "CpE as a Discipline",
             "Calculus",
             "Physics",
             "AutoCAD",
-            "Physical Education",
             "Panitikang Filipino",
             "University and I" ,
-            "NSTP - CWTS"
+            "NSTP - CWTS" ,
+            "Physical Education"
     };
 
     Connection con;
