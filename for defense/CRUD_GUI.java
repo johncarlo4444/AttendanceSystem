@@ -23,7 +23,13 @@ import java.util.regex.Pattern;
 
 public class CRUD_GUI extends JFrame {
 
-    // these formatters keep date and time values consistent for database saving display and reports
+    /*
+     this file is the main window of the attendance system.
+     it handles login startup database creation attendance entry filtering editing deleting and opening report windows.
+     most methods are separated by purpose so the defense explanation can follow the user workflow from form input to mysql saving.
+     */
+
+    // these formatters keep date and time values consistent. the same pattern is used when showing values and when saving them.
     static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm a");
     static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     static final int WINDOW_MARGIN = 18;
@@ -54,7 +60,7 @@ public class CRUD_GUI extends JFrame {
     static final String LOGIN_USERNAME = "admin";
     static final String LOGIN_PASSWORD = "admin";
 
-    // these arrays are reused by entry forms filters dashboard and summary windows
+    // these arrays are the fixed choices for attendance and subject fields. reusing them prevents mismatched words in different windows.
     static final String[] ATTENDANCE_OPTIONS = {"Present", "Absent", "Late", "Excuse"};
     static final String[] SUBJECTS = {
             "General / Events / All Day",
@@ -78,7 +84,7 @@ public class CRUD_GUI extends JFrame {
     private boolean stackedLayout;
 
     public CRUD_GUI() {
-        // this constructor builds the main attendance window then prepares the mysql database
+        // this constructor builds the main window then prepares mysql. the screen is created first and the table is loaded only if setup succeeds.
         AppTheme.install();
         setTitle("Java-MySQL Based Attendance Monitoring System for College Students at MSEUF-Candelaria");
         setSize(1250, 820);
@@ -116,7 +122,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     private void buildCrudPanel() {
-        // this panel contains the main create read update and delete workflow for attendance records
+        // this panel is the data entry area. it contains the fields for student name date subject status remarks and the crud buttons.
         AppTheme.stylePanel(crudPanel);
         crudPanel.setBorder(AppTheme.createSectionBorder("Attendance CRUD", WINDOW_MARGIN));
 
@@ -224,7 +230,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     private void buildRightPanel() {
-        // this panel shows saved records and opens the teacher and summary views
+        // this panel shows saved records in a table. clicking a table row copies its values back into the form for editing or deletion.
         AppTheme.stylePanel(rightPanel);
         rightPanel.setBorder(AppTheme.createSectionBorder("Views and Inserted Students", WINDOW_MARGIN));
 
@@ -297,7 +303,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     private void updateResponsiveLayout() {
-        // this method changes the layout when the window becomes narrow so the form remains readable
+        // this method changes the layout when the window becomes narrow. wide screens use a split pane and small screens stack panels vertically.
         boolean shouldStack = getWidth() < RESPONSIVE_BREAKPOINT;
         if (responsiveBody.getComponentCount() > 0 && stackedLayout == shouldStack) {
             return;
@@ -364,7 +370,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void setupDatabase() {
-        // this method creates the mysql database tables and missing columns needed by the app
+        // this method creates the database and required tables. it also upgrades old tables by adding columns that may be missing.
         try {
             Connection tempCon = DriverManager.getConnection(URL, USER, PASS);
             Statement stmt = tempCon.createStatement();
@@ -392,7 +398,7 @@ public class CRUD_GUI extends JFrame {
                             "remarks TEXT NULL)"
             );
 
-            // these schema checks allow older database copies to run with the newer program version
+            // these schema checks allow an older database copy to run with the newer program version without manually editing mysql.
             ensureStudentsTableSchema(dbStmt);
             ensureColumnExists("attendance_records", "remarks", "ALTER TABLE attendance_records ADD COLUMN remarks TEXT NULL");
             ensureColumnExists("attendance_records", "attendance_time", "ALTER TABLE attendance_records ADD COLUMN attendance_time VARCHAR(20) NOT NULL DEFAULT '---'");
@@ -409,7 +415,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void loadData() {
-        // this method loads table rows and builds the sql query based on optional search filters
+        // this method loads the main table. it starts with a basic select query then adds filters only when the user entered filter values.
         if (!isDatabaseReady()) {
             return;
         }
@@ -434,7 +440,7 @@ public class CRUD_GUI extends JFrame {
                             "FROM attendance_records WHERE 1=1"
             );
 
-            // dynamic sql is used here so empty filters do not affect the result set
+            // dynamic sql is used here so empty filters are ignored. each added condition has a matching prepared statement parameter.
             if (!searchText.isEmpty()) {
                 sql.append(" AND (student_identifier LIKE ? OR student_name LIKE ? OR attendance_status LIKE ? OR remarks LIKE ? OR subject_name LIKE ?)");
             }
@@ -452,7 +458,7 @@ public class CRUD_GUI extends JFrame {
             PreparedStatement pst = con.prepareStatement(sql.toString());
             int parameterIndex = 1;
 
-            // prepared statement parameters prevent direct user input from being placed into sql text
+            // prepared statement parameters keep user input separate from sql code. this is safer and avoids many sql formatting errors.
             if (!searchText.isEmpty()) {
                 String keyword = "%" + searchText + "%";
                 pst.setString(parameterIndex++, keyword);
@@ -491,7 +497,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void insertData() {
-        // this method validates input then saves a new attendance record with automatic time handling
+        // this method validates the form then inserts a new record. present and late records get time values while absent and excuse do not.
         if (!isDatabaseReady()) {
             return;
         }
@@ -562,7 +568,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void updateData() {
-        // this method updates editable attendance fields without changing the original time in and time out values
+        // this method updates only the editable information. it does not replace the original time in and time out because those are audit values.
         if (!isDatabaseReady()) {
             return;
         }
@@ -615,7 +621,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void deleteData() {
-        // this method asks for confirmation before removing a selected attendance record
+        // this method deletes the selected record only after a confirmation dialog. this prevents accidental removal during table clicking.
         if (!isDatabaseReady()) {
             return;
         }
@@ -651,7 +657,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     boolean validateForm(boolean requireId) {
-        // this validation keeps required fields and student name format consistent before saving
+        // this validation protects the database from incomplete records and enforces the required surname comma firstname name format.
         if (requireId && txtId.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Select a record first.");
             return false;
@@ -698,7 +704,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     boolean isNonTimedStatus(String status) {
-        // absent and excuse records do not need time in and time out values
+        // absent and excuse records do not need time in and time out values because the student did not attend the class session.
         return "Absent".equalsIgnoreCase(status) || "Excuse".equalsIgnoreCase(status);
     }
 
@@ -758,7 +764,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void ensureColumnExists(String tableName, String columnName, String alterSql) throws Exception {
-        // this checks mysql metadata before running alter table so the app can start repeatedly
+        // this checks mysql information schema before running alter table. it prevents errors when the column already exists.
         PreparedStatement columnCheck = con.prepareStatement(
                 "SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS " +
                         "WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ? AND COLUMN_NAME = ? LIMIT 1"
@@ -791,7 +797,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void ensureStudentsTableSchema(Statement dbStmt) throws Exception {
-        // this keeps the students table ready for automatic student id generation
+        // this keeps the students table ready for automatic student id generation and prevents duplicate student identifiers.
         ensureColumnExists("students", "student_name", "ALTER TABLE students ADD COLUMN student_name VARCHAR(100) NOT NULL DEFAULT ''");
         ensureColumnExists("students", "student_identifier", "ALTER TABLE students ADD COLUMN student_identifier VARCHAR(50) NULL");
         backfillStudentIdentifiers();
@@ -799,7 +805,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void backfillStudentIdentifiers() throws Exception {
-        // this gives old student rows a generated student id when the column was previously empty
+        // this gives old student rows a generated student id. it is needed when the program is used with records made before student ids existed.
         PreparedStatement pst = con.prepareStatement(
                 "SELECT id, student_name FROM students WHERE student_identifier IS NULL OR TRIM(student_identifier) = ''"
         );
@@ -818,7 +824,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void autofillStudentIdentifier() {
-        // this finds an existing student id as soon as the user enters a known student name
+        // this finds an existing student id as soon as the user enters a known student name so the user does not type the id manually.
         String name = txtName.getText().trim();
         if (name.isEmpty()) {
             txtStudentIdentifier.setText("");
@@ -834,7 +840,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     String ensureStudentIdentifierForName(String studentName) throws Exception {
-        // this reuses an existing student id or creates a new one for a new student name
+        // this method is used before saving attendance. it reuses an existing student id or creates a new one for a new student name.
         String existingIdentifier = findStudentIdentifierByName(studentName);
         if (existingIdentifier != null) {
             return existingIdentifier;
@@ -868,7 +874,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     void migrateExistingStudents() throws Exception {
-        // this moves old attendance names into the students table and links records to generated ids
+        // this migration reads old attendance names copies them into students and writes the generated id back into attendance records.
         PreparedStatement pst = con.prepareStatement(
                 "SELECT DISTINCT student_name FROM attendance_records WHERE student_name IS NOT NULL AND TRIM(student_name) <> ''"
         );
@@ -900,7 +906,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     String generateAutomaticStudentIdentifier(String studentName) throws Exception {
-        // this builds a student id from name letters current year and the next available number
+        // this builds a student id from name letters current year and the next available number. example reyes juan can become re2601.
         String prefix = buildStudentIdPrefix(studentName);
         String year = String.format("%02d", LocalDate.now().getYear() % 100);
         String base = prefix + year;
@@ -925,7 +931,7 @@ public class CRUD_GUI extends JFrame {
         }
 
         String candidate;
-        // this loop avoids duplicates by checking every generated candidate before returning it
+        // this loop avoids duplicates. if the candidate id already belongs to another student the number increases and checks again.
         do {
             if (nextNumber > 99) {
                 throw new IllegalStateException("Student ID limit reached for prefix " + base);
@@ -937,7 +943,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     String buildStudentIdPrefix(String studentName) {
-        // this extracts only letters from the student name so the id prefix is predictable
+        // this extracts only letters from the student name then uses the first two letters as the id prefix.
         String lettersOnly = Pattern.compile("[^A-Za-z]").matcher(studentName == null ? "" : studentName).replaceAll("").toUpperCase(Locale.ENGLISH);
         if (lettersOnly.length() >= 2) {
             return lettersOnly.substring(0, 2);
@@ -954,7 +960,7 @@ public class CRUD_GUI extends JFrame {
 
     static class CalendarPopup {
         static LocalDate pickDate(Component parent, LocalDate initial) {
-            // this custom calendar lets users choose a date without typing the date manually
+            // this custom calendar lets users choose a date with buttons. it returns a localdate value to the main form.
             JDialog dialog = new JDialog(SwingUtilities.getWindowAncestor(parent), "Select Date", Dialog.ModalityType.APPLICATION_MODAL);
             dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -984,7 +990,7 @@ public class CRUD_GUI extends JFrame {
             root.add(footer, BorderLayout.SOUTH);
 
             Runnable rebuild = () -> {
-                // this rebuilds the month grid every time the user changes the visible month
+                // this rebuilds the month grid every time the visible month changes. it clears old buttons then adds the new month days.
                 grid.removeAll();
                 YearMonth ym = shownMonth[0];
                 monthLabel.setText(ym.getMonth().getDisplayName(TextStyle.FULL, Locale.getDefault()) + " " + ym.getYear());
@@ -1043,7 +1049,7 @@ public class CRUD_GUI extends JFrame {
     }
 
     private static boolean showLoginDialog() {
-        // this modal login prevents users from opening the system without the configured credentials
+        // this modal login pauses the program until the user enters the configured username and password or cancels the login.
         final JDialog dialog = new JDialog((Frame) null, "Login", true);
         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 

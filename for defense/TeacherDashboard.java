@@ -18,9 +18,17 @@ import java.util.Locale;
 
 public class TeacherDashboard extends JFrame {
 
+    /*
+     this file is the teacher dashboard.
+     it does not insert update or delete records.
+     its purpose is to read attendance records from mysql and present them in three simple parts.
+     the first part is the schedule date list.
+     the second part is the student list for the selected date.
+     the third part shows filters and the selected student details.
+     */
     private static final int WINDOW_MARGIN = 18;
 
-    // these components form the teacher view with schedules students filters details and records
+    // these components form the teacher view. they are declared as fields because many methods need to read or update them.
     private final Connection con;
     private final JTree scheduleTree = new JTree(new DefaultMutableTreeNode("Schedules"));
     private final DefaultListModel<String> studentModel = new DefaultListModel<>();
@@ -34,7 +42,7 @@ public class TeacherDashboard extends JFrame {
     private String selectedDate;
 
     public TeacherDashboard(Connection con) {
-        // this window reuses the active mysql connection from the main attendance form
+        // this window reuses the active mysql connection from the main attendance form so it does not open a second database login.
         this.con = con;
         AppTheme.install();
 
@@ -57,7 +65,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private JPanel buildSchedulePanel() {
-        // this panel lists attendance dates with their day names for quick schedule selection
+        // this panel lists attendance dates. each date is stored as a date object but displayed with the weekday name for easier checking.
         JPanel panel = new JPanel(new BorderLayout(8, 8));
         AppTheme.stylePanel(panel);
         panel.setBorder(AppTheme.createSectionBorder("Schedules", WINDOW_MARGIN));
@@ -69,7 +77,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private JPanel buildStudentsPanel() {
-        // this panel displays students who have records for the selected schedule date
+        // this panel displays only the students that match the selected date and filters. it helps the teacher focus on one day.
         JPanel panel = new JPanel(new BorderLayout(8, 8));
         AppTheme.stylePanel(panel);
         panel.setBorder(AppTheme.createSectionBorder("Students", WINDOW_MARGIN));
@@ -81,7 +89,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private JPanel buildSummaryPanel() {
-        // this panel combines filters and selected student details
+        // this panel contains the filter controls and the detail tree. the old table was removed so the third panel is less crowded.
         JPanel panel = new JPanel(new BorderLayout(8, 8));
         AppTheme.stylePanel(panel);
         panel.setBorder(AppTheme.createSectionBorder("Filters and Details", WINDOW_MARGIN));
@@ -134,7 +142,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private void wireEvents() {
-        // these listeners refresh the dashboard whenever the teacher chooses a date or student
+        // these listeners are the connection between user actions and data refresh. selecting a date or student calls the needed load methods.
         scheduleTree.addTreeSelectionListener(this::handleScheduleSelection);
         scheduleTree.addMouseListener(new MouseAdapter() {
             @Override
@@ -160,7 +168,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private void handleScheduleSelection(TreeSelectionEvent event) {
-        // this extracts the selected date object from the tree node and refreshes related data
+        // this method checks what tree node was clicked. only date nodes contain a date value that can be used for mysql filtering.
         DefaultMutableTreeNode node = (DefaultMutableTreeNode) scheduleTree.getLastSelectedPathComponent();
         if (node == null) {
             return;
@@ -179,7 +187,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private void loadScheduleTree() {
-        // this query loads each unique attendance date and the node label adds the weekday name
+        // this query uses distinct so repeated attendance records on the same date appear as one schedule item only.
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Schedules");
         try {
             PreparedStatement pst = con.prepareStatement(
@@ -206,13 +214,13 @@ public class TeacherDashboard extends JFrame {
     }
 
     private void refreshForFilters() {
-        // this keeps the student list and detail tree synchronized with filters
+        // this method refreshes the dashboard in the correct order. students are loaded first then the detail tree follows the selected student.
         loadStudents();
         loadStudentTree();
     }
 
     private void loadStudents() {
-        // this query finds students for one date and applies the same dashboard filters
+        // this query finds unique student names for the selected date. the shared filters are added before the query is executed.
         studentModel.clear();
         if (selectedDate == null) {
             detailTree.setModel(new DefaultTreeModel(new DefaultMutableTreeNode("Select a date")));
@@ -246,7 +254,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private void loadStudentTree() {
-        // this builds a nested detail view for the selected student by subject and attendance status
+        // this builds a nested tree for one student. each subject record becomes a parent node with time in time out and remarks below it.
         String selectedStudent = studentList.getSelectedValue();
         if (selectedDate == null || selectedStudent == null) {
             detailTree.setModel(new DefaultTreeModel(new DefaultMutableTreeNode("Select a student")));
@@ -290,7 +298,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private void appendSharedFilters(StringBuilder sql, List<Object> params, boolean includeSearch) {
-        // this method appends optional where clauses and records the matching parameter values
+        // this method builds the optional parts of the where clause. it also stores values in params so preparedstatement can bind them safely.
         if (includeSearch && !txtSearch.getText().trim().isEmpty()) {
             sql.append(" AND (student_name LIKE ? OR student_identifier LIKE ?)");
             String keyword = "%" + txtSearch.getText().trim() + "%";
@@ -315,7 +323,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private void bindParameters(PreparedStatement pst, List<Object> params) throws Exception {
-        // this binds dates and strings in order so prepared statements match the generated sql
+        // this loop binds every parameter by position. the first item in params becomes question mark number one in the sql statement.
         for (int i = 0; i < params.size(); i++) {
             Object value = params.get(i);
             if (value instanceof Date) {
@@ -337,7 +345,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private static String[] prependAll(String[] values) {
-        // this creates combo box options that include all before the fixed choices
+        // this creates a new array where all is placed before the real choices. this is used by filter combo boxes.
         String[] result = new String[values.length + 1];
         result[0] = "All";
         System.arraycopy(values, 0, result, 1, values.length);
@@ -345,7 +353,7 @@ public class TeacherDashboard extends JFrame {
     }
 
     private static class DateSelection {
-        // this object stores the real date value while showing a friendlier tree label
+        // this small class separates stored data from displayed text. the database filter uses date while the tree shows date and day name.
         private final String date;
 
         private DateSelection(String date) {
@@ -354,7 +362,7 @@ public class TeacherDashboard extends JFrame {
 
         @Override
         public String toString() {
-            // this label shows the date and day name without changing the database value
+            // tostring controls what the tree displays. it does not change the selecteddate value used by the sql query.
             LocalDate localDate = LocalDate.parse(date);
             String dayName = localDate.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
             return date + " - " + dayName;

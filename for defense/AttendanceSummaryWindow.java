@@ -19,10 +19,15 @@ import java.util.Map;
 
 public class AttendanceSummaryWindow extends JFrame {
 
+    /*
+     this file creates the weekly and monthly attendance report.
+     it reads records from mysql and transforms many database rows into one row per student.
+     the report uses fixed student columns and scrollable date columns so large reports remain readable.
+     */
     private static final int WINDOW_MARGIN = 18;
     private static final int SMALL_WIDTH_BREAKPOINT = 1100;
 
-    // these fields build the summary report with fixed student columns and scrollable date columns
+    // these fields build the report controls and tables. they are fields because loading and resizing methods need to update them.
     private final Connection con;
     private final JTextField txtAnchorDate = new JTextField(10);
     private final JTextField txtSearch = new JTextField(12);
@@ -49,7 +54,7 @@ public class AttendanceSummaryWindow extends JFrame {
     private final JButton btnThisMonth = new JButton("This Month");
 
     public AttendanceSummaryWindow(Connection con) {
-        // this window reads attendance records from the shared mysql connection
+        // this window reads attendance records from the shared mysql connection so it displays the same data saved in the main form.
         this.con = con;
         AppTheme.install();
 
@@ -74,7 +79,7 @@ public class AttendanceSummaryWindow extends JFrame {
     }
 
     private JPanel buildTopPanel() {
-        // this panel holds report controls for period date subject search and quick date actions
+        // this panel holds the report controls. the teacher can choose weekly or monthly view then filter by subject or student search.
         JPanel panel = new JPanel(new BorderLayout(10, 10));
         AppTheme.stylePanel(panel);
 
@@ -121,14 +126,14 @@ public class AttendanceSummaryWindow extends JFrame {
     }
 
     private JComponent buildSummaryTables() {
-        // this uses the scroll pane row header so student names stay visible while dates scroll
+        // this uses the scroll pane row header. the student id and name stay fixed while the date columns scroll horizontally.
         summaryScrollPane.setRowHeaderView(frozenTable);
         summaryScrollPane.setCorner(JScrollPane.UPPER_LEFT_CORNER, frozenTable.getTableHeader());
         return summaryScrollPane;
     }
 
     private void configureTables() {
-        // this prepares the summary tables for read only report viewing and custom status colors
+        // this prepares the tables for report viewing. users can read and select rows but cannot edit attendance values from this report.
         summaryTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         summaryTable.setRowHeight(30);
         summaryTable.setDefaultRenderer(Object.class, new SummaryCellRenderer(0));
@@ -144,7 +149,7 @@ public class AttendanceSummaryWindow extends JFrame {
     }
 
     private void wireResponsiveness() {
-        // this listener hides less important controls on smaller window widths
+        // this listener adjusts the controls when the window width changes. it hides the month shortcut on smaller screens.
         addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
@@ -160,7 +165,7 @@ public class AttendanceSummaryWindow extends JFrame {
     }
 
     private void loadSummary() {
-        // this method calculates the report date range then builds columns and rows dynamically
+        // this method calculates the date range then rebuilds the whole report. columns depend on the selected week or month.
         LocalDate anchorDate;
         try {
             anchorDate = LocalDate.parse(txtAnchorDate.getText().trim(), CRUD_GUI.DATE_FORMATTER);
@@ -170,14 +175,14 @@ public class AttendanceSummaryWindow extends JFrame {
         }
 
         boolean monthly = "Monthly".equals(cmbPeriod.getSelectedItem());
-        // weekly reports begin on monday while monthly reports cover the full calendar month
+        // weekly reports begin on monday while monthly reports cover the full calendar month of the anchor date.
         LocalDate startDate = monthly ? anchorDate.withDayOfMonth(1) : anchorDate.with(DayOfWeek.MONDAY);
         LocalDate endDate = monthly ? anchorDate.withDayOfMonth(anchorDate.lengthOfMonth()) : startDate.plusDays(6);
         lblRange.setText("Showing " + startDate + " to " + endDate);
 
         try {
             List<LocalDate> dates = new ArrayList<>();
-            // this date list becomes the dynamic columns of the report table
+            // this date list becomes the dynamic columns of the report table. each localdate matches one attendance date.
             for (LocalDate date = startDate; !date.isAfter(endDate); date = date.plusDays(1)) {
                 dates.add(date);
             }
@@ -205,7 +210,7 @@ public class AttendanceSummaryWindow extends JFrame {
                 sql.append(" AND subject_name = ?");
                 params.add(cmbSubject.getSelectedItem().toString());
             }
-            // these optional filters narrow the report without needing separate queries
+            // these optional filters narrow the report without creating separate query methods for every filter combination.
             if (!txtSearch.getText().trim().isEmpty()) {
                 sql.append(" AND (student_identifier LIKE ? OR student_name LIKE ?)");
                 String keyword = "%" + txtSearch.getText().trim() + "%";
@@ -226,14 +231,14 @@ public class AttendanceSummaryWindow extends JFrame {
 
             ResultSet rs = pst.executeQuery();
             Map<String, String[]> rows = new LinkedHashMap<>();
-            // linked hash map keeps each student on one row while preserving the query order
+            // linked hash map keeps each student on one row while preserving the order returned by mysql.
             while (rs.next()) {
                 String studentId = rs.getString("student_identifier");
                 String studentName = rs.getString("student_name");
                 LocalDate attendanceDate = rs.getDate("attendance_date").toLocalDate();
                 String key = studentId + "||" + studentName;
 
-                // compute if absent creates one row array the first time each student appears
+                // compute if absent creates one row array only the first time a student appears in the result set.
                 String[] row = rows.computeIfAbsent(key, ignored -> {
                     String[] values = new String[2 + dates.size()];
                     values[0] = studentId;
@@ -264,7 +269,7 @@ public class AttendanceSummaryWindow extends JFrame {
     }
 
     private void configureColumnWidths() {
-        // fixed column widths keep the report readable even when many dates are displayed
+        // fixed column widths keep the report readable. dates stay compact while student names have more space.
         if (frozenTable.getColumnModel().getColumnCount() < 2) {
             return;
         }
@@ -277,7 +282,7 @@ public class AttendanceSummaryWindow extends JFrame {
     }
 
     private String statusSymbol(String status) {
-        // these compact symbols make the weekly and monthly report easier to scan
+        // these compact symbols make the weekly and monthly report easier to scan than full words in every date cell.
         if ("Present".equalsIgnoreCase(status)) {
             return "P";
         }
@@ -302,7 +307,7 @@ public class AttendanceSummaryWindow extends JFrame {
     }
 
     private static class SummaryCellRenderer extends DefaultTableCellRenderer {
-        // this renderer colors status symbols without changing the stored table values
+        // this renderer colors status symbols without changing the stored table values. it affects only what the user sees.
         private final int frozenColumns;
 
         private SummaryCellRenderer(int frozenColumns) {
@@ -311,7 +316,7 @@ public class AttendanceSummaryWindow extends JFrame {
 
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-            // this method runs for each visible cell and decides alignment color and selection style
+            // this method runs for each visible cell. it decides text alignment and status color while keeping selected rows readable.
             Component component = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
             setHorizontalAlignment(column < frozenColumns ? LEFT : CENTER);
 
