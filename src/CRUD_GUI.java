@@ -241,7 +241,7 @@ public class CRUD_GUI extends JFrame {
         viewButtonPanel.add(btnAttendanceSummary);
 
         topPanel.add(viewButtonPanel);
-
+        // para di maedit directly sa inserted rows
         model = new DefaultTableModel(new String[]{"Record ID", "Student ID", "Student Name", "Subject", "Date", "Time In", "Time Out", "Attendance", "Remarks"}, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
