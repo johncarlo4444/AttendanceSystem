@@ -1,17 +1,16 @@
-# CRUD GUI Conversation Notes
+# CRUD GUI Reviewer
 
-This file contains the chronological explanation conversation about `CRUD_GUI.java`, with references to the related files `TeacherDashboard.java`, `AttendanceSummaryWindow.java`, and `AppTheme.java`.
 
-## 1. User Instructions
+## 1. Compact and Concise
 
-The requested role was to explain the files like a teacher, simply but informatively, and to explain complex syntax. The user said the code would be sent in chronological parts from:
+chronological parts from:
 
 - `CRUD_GUI.java`
 - `AppTheme.java`
 - `TeacherDashboard.java`
 - `AttendanceSummaryWindow.java`
 
-The user later requested the explanations to be compact and concise.
+ compact and concise.
 
 ---
 
