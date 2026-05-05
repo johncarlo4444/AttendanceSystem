@@ -72,21 +72,46 @@ public final class AppTheme {
         button.setBackground(MAROON);
         button.setForeground(WHITE);
         button.setFocusPainted(false);
+        button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         button.setBorder(BorderFactory.createCompoundBorder(
                 new LineBorder(MAROON_DARK),
                 new EmptyBorder(6, 12, 6, 12)
         ));
         button.setOpaque(true);
+        button.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+                button.setBackground(MAROON_DARK);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                button.setBackground(MAROON);
+            }
+        });
     }
 
     static void styleInput(JComponent component) {
         // this styles text fields combo boxes and other input components consistently
         component.setBackground(WHITE);
         component.setForeground(TEXT);
-        component.setBorder(new CompoundBorder(new LineBorder(BORDER), new EmptyBorder(4, 6, 4, 6)));
+        Border normalBorder = new CompoundBorder(new LineBorder(BORDER), new EmptyBorder(4, 6, 4, 6));
+        Border focusBorder = new CompoundBorder(new LineBorder(MAROON_DARK, 2), new EmptyBorder(3, 5, 3, 5));
+        component.setBorder(normalBorder);
         if (component instanceof JTextComponent) {
             ((JTextComponent) component).setCaretColor(MAROON_DARK);
         }
+        component.addFocusListener(new java.awt.event.FocusAdapter() {
+            @Override
+            public void focusGained(java.awt.event.FocusEvent e) {
+                component.setBorder(focusBorder);
+            }
+
+            @Override
+            public void focusLost(java.awt.event.FocusEvent e) {
+                component.setBorder(normalBorder);
+            }
+        });
     }
 
     static void stylePanel(JComponent panel) {
@@ -108,6 +133,8 @@ public final class AppTheme {
         table.setGridColor(BORDER);
         table.setSelectionBackground(MAROON);
         table.setSelectionForeground(WHITE);
+        table.setFillsViewportHeight(true);
+        table.setIntercellSpacing(new Dimension(0, 1));
         JTableHeader header = table.getTableHeader();
         if (header != null) {
             header.setBackground(MAROON);

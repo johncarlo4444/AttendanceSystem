@@ -42,9 +42,10 @@ public class CRUD_GUI extends JFrame {
     JComboBox<String> cmbFilterSubject;
     JTable table;
     DefaultTableModel model;
+    JButton btnInsert;
 
     LocalDate selectedDate = LocalDate.now();
-    String selectedSubject = "General";
+    String selectedSubject = SUBJECTS[0];
 
     static final String URL = "jdbc:mysql://localhost:3306/";
     static final String DB_NAME = "crud_gui_db";
@@ -82,6 +83,7 @@ public class CRUD_GUI extends JFrame {
         AppTheme.install();
         setTitle("Java-MySQL Based Attendance Monitoring System for College Students at MSEUF-Candelaria");
         setSize(1250, 820);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -148,20 +150,24 @@ public class CRUD_GUI extends JFrame {
         addFormRow(formPanel, gbc, 4, "Attendance:", cmbAttendance);
         addFormRow(formPanel, gbc, 5, "Remarks:", txtRemarks);
 
-        JButton btnInsert = new JButton("Insert");
+        btnInsert = new JButton("Time In");
         JButton btnUpdate = new JButton("Update");
         JButton btnDelete = new JButton("Delete");
         JButton btnClear = new JButton("Clear");
+        JButton btnStudentEntry = new JButton("Student Time Entry");
+        JButton btnSubjectRecords = new JButton("Student Records by Subject");
         JButton btnSearch = new JButton("Search");
         JButton btnReset = new JButton("Reset Filter");
-        styleButtons(btnInsert, btnUpdate, btnDelete, btnClear, btnSearch, btnReset);
+        styleButtons(btnInsert, btnUpdate, btnDelete, btnClear, btnStudentEntry, btnSubjectRecords, btnSearch, btnReset);
 
-        JPanel buttonPanel = new JPanel(new GridLayout(2, 2, 10, 10));
+        JPanel buttonPanel = new JPanel(new GridLayout(0, 2, 10, 10));
         AppTheme.stylePanel(buttonPanel);
         buttonPanel.add(btnInsert);
         buttonPanel.add(btnUpdate);
         buttonPanel.add(btnDelete);
         buttonPanel.add(btnClear);
+        buttonPanel.add(btnStudentEntry);
+        buttonPanel.add(btnSubjectRecords);
 
         JPanel filterPanel = new JPanel(new GridBagLayout());
         AppTheme.stylePanel(filterPanel);
@@ -198,6 +204,8 @@ public class CRUD_GUI extends JFrame {
         btnUpdate.addActionListener(e -> updateData());
         btnDelete.addActionListener(e -> deleteData());
         btnClear.addActionListener(e -> clearFields());
+        btnStudentEntry.addActionListener(e -> openStudentEntryWindow());
+        btnSubjectRecords.addActionListener(e -> openStudentSubjectRecords());
         btnSearch.addActionListener(e -> loadData());
         btnReset.addActionListener(e -> resetFilters());
 
@@ -215,12 +223,18 @@ public class CRUD_GUI extends JFrame {
                 if (picked != null) {
                     selectedDate = picked;
                     updateDateField();
+                    updateAttendanceActionLabel();
                 }
             }
         });
-        cmbSubjectEntry.addActionListener(e -> selectedSubject = cmbSubjectEntry.getSelectedItem().toString());
+        cmbSubjectEntry.addActionListener(e -> {
+            selectedSubject = cmbSubjectEntry.getSelectedItem().toString();
+            updateAttendanceActionLabel();
+        });
+        cmbAttendance.addActionListener(e -> updateAttendanceActionLabel());
         cmbFilterAttendance.addActionListener(e -> loadData());
         cmbFilterSubject.addActionListener(e -> loadData());
+        txtName.addCaretListener(e -> updateAttendanceActionLabel());
     }
 
     private void buildRightPanel() {
@@ -292,8 +306,49 @@ public class CRUD_GUI extends JFrame {
                 cmbAttendance.setSelectedItem(model.getValueAt(i, 7).toString());
                 Object remarksValue = model.getValueAt(i, 8);
                 txtRemarks.setText(remarksValue == null ? "" : remarksValue.toString());
+                updateAttendanceActionLabel();
             }
         });
+    }
+
+    void updateAttendanceActionLabel() {
+        if (btnInsert == null) {
+            return;
+        }
+        String status = cmbAttendance == null || cmbAttendance.getSelectedItem() == null
+                ? "Present" : cmbAttendance.getSelectedItem().toString();
+        if (isNonTimedStatus(status)) {
+            btnInsert.setText("Save " + status);
+            return;
+        }
+        if (txtId != null && !txtId.getText().trim().isEmpty()) {
+            btnInsert.setText("Time Out");
+            return;
+        }
+        if (databaseReady && con != null && txtName != null && !txtName.getText().trim().isEmpty()) {
+            try {
+                String studentIdentifier = findStudentIdentifierByName(txtName.getText().trim());
+                if (studentIdentifier != null && hasOpenTimeIn(studentIdentifier, selectedDate, cmbSubjectEntry.getSelectedItem().toString())) {
+                    btnInsert.setText("Time Out");
+                    return;
+                }
+            } catch (Exception ignore) {
+                // keep the default action text if the quick status lookup is unavailable
+            }
+        }
+        btnInsert.setText("Time In");
+    }
+
+    boolean hasOpenTimeIn(String studentIdentifier, LocalDate date, String subject) throws Exception {
+        PreparedStatement pst = con.prepareStatement(
+                "SELECT 1 FROM attendance_records WHERE student_identifier = ? AND attendance_date = ? AND subject_name = ? " +
+                        "AND attendance_time IS NOT NULL AND TRIM(attendance_time) <> '' AND (time_out IS NULL OR TRIM(time_out) = '' OR time_out = '---') LIMIT 1"
+        );
+        pst.setString(1, studentIdentifier);
+        pst.setDate(2, java.sql.Date.valueOf(date));
+        pst.setString(3, subject);
+        ResultSet rs = pst.executeQuery();
+        return rs.next();
     }
 
     private void updateResponsiveLayout() {
@@ -556,6 +611,7 @@ public class CRUD_GUI extends JFrame {
 
             loadData();
             clearFields();
+            updateAttendanceActionLabel();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Insert failed: " + e.getMessage());
         }
@@ -681,12 +737,13 @@ public class CRUD_GUI extends JFrame {
         txtStudentIdentifier.setText("");
         txtName.setText("");
         selectedDate = LocalDate.now();
-        selectedSubject = "General";
+        selectedSubject = SUBJECTS[0];
         cmbSubjectEntry.setSelectedItem(selectedSubject);
         updateDateField();
         txtRemarks.setText("");
         cmbAttendance.setSelectedIndex(0);
         table.clearSelection();
+        updateAttendanceActionLabel();
     }
 
     void updateDateField() {
@@ -750,11 +807,25 @@ public class CRUD_GUI extends JFrame {
         new TeacherDashboard(con).setVisible(true);
     }
 
+    void openStudentEntryWindow() {
+        if (!isDatabaseReady()) {
+            return;
+        }
+        new StudentAttendanceWindow(con).setVisible(true);
+    }
+
     void openAttendanceSummary() {
         if (!isDatabaseReady()) {
             return;
         }
         new AttendanceSummaryWindow(con).setVisible(true);
+    }
+
+    void openStudentSubjectRecords() {
+        if (!isDatabaseReady()) {
+            return;
+        }
+        new StudentSubjectRecordsWindow(con).setVisible(true);
     }
 
     void ensureColumnExists(String tableName, String columnName, String alterSql) throws Exception {

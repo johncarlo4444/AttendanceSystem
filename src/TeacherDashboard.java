@@ -40,6 +40,7 @@ public class TeacherDashboard extends JFrame {
 
         setTitle("Teacher Attendance Dashboard");
         setSize(1400, 800);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
