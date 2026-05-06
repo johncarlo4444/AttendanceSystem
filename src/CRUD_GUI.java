@@ -240,7 +240,7 @@ public class CRUD_GUI extends JFrame {
     private void buildRightPanel() {
         // this panel shows saved records and opens the teacher and summary views
         AppTheme.stylePanel(rightPanel);
-        rightPanel.setBorder(AppTheme.createSectionBorder("Views and Inserted Students", WINDOW_MARGIN));
+        rightPanel.setBorder(AppTheme.createSectionBorder("Views and Recent Inserted Students", WINDOW_MARGIN));
 
         JPanel topPanel = new JPanel();
         AppTheme.stylePanel(topPanel);

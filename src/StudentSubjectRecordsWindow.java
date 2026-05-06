@@ -3,8 +3,10 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
 
 public class StudentSubjectRecordsWindow extends JFrame {
 
@@ -14,6 +16,8 @@ public class StudentSubjectRecordsWindow extends JFrame {
     private final Connection con;
     private final JTextField txtSearch = new JTextField();
     private final JComboBox<String> cmbSubject = new JComboBox<>();
+    private final JTextField txtAnchorDate = new JTextField(10);
+    private final JComboBox<String> cmbDateRange = new JComboBox<>(new String[]{"All Dates", "Selected Date", "1 Month", "2 Months", "3 Months", "Semester", "Year"});
     private final DefaultTableModel studentModel = new DefaultTableModel(new String[]{"Student ID", "Student Name"}, 0) {
         @Override
         public boolean isCellEditable(int row, int column) {
@@ -53,6 +57,7 @@ public class StudentSubjectRecordsWindow extends JFrame {
         content.add(title, BorderLayout.NORTH);
         content.add(buildBody(), BorderLayout.CENTER);
 
+        txtAnchorDate.setText(LocalDate.now().format(CRUD_GUI.DATE_FORMATTER));
         configureTables();
         loadStudents();
     }
@@ -90,11 +95,20 @@ public class StudentSubjectRecordsWindow extends JFrame {
 
         JPanel recordHeader = new JPanel(new BorderLayout(8, 8));
         AppTheme.stylePanel(recordHeader);
-        JPanel subjectPanel = new JPanel(new BorderLayout(8, 0));
+        JPanel subjectPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         AppTheme.stylePanel(subjectPanel);
         AppTheme.styleInput(cmbSubject);
+        AppTheme.styleInput(txtAnchorDate);
+        AppTheme.styleInput(cmbDateRange);
+        JButton btnApplyFilters = new JButton("Apply Filters");
+        AppTheme.styleButton(btnApplyFilters);
         subjectPanel.add(new JLabel("Subject:"), BorderLayout.WEST);
-        subjectPanel.add(cmbSubject, BorderLayout.CENTER);
+        subjectPanel.add(cmbSubject);
+        subjectPanel.add(new JLabel("Date:"));
+        subjectPanel.add(txtAnchorDate);
+        subjectPanel.add(new JLabel("Range:"));
+        subjectPanel.add(cmbDateRange);
+        subjectPanel.add(btnApplyFilters);
         recordHeader.add(lblSelectedStudent, BorderLayout.NORTH);
         recordHeader.add(subjectPanel, BorderLayout.SOUTH);
         recordsPanel.add(recordHeader, BorderLayout.NORTH);
@@ -115,6 +129,20 @@ public class StudentSubjectRecordsWindow extends JFrame {
                 reloadSelectedStudentRecords();
             }
         });
+        txtAnchorDate.addActionListener(e -> reloadSelectedStudentRecords());
+        txtAnchorDate.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+                LocalDate current = parseAnchorDate(false);
+                LocalDate picked = CRUD_GUI.CalendarPopup.pickDate(StudentSubjectRecordsWindow.this, current == null ? LocalDate.now() : current);
+                if (picked != null) {
+                    txtAnchorDate.setText(picked.format(CRUD_GUI.DATE_FORMATTER));
+                    reloadSelectedStudentRecords();
+                }
+            }
+        });
+        cmbDateRange.addActionListener(e -> reloadSelectedStudentRecords());
+        btnApplyFilters.addActionListener(e -> reloadSelectedStudentRecords());
 
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, studentPanel, recordsPanel);
         splitPane.setResizeWeight(0.28);
@@ -185,38 +213,7 @@ public class StudentSubjectRecordsWindow extends JFrame {
         recordModel.setRowCount(0);
         lblSelectedStudent.setText(studentName + " (" + studentId + ")");
         loadSubjectOptionsForStudent(studentId);
-
-        try {
-            String selectedSubject = cmbSubject.getSelectedItem() == null ? ALL_SUBJECTS : cmbSubject.getSelectedItem().toString();
-            StringBuilder sql = new StringBuilder(
-                    "SELECT subject_name, attendance_date, attendance_status, attendance_time, COALESCE(time_out, '') AS time_out, remarks " +
-                            "FROM attendance_records WHERE student_identifier = ?"
-            );
-            if (!ALL_SUBJECTS.equals(selectedSubject)) {
-                sql.append(" AND subject_name = ?");
-            }
-            sql.append(" ORDER BY attendance_date DESC, id DESC");
-
-            PreparedStatement pst = con.prepareStatement(sql.toString());
-            pst.setString(1, studentId);
-            if (!ALL_SUBJECTS.equals(selectedSubject)) {
-                pst.setString(2, selectedSubject);
-            }
-            ResultSet rs = pst.executeQuery();
-            while (rs.next()) {
-                String subject = rs.getString("subject_name");
-                recordModel.addRow(new Object[]{
-                        subject,
-                        rs.getDate("attendance_date"),
-                        rs.getString("attendance_status"),
-                        emptyAsDash(rs.getString("attendance_time")),
-                        emptyAsDash(rs.getString("time_out")),
-                        emptyAsDash(rs.getString("remarks"))
-                });
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Unable to load subject records: " + e.getMessage());
-        }
+        loadRecordsForStudentWithoutReloadingSubjects(studentId, studentName);
     }
 
     private void loadSubjectOptionsForStudent(String studentId) {
@@ -261,6 +258,10 @@ public class StudentSubjectRecordsWindow extends JFrame {
 
         try {
             String selectedSubject = cmbSubject.getSelectedItem() == null ? ALL_SUBJECTS : cmbSubject.getSelectedItem().toString();
+            LocalDate[] dateRange = resolveDateRange();
+            if (dateRange == null) {
+                return;
+            }
             StringBuilder sql = new StringBuilder(
                     "SELECT subject_name, attendance_date, attendance_status, attendance_time, COALESCE(time_out, '') AS time_out, remarks " +
                             "FROM attendance_records WHERE student_identifier = ?"
@@ -268,12 +269,20 @@ public class StudentSubjectRecordsWindow extends JFrame {
             if (!ALL_SUBJECTS.equals(selectedSubject)) {
                 sql.append(" AND subject_name = ?");
             }
+            if (dateRange[0] != null && dateRange[1] != null) {
+                sql.append(" AND attendance_date BETWEEN ? AND ?");
+            }
             sql.append(" ORDER BY attendance_date DESC, id DESC");
 
             PreparedStatement pst = con.prepareStatement(sql.toString());
-            pst.setString(1, studentId);
+            int paramIndex = 1;
+            pst.setString(paramIndex++, studentId);
             if (!ALL_SUBJECTS.equals(selectedSubject)) {
-                pst.setString(2, selectedSubject);
+                pst.setString(paramIndex++, selectedSubject);
+            }
+            if (dateRange[0] != null && dateRange[1] != null) {
+                pst.setDate(paramIndex++, Date.valueOf(dateRange[0]));
+                pst.setDate(paramIndex, Date.valueOf(dateRange[1]));
             }
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
@@ -288,6 +297,54 @@ public class StudentSubjectRecordsWindow extends JFrame {
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Unable to load subject records: " + e.getMessage());
+        }
+    }
+
+    private LocalDate[] resolveDateRange() {
+        String selectedRange = cmbDateRange.getSelectedItem() == null ? "All Dates" : cmbDateRange.getSelectedItem().toString();
+        if ("All Dates".equals(selectedRange)) {
+            return new LocalDate[]{null, null};
+        }
+
+        LocalDate anchorDate = parseAnchorDate(true);
+        if (anchorDate == null) {
+            return null;
+        }
+
+        if ("Selected Date".equals(selectedRange)) {
+            return new LocalDate[]{anchorDate, anchorDate};
+        }
+        if ("1 Month".equals(selectedRange)) {
+            return new LocalDate[]{anchorDate.withDayOfMonth(1), anchorDate.withDayOfMonth(anchorDate.lengthOfMonth())};
+        }
+        if ("2 Months".equals(selectedRange)) {
+            LocalDate start = anchorDate.minusMonths(1).withDayOfMonth(1);
+            return new LocalDate[]{start, anchorDate.withDayOfMonth(anchorDate.lengthOfMonth())};
+        }
+        if ("3 Months".equals(selectedRange)) {
+            LocalDate start = anchorDate.minusMonths(2).withDayOfMonth(1);
+            return new LocalDate[]{start, anchorDate.withDayOfMonth(anchorDate.lengthOfMonth())};
+        }
+        if ("Semester".equals(selectedRange)) {
+            int month = anchorDate.getMonthValue();
+            LocalDate start = month <= 6 ? anchorDate.withMonth(1).withDayOfMonth(1) : anchorDate.withMonth(7).withDayOfMonth(1);
+            LocalDate end = month <= 6 ? anchorDate.withMonth(6).withDayOfMonth(30) : anchorDate.withMonth(12).withDayOfMonth(31);
+            return new LocalDate[]{start, end};
+        }
+        if ("Year".equals(selectedRange)) {
+            return new LocalDate[]{anchorDate.withDayOfYear(1), anchorDate.withMonth(12).withDayOfMonth(31)};
+        }
+        return new LocalDate[]{null, null};
+    }
+
+    private LocalDate parseAnchorDate(boolean showError) {
+        try {
+            return LocalDate.parse(txtAnchorDate.getText().trim(), CRUD_GUI.DATE_FORMATTER);
+        } catch (Exception e) {
+            if (showError) {
+                JOptionPane.showMessageDialog(this, "Date must be in YYYY-MM-DD format.");
+            }
+            return null;
         }
     }
 
